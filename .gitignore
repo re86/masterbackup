@@ -1,0 +1,10 @@
+#ignore everything
+*/*
+*.*
+
+# But not these files...
+!.gitignore
+!*.xml
+
+# ...even if they are in subdirectories
+#!*/
