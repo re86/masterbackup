@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-21 21:06:11.470 UTC</timestamp>
+  <original>
+    <name>GHS-iOS-Analysis_n</name>
+    <number>171</number>
+  </original>
+  <md5sum>f94da3f512518e53656bc43cb7f42c04</md5sum>
+  <fileName>ng.ipad.cd5f2319a5a5c4f6bab4cae639e5c4c13cc412a7.171.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iOS-Analysis_n</string>
+      <ranges>171</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build_n</string>
+      <ranges>78</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

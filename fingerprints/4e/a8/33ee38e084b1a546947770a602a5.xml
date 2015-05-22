@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-21 13:27:18.842 UTC</timestamp>
+  <original>
+    <name>GHS-Android-Build-REL-CI</name>
+    <number>27</number>
+  </original>
+  <md5sum>4ea833ee38e084b1a546947770a602a5</md5sum>
+  <fileName>GroceryDroidHudlRelease-27.apk</fileName>
+  <usages>
+    <entry>
+      <string>GHS-Android-Upload-REL-CI</string>
+      <ranges>23</ranges>
+    </entry>
+    <entry>
+      <string>GHS-Android-Build-REL-CI</string>
+      <ranges>27</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

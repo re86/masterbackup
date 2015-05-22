@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-21 14:01:40.686 UTC</timestamp>
+  <original>
+    <name>StoreEmpower-Android-Build-DEV-CI</name>
+    <number>108</number>
+  </original>
+  <md5sum>2802a7d0103a4d82079bc3b2ca8e3b0b</md5sum>
+  <fileName>StoreEmpowerment-102.apk</fileName>
+  <usages>
+    <entry>
+      <string>StoreEmpower-Android-Upload-DEV-CI</string>
+      <ranges>97</ranges>
+    </entry>
+    <entry>
+      <string>StoreEmpower-Android-Build-DEV-CI</string>
+      <ranges>108</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

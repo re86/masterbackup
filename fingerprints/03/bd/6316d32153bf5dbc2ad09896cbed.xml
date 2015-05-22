@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-21 20:17:24.684 UTC</timestamp>
+  <original>
+    <name>GHS-Android-Analysis_n</name>
+    <number>184</number>
+  </original>
+  <md5sum>03bd6316d32153bf5dbc2ad09896cbed</md5sum>
+  <fileName>ng.droid.89e7aea13b43c8a7112d29fdd7367a548b57411b.184.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>GHS-Android-Analysis_n</string>
+      <ranges>184</ranges>
+    </entry>
+    <entry>
+      <string>GHS-Android-Build_n</string>
+      <ranges>158</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

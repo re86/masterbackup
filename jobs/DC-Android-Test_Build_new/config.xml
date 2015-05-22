@@ -12,17 +12,6 @@
   <properties>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
-        <hudson.model.ChoiceParameterDefinition>
-          <name>TestName</name>
-          <description></description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>sanity</string>
-              <string>regression</string>
-              <string>login</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>LIVE</name>
           <description></description>
@@ -48,6 +37,36 @@
           <description></description>
           <defaultValue>false</defaultValue>
         </hudson.model.BooleanParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>SANITYDEVICE1</name>
+          <description></description>
+          <defaultValue>./runner.sh 9aac0d89 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-PPE-${START_BUILD_NUMBER}.apk @sanity OPS james.bond@gmail.com:Password+1</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>REGRESSIONDEVICE1</name>
+          <description></description>
+          <defaultValue>./runner.sh 9aac0d89 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-PPE-${START_BUILD_NUMBER}.apk @regression OPS james.bond@gmail.com:Password+1</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>SANITYDEVICE2</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>REGRESSIONDEVICE2</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>SANITYDEVICE3</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>REGRESSIONDEVICE3</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-21 19:09:19.994 UTC</timestamp>
+  <original>
+    <name>DC-Android-Build_n</name>
+    <number>220</number>
+  </original>
+  <md5sum>cc4890188bc693ed2e719f74476076ff</md5sum>
+  <fileName>Clubcard-Android-LIVE-273.apk</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Upload_n</string>
+      <ranges>122</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Build_n</string>
+      <ranges>220</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

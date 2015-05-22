@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-22 06:03:49.371 UTC</timestamp>
+  <original>
+    <name>DC-Android-Test_Build_new</name>
+    <number>27</number>
+  </original>
+  <md5sum>b744d3ab757c52f26510a549ce4dac15</md5sum>
+  <fileName>Clubcard-Android-PPE-27.apk</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device3</string>
+      <ranges>27</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device2</string>
+      <ranges>27</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device1</string>
+      <ranges>27</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Test_Build_new</string>
+      <ranges>27</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

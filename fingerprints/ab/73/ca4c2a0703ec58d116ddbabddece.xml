@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-22 03:03:18.899 UTC</timestamp>
+  <original>
+    <name>DigitalClubcard-Android-Build-DEV-CI</name>
+    <number>422</number>
+  </original>
+  <md5sum>ab73ca4c2a0703ec58d116ddbabddece</md5sum>
+  <fileName>Clubcard-Android-PPE-452.apk</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-Android-Build-DEV-CI</string>
+      <ranges>422</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-Android-Upload-DEV-CI</string>
+      <ranges>378</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

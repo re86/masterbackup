@@ -42,6 +42,16 @@
           <description></description>
           <defaultValue></defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>SANITYDEVICE1</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>REGRESSIONDEVICE1</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
@@ -87,7 +97,7 @@ cd Apps/DigitalClubcard/Automation.Droid/Sanity
       <conditionalbuilders>
         <hudson.tasks.Shell>
           <command>cd Apps/DigitalClubcard/Automation.Droid/Sanity
-./runner.sh 9aac0d89 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-PPE-${START_BUILD_NUMBER}.apk @sanity OPS james.bond@gmail.com:Password+1</command>
+$SANITYDEVICE1</command>
         </hudson.tasks.Shell>
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>

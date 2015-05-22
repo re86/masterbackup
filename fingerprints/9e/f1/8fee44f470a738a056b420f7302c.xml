@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-21 13:58:50.262 UTC</timestamp>
+  <original>
+    <name>GHS-Android-Build-REL-CI</name>
+    <number>28</number>
+  </original>
+  <md5sum>9ef18fee44f470a738a056b420f7302c</md5sum>
+  <fileName>GroceryDroidReleaseTablet-28.apk</fileName>
+  <usages>
+    <entry>
+      <string>GHS-Android-Upload-REL-CI</string>
+      <ranges>24</ranges>
+    </entry>
+    <entry>
+      <string>GHS-Android-Build-REL-CI</string>
+      <ranges>28</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

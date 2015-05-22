@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-21 18:51:10.526 UTC</timestamp>
+  <original>
+    <name>DC-Android-Test_Build_new</name>
+    <number>26</number>
+  </original>
+  <md5sum>86f3c0461bbc1f681847ae3ac9e9ee33</md5sum>
+  <fileName>Clubcard-Android-PPE-26.apk</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device3</string>
+      <ranges>26</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device2</string>
+      <ranges>26</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Test_Build_new</string>
+      <ranges>26</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device1</string>
+      <ranges>26</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device3</string>
+      <ranges>26</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device2</string>
+      <ranges>26</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device1</string>
+      <ranges>26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

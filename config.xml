@@ -850,10 +850,10 @@
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
       <gridBuilder class="au.com.centrumsystems.hudson.plugin.buildpipeline.DownstreamProjectGridBuilder">
-        <firstJob>DigitalClubcard-Android-Analysis-DEV-CI</firstJob>
+        <firstJob>IGHS-iOS-Thailand-Analysis-DEV-CI</firstJob>
       </gridBuilder>
       <noOfDisplayedBuilds>5</noOfDisplayedBuilds>
-      <buildViewTitle>DigitalClubcard - Android</buildViewTitle>
+      <buildViewTitle>IGHS - iOS - Thailand</buildViewTitle>
       <consoleOutputLinkStyle>Lightbox</consoleOutputLinkStyle>
       <cssUrl></cssUrl>
       <triggerOnlyLatestJob>false</triggerOnlyLatestJob>
