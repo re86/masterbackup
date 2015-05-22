@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2014-09-08 07:37:41.872 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>3</number>
+  </original>
+  <md5sum>eb2ee2a6f46ecac8a18e096cc84b1acb</md5sum>
+  <fileName>bumpiosbuild.sh</fileName>
+  <usages>
+    <entry>
+      <string>DC-iOS-Regression-Build</string>
+      <ranges>5</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iPad-Regression-Build</string>
+      <ranges>26-27,30-31</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Malaysia-Regression-Build</string>
+      <ranges>1</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

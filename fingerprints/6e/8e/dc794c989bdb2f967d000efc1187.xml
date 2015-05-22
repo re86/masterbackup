@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-18 13:32:16.379 UTC</timestamp>
+  <original>
+    <name>CCube-CI-DC-iOS-AppBuild</name>
+    <number>3</number>
+  </original>
+  <md5sum>6e8edc794c989bdb2f967d000efc1187</md5sum>
+  <fileName>auto.ios.3.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>CCube-CI-DC-iOS-Sanity-Test</string>
+      <ranges>2-3</ranges>
+    </entry>
+    <entry>
+      <string>CCube-CI-GHS-iOS-iPad-Sanity-Test</string>
+      <ranges>2-3</ranges>
+    </entry>
+    <entry>
+      <string>CCube-CI-GHS-iOS-iPhone-Sanity-Test</string>
+      <ranges>2-3</ranges>
+    </entry>
+    <entry>
+      <string>CCube-CI-DC-iOS-AppBuild</string>
+      <ranges>4-6</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

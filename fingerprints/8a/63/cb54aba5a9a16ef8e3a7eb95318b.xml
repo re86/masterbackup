@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-04-21 08:16:29.57 UTC</timestamp>
+  <original>
+    <name>GHS-iOS-Build-DEV-CI</name>
+    <number>246</number>
+  </original>
+  <md5sum>8a63cb54aba5a9a16ef8e3a7eb95318b</md5sum>
+  <fileName>GHS-iOS-dSYM.zip</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iOS-Upload-Insight-DEV-CI</string>
+      <ranges>16</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

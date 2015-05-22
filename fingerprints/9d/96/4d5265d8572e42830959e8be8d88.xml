@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-11 12:01:36.735 UTC</timestamp>
+  <original>
+    <name>DigitalClubcard-iOS-Build-LIVE-CI</name>
+    <number>36</number>
+  </original>
+  <md5sum>9d964d5265d8572e42830959e8be8d88</md5sum>
+  <fileName>DC-iOS-dSYM-live.zip</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-iOS-Build-LIVE-CI</string>
+      <ranges>36</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-iOS-Upload-Insight-LIVE-CI</string>
+      <ranges>8</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-21 12:47:07.889 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>22</number>
+  </original>
+  <md5sum>bf727e494e9127f238c10db62f005a7a</md5sum>
+  <fileName>rel_dcios_force.xml</fileName>
+  <usages>
+    <entry>
+      <string>Force-CI-build (release branch)</string>
+      <ranges>15-18</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

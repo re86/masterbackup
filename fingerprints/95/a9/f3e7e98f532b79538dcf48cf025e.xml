@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-12 12:00:05.967 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>59</number>
+  </original>
+  <md5sum>95a9f3e7e98f532b79538dcf48cf025e</md5sum>
+  <fileName>jq</fileName>
+  <usages>
+    <entry>
+      <string>CI-Scripts</string>
+      <ranges>82-84</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

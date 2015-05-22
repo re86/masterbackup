@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-08 10:58:00.878 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>49</number>
+  </original>
+  <md5sum>4e1ba0bc9b6e427572db5a81f0d62323</md5sum>
+  <fileName>poll.bat</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iOS-Build-dev-od</string>
+      <ranges>28-30</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build-rel-od</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

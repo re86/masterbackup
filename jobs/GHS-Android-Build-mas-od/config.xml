@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>3</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>3</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.BooleanParameterDefinition>
+          <name>LIVE</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>OPS</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>TIE</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>DBT</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>STORE5</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>STORE6</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>hsc-build-01</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>mkdir -p ${WORKSPACE}/repo
+
+mkdir ${WORKSPACE}/repo/${BUILD_NUMBER}/</command>
+    </hudson.tasks.Shell>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$LIVE</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.plugins.parameterizedtrigger.TriggerBuilder plugin="parameterized-trigger@2.25">
+          <configs>
+            <hudson.plugins.parameterizedtrigger.BlockableBuildTriggerConfig>
+              <configs class="empty-list"/>
+              <projects>GHS-Android-0-Poll-LIVE-CI</projects>
+              <condition>ALWAYS</condition>
+              <triggerWithNoParameters>false</triggerWithNoParameters>
+              <block>
+                <buildStepFailureThreshold>
+                  <name>FAILURE</name>
+                  <ordinal>2</ordinal>
+                  <color>RED</color>
+                  <completeBuild>true</completeBuild>
+                </buildStepFailureThreshold>
+                <unstableThreshold>
+                  <name>UNSTABLE</name>
+                  <ordinal>1</ordinal>
+                  <color>YELLOW</color>
+                  <completeBuild>true</completeBuild>
+                </unstableThreshold>
+                <failureThreshold>
+                  <name>FAILURE</name>
+                  <ordinal>2</ordinal>
+                  <color>RED</color>
+                  <completeBuild>true</completeBuild>
+                </failureThreshold>
+              </block>
+              <buildAllNodesWithLabel>false</buildAllNodesWithLabel>
+            </hudson.plugins.parameterizedtrigger.BlockableBuildTriggerConfig>
+          </configs>
+        </hudson.plugins.parameterizedtrigger.TriggerBuilder>
+        <hudson.tasks.Shell>
+          <command>cd ${WORKSPACE}/repo/${BUILD_NUMBER}
+
+echo &quot;The latest LIVE build will be available on the CI-LIVE tab of jenkins&quot;&gt;read_this-${BUILD_NUMBER}.apk</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>CI-Scripts</project>
+      <filter>*.*</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>chmod 755 *.*
+
+./updaterepo.sh /Users/hscbuild01/jenkins-slave/codebase/ENV/LIVE/GHS-Android-code ${WORKSPACE} ghs.android.od.${BUILD_NUMBER}.tar origin/master
+
+chmod -R 755 ${WORKSPACE}</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>./bumpdroidbuild.sh ${BUILD_NUMBER} Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/Properties/AndroidManifest.xml
+
+./bumpdroidbuild.sh ${BUILD_NUMBER} Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Properties/AndroidManifest.xml</command>
+    </hudson.tasks.Shell>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$OPS</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/Grocery.Droid.csproj /p:Configuration=OPS /t:SignAndroidPackage /p:OutputPath=bin/OPS
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/OPS/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/OPS/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidPhone-OPS-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=OPS_Hudl2 /t:SignAndroidPackage /p:OutputPath=bin/OPS_Hudl2
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/OPS_Hudl2/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/OPS_Hudl2/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl2-OPS-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=OPS_Hudl1 /t:SignAndroidPackage /p:OutputPath=bin/OPS_Hudl1
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/OPS_Hudl1/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/OPS_Hudl1/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl1-OPS-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=OPS /t:SignAndroidPackage /p:OutputPath=bin/OPS
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/OPS/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/OPS/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidNonHudl-OPS-${BUILD_NUMBER}.apk</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$TIE</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/Grocery.Droid.csproj /p:Configuration=TIE /t:SignAndroidPackage /p:OutputPath=bin/TIE
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/TIE/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/TIE/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidPhone-TIE-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=TIE_Hudl2 /t:SignAndroidPackage /p:OutputPath=bin/TIE_Hudl2
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/TIE_Hudl2/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/TIE_Hudl2/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl2-TIE-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=TIE_Hudl1 /t:SignAndroidPackage /p:OutputPath=bin/TIE_Hudl1
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/TIE_Hudl1/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/TIE_Hudl1/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl1-TIE-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=TIE /t:SignAndroidPackage /p:OutputPath=bin/TIE
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/TIE/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/TIE/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidNonHudl-TIE-${BUILD_NUMBER}.apk</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$DBT</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/Grocery.Droid.csproj /p:Configuration=DBT /t:SignAndroidPackage /p:OutputPath=bin/DBT
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/DBT/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/DBT/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidPhone-DBT-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=DBT_Hudl2 /t:SignAndroidPackage /p:OutputPath=bin/DBT_Hudl2
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/DBT_Hudl2/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/DBT_Hudl2/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl2-DBT-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=DBT_Hudl1 /t:SignAndroidPackage /p:OutputPath=bin/DBT_Hudl1
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/DBT_Hudl1/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/DBT_Hudl1/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl1-DBT-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=DBT /t:SignAndroidPackage /p:OutputPath=bin/DBT
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/DBT/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/DBT/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidNonHudl-DBT-${BUILD_NUMBER}.apk</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$STORE5</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=STORE_5_HUDL1 /t:SignAndroidPackage /p:OutputPath=bin/STORE_5_HUDL1
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_5_HUDL1/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_5_HUDL1/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl1-STORE5-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=STORE_5_HUDL2 /t:SignAndroidPackage /p:OutputPath=bin/STORE_5_HUDL2
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_5_HUDL2/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_5_HUDL2/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl2-STORE5-${BUILD_NUMBER}.apk
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=STORE_5 /t:SignAndroidPackage /p:OutputPath=bin/STORE_5
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_5/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_5/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidNonHudl-STORE5-${BUILD_NUMBER}.apk
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/Grocery.Droid.csproj /p:Configuration=STORE_5 /t:SignAndroidPackage /p:OutputPath=bin/STORE_5
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/STORE_5/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/STORE_5/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidPhone-STORE5-${BUILD_NUMBER}.apk</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$STORE6</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=STORE_6_HUDL1 /t:SignAndroidPackage /p:OutputPath=bin/STORE_6_HUDL1
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_6_HUDL1/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_6_HUDL1/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl1-STORE6-${BUILD_NUMBER}.apk
+
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=STORE_6_HUDL2 /t:SignAndroidPackage /p:OutputPath=bin/STORE_6_HUDL2
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_6_HUDL2/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_6_HUDL2/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl2-STORE6-${BUILD_NUMBER}.apk
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=STORE_6 /t:SignAndroidPackage /p:OutputPath=bin/STORE_6
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_6/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/STORE_6/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidNonHudl-STORE6-${BUILD_NUMBER}.apk
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/Grocery.Droid.csproj /p:Configuration=STORE_6 /t:SignAndroidPackage /p:OutputPath=bin/STORE_6
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/STORE_6/ -name *-Signed.apk -exec basename {} \; `
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/STORE_6/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidPhone-STORE6-${BUILD_NUMBER}.apk</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>repo/${BUILD_NUMBER}/*.apk</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

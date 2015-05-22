@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-18 20:59:32.661 UTC</timestamp>
+  <original>
+    <name>DC-iOS-Analysis_n</name>
+    <number>234</number>
+  </original>
+  <md5sum>a80d4873ee575ae4f00d088e5647abd8</md5sum>
+  <fileName>dc.ios.4f8156c0d30b0fc2fd4ec347be930ed2a832be1d.234.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>DC-iOS-Analysis_n</string>
+      <ranges>234</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Build_n</string>
+      <ranges>188</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

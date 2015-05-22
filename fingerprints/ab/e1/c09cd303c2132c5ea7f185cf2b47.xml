@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-19 08:02:07.518 UTC</timestamp>
+  <original>
+    <name>DigitalClubcard-Android-Build-DEV-CI</name>
+    <number>416</number>
+  </original>
+  <md5sum>abe1c09cd303c2132c5ea7f185cf2b47</md5sum>
+  <fileName>Clubcard-Android-LIVE-446.apk</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-Android-Upload-DEV-CI</string>
+      <ranges>376</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

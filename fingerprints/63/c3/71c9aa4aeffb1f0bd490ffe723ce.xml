@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-06 12:56:48.895 UTC</timestamp>
+  <original>
+    <name>IGHS-iOS-Malaysia-Build-DEV-CI</name>
+    <number>167</number>
+  </original>
+  <md5sum>63c371c9aa4aeffb1f0bd490ffe723ce</md5sum>
+  <fileName>IGHS-iOS-Malaysia-Release-167.ipa</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iOS-Malaysia-Upload-DEV-CI</string>
+      <ranges>197</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Malaysia-Build-DEV-CI</string>
+      <ranges>167</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

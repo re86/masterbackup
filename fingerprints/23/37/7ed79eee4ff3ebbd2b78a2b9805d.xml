@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-24 09:55:29.66 UTC</timestamp>
+  <original>
+    <name>CCube-CI-DC-iOS-AppBuild</name>
+    <number>5</number>
+  </original>
+  <md5sum>23377ed79eee4ff3ebbd2b78a2b9805d</md5sum>
+  <fileName>Clubcard-iOS-PROD-debug-5.ipa</fileName>
+  <usages>
+    <entry>
+      <string>CCube-CI-GHS-iOS-iPad-Sanity-Test</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>CCube-CI-DC-iOS-Sanity-Test</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>CCube-CI-GHS-iOS-iPhone-Sanity-Test</string>
+      <ranges>2</ranges>
+    </entry>
+    <entry>
+      <string>CCube-CI-DC-iOS-AppBuild</string>
+      <ranges>5</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

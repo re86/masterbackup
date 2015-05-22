@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-18 14:27:43.600 UTC</timestamp>
+  <original>
+    <name>CCube-CI-DC-Android-AppBuild</name>
+    <number>3</number>
+  </original>
+  <md5sum>c0bc95bc92d7ec3d40b8706b150d878b</md5sum>
+  <fileName>auto.droid.3.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>CCube-CI-DC-Android-AppBuild</string>
+      <ranges>3-4</ranges>
+    </entry>
+    <entry>
+      <string>CCube-CI-DC-Android-Sanity-Test</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-09 10:06:48.935 UTC</timestamp>
+  <original>
+    <name>DC-iOS-Sanity_Build</name>
+    <number>123</number>
+  </original>
+  <md5sum>d48af6bba83624e22b96a4c938cb6758</md5sum>
+  <fileName>auto.ios.123.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>DC-iOS-Sanity_Test</string>
+      <ranges>114-115</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Regression-Test</string>
+      <ranges>47-48</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Sanity_Build</string>
+      <ranges>129-131</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

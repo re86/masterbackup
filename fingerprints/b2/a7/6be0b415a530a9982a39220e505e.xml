@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-04 12:17:10.383 UTC</timestamp>
+  <original>
+    <name>IGHS-Android-Malaysia-Build-REL-CI</name>
+    <number>19</number>
+  </original>
+  <md5sum>b2a76be0b415a530a9982a39220e505e</md5sum>
+  <fileName>IGHS-Android-Malaysia-rel-19.apk</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-Android-Malaysia-Upload-REL-CI</string>
+      <ranges>15</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-Android-Malaysia-Build-REL-CI</string>
+      <ranges>19</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

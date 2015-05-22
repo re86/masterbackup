@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-05 21:23:46.462 UTC</timestamp>
+  <original>
+    <name>DC-Android-Sanity_Build</name>
+    <number>233</number>
+  </original>
+  <md5sum>586493ff435748f109720d7b0a77a3ed</md5sum>
+  <fileName>Clubcard-Android-PPE-233.apk</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Regression_Test</string>
+      <ranges>115</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test</string>
+      <ranges>227</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Build</string>
+      <ranges>233</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

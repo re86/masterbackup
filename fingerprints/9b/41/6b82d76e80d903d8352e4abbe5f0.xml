@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-06 10:01:22.83 UTC</timestamp>
+  <original>
+    <name>IGHS-iPhone-Sanity_Build</name>
+    <number>1</number>
+  </original>
+  <md5sum>9b416b82d76e80d903d8352e4abbe5f0</md5sum>
+  <fileName>auto.ios.1.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iPhone-Sanity_Build</string>
+      <ranges>3</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iPhone-Sanity_Test</string>
+      <ranges>2-3</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

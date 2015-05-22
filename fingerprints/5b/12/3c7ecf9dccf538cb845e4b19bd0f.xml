@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-06 14:04:31.176 UTC</timestamp>
+  <original>
+    <name>IGHS-iOS-Thailand-Build-DEV-CI</name>
+    <number>135</number>
+  </original>
+  <md5sum>5b123c7ecf9dccf538cb845e4b19bd0f</md5sum>
+  <fileName>IGHS-iOS-Thailand-Release-147.ipa</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iOS-Thailand-Build-DEV-CI</string>
+      <ranges>135</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Thailand-Upload-DEV-CI</string>
+      <ranges>130</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

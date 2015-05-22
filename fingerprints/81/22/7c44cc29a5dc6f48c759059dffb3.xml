@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-12 14:48:31.419 UTC</timestamp>
+  <original>
+    <name>StoreEmpower-iOS-Sanity_Build</name>
+    <number>6</number>
+  </original>
+  <md5sum>81227c44cc29a5dc6f48c759059dffb3</md5sum>
+  <fileName>auto.seios.droid.6.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>StoreEmpower-iOS-Sanity_Test</string>
+      <ranges>19-20</ranges>
+    </entry>
+    <entry>
+      <string>StoreEmpower-iOS-Sanity_Build</string>
+      <ranges>17-19</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

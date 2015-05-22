@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-31 19:08:50.205 UTC</timestamp>
+  <original>
+    <name>IGHS-Android-Thailand-Build_n</name>
+    <number>160</number>
+  </original>
+  <md5sum>f619e23a694346b4a93340e9c1aeaee7</md5sum>
+  <fileName>IGHS-Android-Thailand-Release-187.apk</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-Android-Thailand-Build_n</string>
+      <ranges>160</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-Android-Thailand-Upload_n</string>
+      <ranges>97</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

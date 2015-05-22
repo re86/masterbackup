@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-21 12:14:26.113 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>20</number>
+  </original>
+  <md5sum>221c213b86726612cf8f43b51a81c3dc</md5sum>
+  <fileName>ighsiosmaltemplate.xml</fileName>
+  <usages>
+    <entry>
+      <string>View-Pipeline-Status</string>
+      <ranges>31</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>25-26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-06 10:30:45.904 UTC</timestamp>
+  <original>
+    <name>IGHS-iPhone-Sanity_Build</name>
+    <number>3</number>
+  </original>
+  <md5sum>0ccb39c45fb715ea99954d31cf5f9175</md5sum>
+  <fileName>IGHS-iOS-Malaysia-Debug-3.ipa</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iPhone-Sanity_Build</string>
+      <ranges>3</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iPhone-Sanity_Test</string>
+      <ranges>3</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

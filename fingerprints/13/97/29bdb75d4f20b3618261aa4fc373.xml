@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-03 14:46:39.76 UTC</timestamp>
+  <original>
+    <name>GHS-iOS-Build-REL-CI</name>
+    <number>5</number>
+  </original>
+  <md5sum>139729bdb75d4f20b3618261aa4fc373</md5sum>
+  <fileName>Grocery-iPad-5.ipa</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iOS-Upload-REL-CI</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

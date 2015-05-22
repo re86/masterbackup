@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2014-12-02 13:17:52.974 UTC</timestamp>
+  <original>
+    <name>DigitalClubcard-Android-BUILD</name>
+    <number>4</number>
+  </original>
+  <md5sum>ca8650ccafa581bafaddada8a8f7f361</md5sum>
+  <fileName>dc.droid.8684fb41349736360d775525c5850b96d06dcd4f.4.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-Android-BUILD</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-Android-SCA</string>
+      <ranges>3</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-12 15:53:53.5 UTC</timestamp>
+  <original>
+    <name>StoreEmpower-iOS-Sanity_Build</name>
+    <number>19</number>
+  </original>
+  <md5sum>29fcd71b38b3b15b9984f26876deba14</md5sum>
+  <fileName>StoreEmpower-iOS-19.ipa</fileName>
+  <usages>
+    <entry>
+      <string>StoreEmpower-iOS-Sanity_Test</string>
+      <ranges>19-20</ranges>
+    </entry>
+    <entry>
+      <string>StoreEmpower-iOS-Sanity_Build</string>
+      <ranges>19</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

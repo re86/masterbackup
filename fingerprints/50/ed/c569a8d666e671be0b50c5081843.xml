@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-21 12:14:26.106 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>20</number>
+  </original>
+  <md5sum>50edc569a8d666e671be0b50c5081843</md5sum>
+  <fileName>ighsandroidmaltemplate.xml</fileName>
+  <usages>
+    <entry>
+      <string>View-Pipeline-Status</string>
+      <ranges>31</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>25-26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

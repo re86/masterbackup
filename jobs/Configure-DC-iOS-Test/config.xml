@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PROD</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PPE</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>STORE5</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>STORE6</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>SANITYVM1</name>
+          <description></description>
+          <defaultValue>./Runner.sh http://192.168.3.230:37265 james.bond@gmail.com:Password+1 ops @sanity Sanity</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>REGRESSIONVM1</name>
+          <description></description>
+          <defaultValue>./Runner.sh http://192.168.3.230:37265 james.bond@gmail.com:Password+1 ops @regression Regression</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>SANITYVM2</name>
+          <description></description>
+          <defaultValue>./Runner.sh http://192.168.2.193:37265 james.bond@gmail.com:Password+1 ops @sanity Sanity</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>REGRESSIONVM2</name>
+          <description></description>
+          <defaultValue>./Runner.sh http://192.168.2.193:37265 james.bond@gmail.com:Password+1 ops @regression Regression</defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>master</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cp /Users/Tesco/jenkins-slave/configure_jobs/dc_ios_sanity_build.xml .
+
+chmod 777 *.xml
+
+xml ed --inplace -u &quot;//name[contains(text(),\&quot;SANITYVM1\&quot;)]/following-sibling::defaultValue[1]/text()&quot; -v &quot;${SANITYVM1}&quot; dc_ios_sanity_build.xml
+
+xml ed --inplace -u &quot;//name[contains(text(),\&quot;REGRESSIONVM1\&quot;)]/following-sibling::defaultValue[1]/text()&quot; -v &quot;${REGRESSIONVM1}&quot; dc_ios_sanity_build.xml
+
+xml ed --inplace -u &quot;//name[contains(text(),\&quot;SANITYVM2\&quot;)]/following-sibling::defaultValue[1]/text()&quot; -v &quot;${SANITYVM2}&quot; dc_ios_sanity_build.xml
+
+xml ed --inplace -u &quot;//name[contains(text(),\&quot;REGRESSIONVM2\&quot;)]/following-sibling::defaultValue[1]/text()&quot; -v &quot;${REGRESSIONVM2}&quot; dc_ios_sanity_build.xml</command>
+    </hudson.tasks.Shell>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$PROD</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>xml ed --inplace -u &quot;//name[contains(text(),\&quot;PROD\&quot;)]/following-sibling::defaultValue[1]/text()&quot; -v true dc_ios_sanity_build.xml</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$PPE</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>xml ed --inplace -u &quot;//name[contains(text(),\&quot;PPE\&quot;)]/following-sibling::defaultValue[1]/text()&quot; -v true dc_ios_sanity_build.xml</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$STORE5</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>xml ed --inplace -u &quot;//name[contains(text(),\&quot;STORE5\&quot;)]/following-sibling::defaultValue[1]/text()&quot; -v true dc_ios_sanity_build.xml</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$STORE6</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>xml ed --inplace -u &quot;//name[contains(text(),\&quot;STORE6\&quot;)]/following-sibling::defaultValue[1]/text()&quot; -v true dc_ios_sanity_build.xml</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <hudson.tasks.Shell>
+      <command>curl -X POST -d @dc_ios_sanity_build.xml -H &quot;Content-Type: text/xml&quot; http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/DC-iOS-Sanity_Build_new/config.xml</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView plugin="build-monitor-plugin@1.5+build.123">
+  <name>My Dashboard</name>
+  <filterExecutors>false</filterExecutors>
+  <filterQueue>false</filterQueue>
+  <properties class="hudson.model.View$PropertyList"/>
+  <jobNames>
+    <comparator class="hudson.util.CaseInsensitiveComparator"/>
+    <string>DigitalClubcard-Android-Build-REL-CI</string>
+    <string>DigitalClubcard-Android-Upload-REL-CI</string>
+    <string>DigitalClubcard-iOS-Build-REL-CI</string>
+    <string>DigitalClubcard-iOS-Upload-REL-CI</string>
+    <string>GHS-Android-Build-REL-CI</string>
+    <string>GHS-Android-Upload-REL-CI</string>
+    <string>GHS-iOS-Build-REL-CI</string>
+    <string>GHS-iOS-Upload-REL-CI</string>
+    <string>IGHS-Android-Malaysia-Build-REL-CI</string>
+    <string>IGHS-Android-Malaysia-Upload-REL-CI</string>
+    <string>IGHS-Android-Thailand-Build-REL-CI</string>
+    <string>IGHS-Android-Thailand-Upload-REL-CI</string>
+    <string>IGHS-iOS-Malaysia-Build-REL-CI</string>
+    <string>IGHS-iOS-Malaysia-Upload-REL-CI</string>
+    <string>IGHS-iOS-Thailand-Build-REL-CI</string>
+    <string>IGHS-iOS-Thailand-Upload-REL-CI</string>
+  </jobNames>
+  <jobFilters/>
+  <columns/>
+  <recurse>false</recurse>
+  <order class="com.smartcodeltd.jenkinsci.plugins.buildmonitor.order.ByName"/>
+</com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-24 09:56:21.647 UTC</timestamp>
+  <original>
+    <name>CCube-CI-DC-Android-AppBuild</name>
+    <number>4</number>
+  </original>
+  <md5sum>6bfc3202f4c55e05bf5643f5c79a903a</md5sum>
+  <fileName>Clubcard-Android-LIVE-4.apk</fileName>
+  <usages>
+    <entry>
+      <string>CCube-CI-DC-Android-AppBuild</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>CCube-CI-DC-Android-Sanity-Test</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

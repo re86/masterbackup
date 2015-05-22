@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>1</daysToKeep>
+    <numToKeep>1</numToKeep>
+    <artifactDaysToKeep>1</artifactDaysToKeep>
+    <artifactNumToKeep>1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>master</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>@midnight</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuilddcandroid/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuilddcios/doDelete?delay=10secv
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildghsandroid/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildghsios/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsandroidmal/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsandroidthai/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsiosmal/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsiosthai/doDelete?delay=10sec
+
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuilddcandroidrel/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuilddciosrel/doDelete?delay=10secv
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildghsandroidrel/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildghsiosrel/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsandroidmalrel/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsandroidthairel/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsiosmalrel/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsiosthairel/doDelete?delay=10sec
+
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuilddcandroidmas/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuilddciosmas/doDelete?delay=10secv
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildghsandroidmas/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildghsiosmas/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsandroidmalmas/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsandroidthaimas/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsiosmalmas/doDelete?delay=10sec
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/All/job/zzforcebuildighsiosthaimas/doDelete?delay=10sec</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>3</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>3</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PROD_and_PPE_AdHoc</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PROD_Debug</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PPE_Debug</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>STORE5</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>STORE6</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>TESS_Adhoc</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>hsc-build-02</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$PROD_and_PPE_AdHoc</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.plugins.parameterizedtrigger.TriggerBuilder plugin="parameterized-trigger@2.25">
+          <configs>
+            <hudson.plugins.parameterizedtrigger.BlockableBuildTriggerConfig>
+              <configs class="empty-list"/>
+              <projects>DigitalClubcard-iOS-0-Poll-DEV-CI</projects>
+              <condition>ALWAYS</condition>
+              <triggerWithNoParameters>false</triggerWithNoParameters>
+              <buildAllNodesWithLabel>false</buildAllNodesWithLabel>
+            </hudson.plugins.parameterizedtrigger.BlockableBuildTriggerConfig>
+          </configs>
+        </hudson.plugins.parameterizedtrigger.TriggerBuilder>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>CI-Scripts</project>
+      <filter>*.*</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>chmod 755 *.*
+
+./updaterepo.sh /Users/hscbuild01/jenkins-slave/codebase/ENV/DEV/DC-iOS-code ${WORKSPACE} dc.ios.od.${BUILD_NUMBER}.tar origin/develop
+
+chmod -R 755 ${WORKSPACE}</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>./bumpiosbuild.sh ${BUILD_NUMBER} Apps/DigitalClubcard/iOS/Clubcard.iOS/Info.plist</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>security -v unlock-keychain -p ${keychain_password} &quot;/Users/hscbuild01/Library/Keychains/login.keychain&quot;
+#security -v unlock-keychain -p ${keychain_password} &quot;/certs/login.keychain&quot;</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool build -t:Build Apps/DigitalClubcard/Common/Common.Resources/Common.Resources/Common.Resources.csproj
+/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool build -t:Build Apps/DigitalClubcard/Common/Clubcard.Resources/Clubcard.Resources.csproj
+
+mkdir -p ${WORKSPACE}/repo
+
+mkdir ${WORKSPACE}/repo/${BUILD_NUMBER}/</command>
+    </hudson.tasks.Shell>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$PROD_Debug</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:PROD Debug|iPhone&quot; Apps/DigitalClubcard/iOS/Clubcard.iOS.sln
+
+DEBUG_BUILD=`find  ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Debug/  -name *.ipa -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Debug/${DEBUG_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/Clubcard-iOS-PROD-debug-${BUILD_NUMBER}.ipa</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$PPE_Debug</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:PPE Debug|iPhone&quot; Apps/DigitalClubcard/iOS/Clubcard.iOS.sln
+
+DEBUG_BUILD=`find  ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Debug/  -name *.ipa -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Debug/${DEBUG_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/Clubcard-iOS-PPE-debug-${BUILD_NUMBER}.ipa</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$STORE5</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:STORE5 Ad-Hoc|iPhone&quot; Apps/DigitalClubcard/iOS/Clubcard.iOS.sln
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Ad-Hoc/ -name *.ipa -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Ad-Hoc/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/Clubcard-iOS-store5-${BUILD_NUMBER}.ipa</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$STORE6</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:STORE6 Ad-Hoc|iPhone&quot; Apps/DigitalClubcard/iOS/Clubcard.iOS.sln
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Ad-Hoc/ -name *.ipa -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Ad-Hoc/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/Clubcard-iOS-store6-${BUILD_NUMBER}.ipa</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$TESS_Adhoc</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:TESS Ad-Hoc|iPhone&quot; Apps/DigitalClubcard/iOS/Clubcard.iOS.sln
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Ad-Hoc/ -name *.ipa -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Ad-Hoc/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/Clubcard-iOS-TESS-${BUILD_NUMBER}.ipa
+
+curl \
+  -F &quot;status=2&quot; \
+  -F &quot;notify=1&quot; \
+  -F &quot;notes=Uploaded by Jenkins job.&quot; \
+  -F &quot;notes_type=0&quot; \
+  -F &quot;ipa=@repo/${BUILD_NUMBER}/Clubcard-iOS-TESS-${BUILD_NUMBER}.ipa&quot; \
+  -H &quot;X-HockeyAppToken: 9f52a1ad9d6a4f919c297a690b53d4c0&quot; \
+  https://rink.hockeyapp.net/api/2/apps/12e200012100c096e9a1c4ba42206316/app_versions/upload</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>repo/${BUILD_NUMBER}/Clubcard-iOS-*.ipa</artifacts>
+      <allowEmptyArchive>true</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+      <varPasswordPairs>
+        <varPasswordPair var="keychain_password" password="uBMzzhUHlpzwWSyOpdAtob928bD4D19+86Fv08zi1w4="/>
+      </varPasswordPairs>
+    </com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+  </buildWrappers>
+</project>

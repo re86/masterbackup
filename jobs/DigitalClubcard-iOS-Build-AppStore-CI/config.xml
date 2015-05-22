@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>hsc-build-02</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>git clone https://tescomobile.visualstudio.com/DefaultCollection/_git/DigitalClubcard.iOS .
+
+git submodule init
+
+git submodule update --init --recursive
+</command>
+    </hudson.tasks.Shell>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>CI-Scripts</project>
+      <filter>*.*</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>chmod -R 755 ${WORKSPACE}</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>security -v unlock-keychain -p ${keychain_password} &quot;/Users/hscbuild01/Library/Keychains/login.keychain&quot;</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool build -t:Build Apps/DigitalClubcard/Common/Common.Resources/Common.Resources/Common.Resources.csproj
+/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool build -t:Build Apps/DigitalClubcard/Common/Clubcard.Resources/Clubcard.Resources.csproj
+
+/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:PROD Ad-Hoc|iPhone&quot; Apps/DigitalClubcard/iOS/Clubcard.iOS.sln</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>mkdir -p ${WORKSPACE}/repo
+
+mkdir ${WORKSPACE}/repo/${BUILD_NUMBER}/
+
+#cd ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Ad-Hoc
+
+#zip -r ${WORKSPACE}/repo/${BUILD_NUMBER}/Clubcard.zip Clubcard.app</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>ENT_BUILD1=`find  ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Ad-Hoc/ -name *.ipa -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Ad-Hoc/${ENT_BUILD1} ${WORKSPACE}/repo/${BUILD_NUMBER}/DC-iOS-mas-PROD-${BUILD_NUMBER}.ipa
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>repo/${BUILD_NUMBER}/*</artifacts>
+      <allowEmptyArchive>true</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.38.1">
+      <recipientList></recipientList>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+          <email>
+            <recipientList>$DEFAULT_RECIPIENTS,HSC_Digital_Clubcard_iOS@in.tesco.com</recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>true</attachBuildLog>
+            <compressBuildLog>true</compressBuildLog>
+            <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
+            <contentType>project</contentType>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+      </configuredTriggers>
+      <contentType>default</contentType>
+      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <attachmentsPattern></attachmentsPattern>
+      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+      <attachBuildLog>false</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo></replyTo>
+      <saveOutput>false</saveOutput>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+      <varPasswordPairs>
+        <varPasswordPair var="keychain_password" password="uBMzzhUHlpzwWSyOpdAtob928bD4D19+86Fv08zi1w4="/>
+      </varPasswordPairs>
+    </com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+  </buildWrappers>
+</project>

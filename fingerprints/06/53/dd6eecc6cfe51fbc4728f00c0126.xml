@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-18 13:19:30.411 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>26</number>
+  </original>
+  <md5sum>0653dd6eecc6cfe51fbc4728f00c0126</md5sum>
+  <fileName>dev_ighsandroidthai_force.xml</fileName>
+  <usages>
+    <entry>
+      <string>Force-CI-build (develop branch)</string>
+      <ranges>53-57</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

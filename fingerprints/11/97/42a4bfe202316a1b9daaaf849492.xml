@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-13 12:47:10.193 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>60</number>
+  </original>
+  <md5sum>119742a4bfe202316a1b9daaaf849492</md5sum>
+  <fileName>automation_schedule.sh</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iOS-Build-dev-od</string>
+      <ranges>32-42</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build-rel-od</string>
+      <ranges>5</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Malaysia-Build-LIVE-CI</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Build-dev-od</string>
+      <ranges>34-36</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

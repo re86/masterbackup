@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>hsc-build-01</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>git clone https://tescomobile.visualstudio.com/DefaultCollection/Grocery/_git/Grocery.Droid .
+
+git submodule init
+
+git submodule update --init --recursive</command>
+    </hudson.tasks.Shell>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>CI-Scripts</project>
+      <filter>*.*</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>chmod -R 755 ${WORKSPACE}
+
+mkdir -p ${WORKSPACE}/repo
+
+mkdir ${WORKSPACE}/repo/${BUILD_NUMBER}/</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/Grocery.Droid.csproj /p:Configuration=Release /t:SignAndroidPackage /p:OutputPath=bin/Release
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/Release/ -name *-Signed.apk -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid/bin/Release/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidPhone-Rel-${BUILD_NUMBER}.apk</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=HudlRelease /t:SignAndroidPackage /p:OutputPath=bin/HudlRelease
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/HudlRelease/ -name *-Signed.apk -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/HudlRelease/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl2-Rel-${BUILD_NUMBER}.apk</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=Release /t:SignAndroidPackage /p:OutputPath=bin/Release
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/Release/ -name *-Signed.apk -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/Release/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidNonHudl-Rel-${BUILD_NUMBER}.apk</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>xbuild Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/Grocery.Droid.Tablet.csproj /p:Configuration=Hudl1_Release /t:SignAndroidPackage /p:OutputPath=bin/Hudl1_Release
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/Hudl1_Release/ -name *-Signed.apk -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/Grocery.Droid.Tablet/bin/Hudl1_Release/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/GroceryDroidHudl1-Rel-${BUILD_NUMBER}.apk</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>repo/${BUILD_NUMBER}/*.apk</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.38.1">
+      <recipientList></recipientList>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+          <email>
+            <recipientList>HSC_Mobile_Grocery_Android@in.tesco.com, prabhuraj.manoharan@in.tesco.com</recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>true</attachBuildLog>
+            <compressBuildLog>true</compressBuildLog>
+            <replyTo>prabhuraj.manoharan@in.tesco.com</replyTo>
+            <contentType>project</contentType>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+      </configuredTriggers>
+      <contentType>default</contentType>
+      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <attachmentsPattern></attachmentsPattern>
+      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+      <attachBuildLog>false</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo></replyTo>
+      <saveOutput>false</saveOutput>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

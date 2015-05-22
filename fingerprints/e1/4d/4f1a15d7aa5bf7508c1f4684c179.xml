@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-11 07:00:03.875 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>75</number>
+  </original>
+  <md5sum>e14d4f1a15d7aa5bf7508c1f4684c179</md5sum>
+  <fileName>pollrepo.bat</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iPad-Sanity_Build</string>
+      <ranges>12-13</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build-dev-od</string>
+      <ranges>48-56</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build-rel-od</string>
+      <ranges>28</ranges>
+    </entry>
+    <entry>
+      <string>MobiAssets-Android-Build-DEV-CI</string>
+      <ranges>13</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

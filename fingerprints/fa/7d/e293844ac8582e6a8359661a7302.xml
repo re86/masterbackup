@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2014-12-10 06:06:27.986 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>44</number>
+  </original>
+  <md5sum>fa7de293844ac8582e6a8359661a7302</md5sum>
+  <fileName>poll.bat</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iOS-Build-dev-od</string>
+      <ranges>8-25</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iPhone-Sanity_Build</string>
+      <ranges>30</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build-rel-od</string>
+      <ranges>1-3</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iPhone-Sanity_Build</string>
+      <ranges>2-3</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Build-dev-od</string>
+      <ranges>32-33</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

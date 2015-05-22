@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>ProjectName</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>IGHS-ANDROID-Maly</string>
+              <string>IGHS-ANDROID-Thai</string>
+              <string>IGHS-iOS-Maly-Release</string>
+              <string>IGHS-iOS-Thai-Release</string>
+              <string>IGHS-iOS-Maly-Appstore</string>
+              <string>IGHS-iOS-Thai-Appstore</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>FeatureBranchName</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>hsc-build-01</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>CI-Scripts</project>
+      <filter>*.sh, *.bat</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>mkdir -p ${WORKSPACE}/repo
+
+mkdir ${WORKSPACE}/repo/${BUILD_NUMBER}/
+
+chmod 755 *</command>
+    </hudson.tasks.Shell>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$ProjectName</arg1>
+        <arg2>IGHS-ANDROID-Maly</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>cd /Users/hscbuild01/jenkins-slave/codebase/ENV/CUSTOM/IGHS-Android-Malaysia-code
+git checkout develop
+git pull --prune
+git checkout $FeatureBranchName
+git reset --hard HEAD
+git pull
+git clean -f -d
+git submodule init
+git submodule update --init --recursive
+tar cf ../ighs.android.mal.${BUILD_NUMBER}.tar .
+mv ../ighs.android.mal.${BUILD_NUMBER}.tar ${WORKSPACE}
+cd ${WORKSPACE}
+tar xvf ighs.android.mal.${BUILD_NUMBER}.tar
+rm ighs.android.mal.${BUILD_NUMBER}.tar
+
+chmod -R 755 ${WORKSPACE}
+
+./bumpdroidbuild.sh ${BUILD_NUMBER} Apps/Grocery/Droid/Grocery.Droid/IGHS.Droid.Malay/Properties/AndroidManifest.xml
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/IGHS.Droid.Malay/IGHS.Droid.Malay.csproj /p:Configuration=Release /t:SignAndroidPackage
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/IGHS.Droid.Malay/bin/Release -name *-Signed.apk -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/IGHS.Droid.Malay/bin/Release/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/IGHS-Android-Malaysia-Release-${BUILD_NUMBER}.apk</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$ProjectName</arg1>
+        <arg2>IGHS-ANDROID-Thai</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>cd /Users/hscbuild01/jenkins-slave/codebase/ENV/CUSTOM/IGHS-Android-Thailand-code
+git checkout develop
+git pull --prune
+git checkout $FeatureBranchName
+git reset --hard HEAD
+git pull
+git clean -f -d
+git submodule init
+git submodule update --init --recursive
+tar cf ../ighs.android.thai.${BUILD_NUMBER}.tar .
+mv ../ighs.android.thai.${BUILD_NUMBER}.tar ${WORKSPACE}
+cd ${WORKSPACE}
+tar xvf ighs.android.thai.${BUILD_NUMBER}.tar
+rm ighs.android.thai.${BUILD_NUMBER}.tar
+
+chmod -R 755 ${WORKSPACE}
+
+./bumpdroidbuild.sh ${BUILD_NUMBER} Apps/Grocery/Droid/Grocery.Droid/IGHS.Droid.Thai/Properties/AndroidManifest.xml
+
+xbuild Apps/Grocery/Droid/Grocery.Droid/IGHS.Droid.Thai/IGHS.Droid.Thai.csproj /p:Configuration=Release /t:SignAndroidPackage
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/IGHS.Droid.Thai/bin/Release -name *-Signed.apk -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/Droid/Grocery.Droid/IGHS.Droid.Thai/bin/Release/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/IGHS-Android-Thailand-Release-${BUILD_NUMBER}.apk</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$ProjectName</arg1>
+        <arg2>IGHS-iOS-Maly-Release</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>cd /Users/hscbuild01/jenkins-slave/codebase/ENV/CUSTOM/IGHS-iOS-Malaysia-code
+git checkout develop
+git pull --prune
+git checkout $FeatureBranchName
+git reset --hard HEAD
+git pull
+git clean -f -d
+git submodule init
+git submodule update --init --recursive
+tar cf ../ighs.ios.mal.${BUILD_NUMBER}.tar .
+mv ../ighs.ios.mal.${BUILD_NUMBER}.tar ${WORKSPACE}
+cd ${WORKSPACE}
+tar xvf ighs.ios.mal.${BUILD_NUMBER}.tar
+rm ighs.ios.mal.${BUILD_NUMBER}.tar
+
+chmod -R 755 ${WORKSPACE}
+
+./bumpiosbuild.sh ${BUILD_NUMBER} Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/Info.plist
+
+security -v unlock-keychain -p ${keychain_password} &quot;/certs/login.keychain&quot;
+
+/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:Release|iPhone&quot; -p:Grocery.IGHS.Malaysia.iOS Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.sln
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/Release/ -name *.ipa -exec basename {} \;`
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/Release/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/IGHS-iOS-Malaysia-Release-${BUILD_NUMBER}.ipa
+
+cd ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/Release/
+
+zip -r IGHS-Mal-iOS-dSYM.zip *.dSYM
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/Release/IGHS-Mal-iOS-dSYM.zip ${WORKSPACE}/repo/${BUILD_NUMBER}/IGHS-Mal-iOS-dSYM.zip</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$ProjectName</arg1>
+        <arg2>IGHS-iOS-Thai-Release</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>cd /Users/hscbuild01/jenkins-slave/codebase/ENV/CUSTOM/IGHS-iOS-Thailand-code
+git checkout develop
+git pull --prune
+git checkout $FeatureBranchName
+git reset --hard HEAD
+git pull
+git clean -f -d
+git submodule init
+git submodule update --init --recursive
+tar cf ../ighs.ios.mal.${BUILD_NUMBER}.tar .
+mv ../ighs.ios.mal.${BUILD_NUMBER}.tar ${WORKSPACE}
+cd ${WORKSPACE}
+tar xvf ighs.ios.mal.${BUILD_NUMBER}.tar
+rm ighs.ios.mal.${BUILD_NUMBER}.tar
+
+chmod -R 755 ${WORKSPACE}
+
+./bumpiosbuild.sh ${BUILD_NUMBER} Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Thailand.iOS/Info.plist
+
+security -v unlock-keychain -p ${keychain_password} &quot;/certs/login.keychain&quot;
+
+/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:Release|iPhone&quot; -p:Grocery.IGHS.Thailand.iOS Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.sln
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Thailand.iOS/bin/iPhone/Release/  -name *.ipa -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Thailand.iOS/bin/iPhone/Release/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/IGHS-iOS-Thailand-Release-${BUILD_NUMBER}.ipa
+
+cd ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Thailand.iOS/bin/iPhone/Release/
+
+zip -r IGHS-Thai-iOS-dSYM.zip *.dSYM
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Thailand.iOS/bin/iPhone/Release/IGHS-Thai-iOS-dSYM.zip ${WORKSPACE}/repo/${BUILD_NUMBER}/IGHS-Thai-iOS-dSYM.zip</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$ProjectName</arg1>
+        <arg2>IGHS-iOS-Maly-Appstore</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>cd /Users/hscbuild01/jenkins-slave/codebase/ENV/CUSTOM/IGHS-iOS-Malaysia-code
+git checkout develop
+git pull --prune
+git checkout $FeatureBranchName
+git reset --hard HEAD
+git pull
+git clean -f -d
+git submodule init
+git submodule update --init --recursive
+tar cf ../ighs.ios.mal.${BUILD_NUMBER}.tar .
+mv ../ighs.ios.mal.${BUILD_NUMBER}.tar ${WORKSPACE}
+cd ${WORKSPACE}
+tar xvf ighs.ios.mal.${BUILD_NUMBER}.tar
+rm ighs.ios.mal.${BUILD_NUMBER}.tar
+
+chmod -R 755 ${WORKSPACE}
+
+security -v unlock-keychain -p ${keychain_password} &quot;/certs/login.keychain&quot;
+
+/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:AppStore|iPhone&quot; -p:Grocery.IGHS.Malaysia.iOS Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.sln
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/AppStore/ -name *.app -exec basename {} \;`
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/AppStore/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/${ENT_BUILD}
+
+
+cd ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/AppStore/
+
+zip -r IGHS-Mal-iOS-dSYM.zip . -i *.zip
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/AppStore/IGHS-Mal-iOS-dSYM.zip ${WORKSPACE}/repo/${BUILD_NUMBER}/IGHS-Mal-iOS-dSYM.zip
+
+tar cf ${WORKSPACE}/repo/${ENT_BUILD}.${BUILD_NUMBER}.tar ${WORKSPACE}/repo/${BUILD_NUMBER}
+
+cd ${WORKSPACE}/repo
+
+bzip2 ${ENT_BUILD}.${BUILD_NUMBER}.tar
+
+cd ${WORKSPACE}/repo/${BUILD_NUMBER}/
+
+rm -rf *</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$ProjectName</arg1>
+        <arg2>IGHS-iOS-Thai-Appstore</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>cd /Users/hscbuild01/jenkins-slave/codebase/ENV/CUSTOM/IGHS-iOS-Thailand-code
+git checkout develop
+git pull --prune
+git checkout $FeatureBranchName
+git reset --hard HEAD
+git pull
+git clean -f -d
+git submodule init
+git submodule update --init --recursive
+tar cf ../ighs.ios.mal.${BUILD_NUMBER}.tar .
+mv ../ighs.ios.mal.${BUILD_NUMBER}.tar ${WORKSPACE}
+cd ${WORKSPACE}
+tar xvf ighs.ios.mal.${BUILD_NUMBER}.tar
+rm ighs.ios.mal.${BUILD_NUMBER}.tar
+
+chmod -R 755 ${WORKSPACE}
+
+security -v unlock-keychain -p ${keychain_password} &quot;/certs/login.keychain&quot;
+
+/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:AppStore|iPhone&quot; -p:Grocery.IGHS.Thailand.iOS Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.sln
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Thailand.iOS/bin/iPhone/AppStore/  -name *.app -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Thailand.iOS/bin/iPhone/AppStore/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/${ENT_BUILD}
+
+
+cd ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Thailand.iOS/bin/iPhone/AppStore/
+
+zip -r IGHS-Thai-iOS-dSYM.zip . -i *.zip
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Thailand.iOS/bin/iPhone/AppStore/IGHS-Thai-iOS-dSYM.zip ${WORKSPACE}/repo/${BUILD_NUMBER}/IGHS-Thai-iOS-dSYM.zip
+
+
+tar cf ${WORKSPACE}/repo/${ENT_BUILD}.${BUILD_NUMBER}.tar ${WORKSPACE}/repo/${BUILD_NUMBER}
+
+cd ${WORKSPACE}/repo
+
+bzip2 ${ENT_BUILD}.${BUILD_NUMBER}.tar
+
+cd ${WORKSPACE}/repo/${BUILD_NUMBER}/
+
+rm -rf *</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>repo/${BUILD_NUMBER}/*.apk, repo/${BUILD_NUMBER}/*.ipa, repo/${BUILD_NUMBER}/*.zip, **/*.bz2</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+      <varPasswordPairs>
+        <varPasswordPair var="keychain_password" password="uBMzzhUHlpzwWSyOpdAtob928bD4D19+86Fv08zi1w4="/>
+      </varPasswordPairs>
+    </com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+  </buildWrappers>
+</project>

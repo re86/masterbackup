@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-06 08:34:06.662 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>12</number>
+  </original>
+  <md5sum>a3dfcb0654b433f8eef6977010a7e9dd</md5sum>
+  <fileName>dc_android_sanity.xml</fileName>
+  <usages>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>26</ranges>
+    </entry>
+    <entry>
+      <string>Configure-DC-Android-sanity</string>
+      <ranges>34-35</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

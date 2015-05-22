@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-19 13:16:00.821 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>18</number>
+  </original>
+  <md5sum>2b2980b6b762c0b0b33a15c5b346f844</md5sum>
+  <fileName>dev_ighsiosmal_force.xml</fileName>
+  <usages>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>25</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

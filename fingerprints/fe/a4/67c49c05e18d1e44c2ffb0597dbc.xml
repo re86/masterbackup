@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-27 13:50:35.561 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>78</number>
+  </original>
+  <md5sum>fea467c49c05e18d1e44c2ffb0597dbc</md5sum>
+  <fileName>updaterepo.sh</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-Android-Malaysia-0-Poll-DEV-CI</string>
+      <ranges>2026</ranges>
+    </entry>
+    <entry>
+      <string>CCube-Sanity-Build</string>
+      <ranges>4</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-Android-Thailand-0-Poll-DEV-CI</string>
+      <ranges>2023</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-21 12:47:07.965 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>22</number>
+  </original>
+  <md5sum>d89404739dc06cc6aa21f12be5ccdd69</md5sum>
+  <fileName>rel_ghsandroid_force.xml</fileName>
+  <usages>
+    <entry>
+      <string>Force-CI-build (release branch)</string>
+      <ranges>15-18</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-15 12:00:26.670 UTC</timestamp>
+  <original>
+    <name>DigitalClubcard-Android-Build-REL-CI</name>
+    <number>74</number>
+  </original>
+  <md5sum>b4298ca1f98b48654e83ed75eac34ad9</md5sum>
+  <fileName>DC-Android-rel-PPE-74.apk</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-Android-Upload-REL-CI</string>
+      <ranges>49</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-Android-Build-REL-CI</string>
+      <ranges>74</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-09 19:33:20.130 UTC</timestamp>
+  <original>
+    <name>IGHS-iOS-Malaysia-Analysis_n</name>
+    <number>139</number>
+  </original>
+  <md5sum>4e74b0be233dc85632d82b79bfb5ef90</md5sum>
+  <fileName>ighs.ios.mal.9fb185a2ed9b30927fe46076844a1b5d7375c052.139.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iOS-Malaysia-Build_n</string>
+      <ranges>103</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

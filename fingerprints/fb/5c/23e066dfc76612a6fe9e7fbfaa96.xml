@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-12 20:44:43.0 UTC</timestamp>
+  <original>
+    <name>DC-Android-Test_Build_new</name>
+    <number>7</number>
+  </original>
+  <md5sum>fb5c23e066dfc76612a6fe9e7fbfaa96</md5sum>
+  <fileName>Clubcard-Android-PPE-7.apk</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device3</string>
+      <ranges>7</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device3</string>
+      <ranges>7</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

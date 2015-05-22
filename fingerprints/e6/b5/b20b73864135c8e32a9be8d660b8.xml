@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-20 07:20:49.715 UTC</timestamp>
+  <original>
+    <name>DigitalClubcard-iOS-Build-DEV-CI</name>
+    <number>577</number>
+  </original>
+  <md5sum>e6b5b20b73864135c8e32a9be8d660b8</md5sum>
+  <fileName>Clubcard-iOS-LIVE-590.ipa</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-iOS-Upload-DEV-CI</string>
+      <ranges>500</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

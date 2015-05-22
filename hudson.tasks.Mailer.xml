@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.tasks.Mailer_-DescriptorImpl plugin="mailer@1.10">
+  <hudsonUrl>http://192.168.2.100:8001/</hudsonUrl>
+  <smtpAuthUsername>tescomce.alert@gmail.com</smtpAuthUsername>
+  <smtpAuthPassword>Z9K1Q4g9b+087vrOZFgf/ads9OicznNaNdG/KWenbMUWxMFgCAM8mgtK0S92/GR3</smtpAuthPassword>
+  <replyToAddress>tescomce.alert@gmail.com</replyToAddress>
+  <smtpHost>smtp.gmail.com</smtpHost>
+  <useSsl>true</useSsl>
+  <smtpPort>465</smtpPort>
+  <charset>UTF-8</charset>
+</hudson.tasks.Mailer_-DescriptorImpl>

@@ -1,0 +1,1017 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson>
+  <disabledAdministrativeMonitors>
+    <string>hudson.diagnosis.ReverseProxySetupMonitor</string>
+  </disabledAdministrativeMonitors>
+  <version>1.577</version>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <useSecurity>true</useSecurity>
+  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Hudson.Administer:mathuraa</permission>
+    <permission>hudson.model.Hudson.Administer:re86</permission>
+    <permission>hudson.model.Hudson.Read:Deekshith</permission>
+    <permission>hudson.model.Hudson.Read:Kritika</permission>
+    <permission>hudson.model.Hudson.Read:Nirekshitha</permission>
+    <permission>hudson.model.Hudson.Read:aishwat</permission>
+    <permission>hudson.model.Hudson.Read:amar</permission>
+    <permission>hudson.model.Hudson.Read:ananthprasad</permission>
+    <permission>hudson.model.Hudson.Read:aniket.kulkarni</permission>
+    <permission>hudson.model.Hudson.Read:anunitraushan</permission>
+    <permission>hudson.model.Hudson.Read:chethan.jeppu</permission>
+    <permission>hudson.model.Hudson.Read:debangana</permission>
+    <permission>hudson.model.Hudson.Read:gc04</permission>
+    <permission>hudson.model.Hudson.Read:karthick</permission>
+    <permission>hudson.model.Hudson.Read:karthikt</permission>
+    <permission>hudson.model.Hudson.Read:lei</permission>
+    <permission>hudson.model.Hudson.Read:ly88</permission>
+    <permission>hudson.model.Hudson.Read:maheswaran.p</permission>
+    <permission>hudson.model.Hudson.Read:malathi</permission>
+    <permission>hudson.model.Hudson.Read:manjeet</permission>
+    <permission>hudson.model.Hudson.Read:meenusaproo</permission>
+    <permission>hudson.model.Hudson.Read:msuresh</permission>
+    <permission>hudson.model.Hudson.Read:nithya</permission>
+    <permission>hudson.model.Hudson.Read:ravindra.saxena</permission>
+    <permission>hudson.model.Hudson.Read:renuka</permission>
+    <permission>hudson.model.Hudson.Read:sakthya</permission>
+    <permission>hudson.model.Hudson.Read:shadhan</permission>
+    <permission>hudson.model.Hudson.Read:sharon</permission>
+    <permission>hudson.model.Hudson.Read:shashijb</permission>
+    <permission>hudson.model.Hudson.Read:shivaprasada</permission>
+    <permission>hudson.model.Hudson.Read:shreesha</permission>
+    <permission>hudson.model.Hudson.Read:skumar</permission>
+    <permission>hudson.model.Hudson.Read:sudar</permission>
+    <permission>hudson.model.Hudson.Read:sukesh</permission>
+    <permission>hudson.model.Hudson.Read:tapas.saha</permission>
+    <permission>hudson.model.Hudson.Read:ujjawal</permission>
+    <permission>hudson.model.Hudson.Read:vc75</permission>
+    <permission>hudson.model.Hudson.Read:vijay</permission>
+    <permission>hudson.model.Hudson.Read:vishnu</permission>
+    <permission>hudson.model.Hudson.Read:vm05</permission>
+    <permission>hudson.model.Hudson.Read:yashwantsingh</permission>
+    <permission>hudson.model.Hudson.RunScripts:Deekshith</permission>
+    <permission>hudson.model.Hudson.RunScripts:Kritika</permission>
+    <permission>hudson.model.Hudson.RunScripts:Nirekshitha</permission>
+    <permission>hudson.model.Hudson.RunScripts:aishwat</permission>
+    <permission>hudson.model.Hudson.RunScripts:amar</permission>
+    <permission>hudson.model.Hudson.RunScripts:ananthprasad</permission>
+    <permission>hudson.model.Hudson.RunScripts:aniket.kulkarni</permission>
+    <permission>hudson.model.Hudson.RunScripts:anunitraushan</permission>
+    <permission>hudson.model.Hudson.RunScripts:chethan.jeppu</permission>
+    <permission>hudson.model.Hudson.RunScripts:debangana</permission>
+    <permission>hudson.model.Hudson.RunScripts:gc04</permission>
+    <permission>hudson.model.Hudson.RunScripts:karthick</permission>
+    <permission>hudson.model.Hudson.RunScripts:karthikt</permission>
+    <permission>hudson.model.Hudson.RunScripts:lei</permission>
+    <permission>hudson.model.Hudson.RunScripts:ly88</permission>
+    <permission>hudson.model.Hudson.RunScripts:maheswaran.p</permission>
+    <permission>hudson.model.Hudson.RunScripts:malathi</permission>
+    <permission>hudson.model.Hudson.RunScripts:manjeet</permission>
+    <permission>hudson.model.Hudson.RunScripts:meenusaproo</permission>
+    <permission>hudson.model.Hudson.RunScripts:msuresh</permission>
+    <permission>hudson.model.Hudson.RunScripts:nithya</permission>
+    <permission>hudson.model.Hudson.RunScripts:ravindra.saxena</permission>
+    <permission>hudson.model.Hudson.RunScripts:renuka</permission>
+    <permission>hudson.model.Hudson.RunScripts:sakthya</permission>
+    <permission>hudson.model.Hudson.RunScripts:shadhan</permission>
+    <permission>hudson.model.Hudson.RunScripts:sharon</permission>
+    <permission>hudson.model.Hudson.RunScripts:shashijb</permission>
+    <permission>hudson.model.Hudson.RunScripts:shivaprasada</permission>
+    <permission>hudson.model.Hudson.RunScripts:shreesha</permission>
+    <permission>hudson.model.Hudson.RunScripts:skumar</permission>
+    <permission>hudson.model.Hudson.RunScripts:sudar</permission>
+    <permission>hudson.model.Hudson.RunScripts:sukesh</permission>
+    <permission>hudson.model.Hudson.RunScripts:tapas.saha</permission>
+    <permission>hudson.model.Hudson.RunScripts:ujjawal</permission>
+    <permission>hudson.model.Hudson.RunScripts:vc75</permission>
+    <permission>hudson.model.Hudson.RunScripts:vijay</permission>
+    <permission>hudson.model.Hudson.RunScripts:vishnu</permission>
+    <permission>hudson.model.Hudson.RunScripts:vm05</permission>
+    <permission>hudson.model.Hudson.RunScripts:yashwantsingh</permission>
+    <permission>hudson.model.Item.Build:Deekshith</permission>
+    <permission>hudson.model.Item.Build:Kritika</permission>
+    <permission>hudson.model.Item.Build:Nirekshitha</permission>
+    <permission>hudson.model.Item.Build:aishwat</permission>
+    <permission>hudson.model.Item.Build:amar</permission>
+    <permission>hudson.model.Item.Build:ananthprasad</permission>
+    <permission>hudson.model.Item.Build:aniket.kulkarni</permission>
+    <permission>hudson.model.Item.Build:anunitraushan</permission>
+    <permission>hudson.model.Item.Build:chethan.jeppu</permission>
+    <permission>hudson.model.Item.Build:debangana</permission>
+    <permission>hudson.model.Item.Build:gc04</permission>
+    <permission>hudson.model.Item.Build:karthick</permission>
+    <permission>hudson.model.Item.Build:karthikt</permission>
+    <permission>hudson.model.Item.Build:lei</permission>
+    <permission>hudson.model.Item.Build:ly88</permission>
+    <permission>hudson.model.Item.Build:maheswaran.p</permission>
+    <permission>hudson.model.Item.Build:malathi</permission>
+    <permission>hudson.model.Item.Build:manjeet</permission>
+    <permission>hudson.model.Item.Build:meenusaproo</permission>
+    <permission>hudson.model.Item.Build:msuresh</permission>
+    <permission>hudson.model.Item.Build:nithya</permission>
+    <permission>hudson.model.Item.Build:ravindra.saxena</permission>
+    <permission>hudson.model.Item.Build:renuka</permission>
+    <permission>hudson.model.Item.Build:sakthya</permission>
+    <permission>hudson.model.Item.Build:shadhan</permission>
+    <permission>hudson.model.Item.Build:sharon</permission>
+    <permission>hudson.model.Item.Build:shashijb</permission>
+    <permission>hudson.model.Item.Build:shivaprasada</permission>
+    <permission>hudson.model.Item.Build:shreesha</permission>
+    <permission>hudson.model.Item.Build:skumar</permission>
+    <permission>hudson.model.Item.Build:sudar</permission>
+    <permission>hudson.model.Item.Build:sukesh</permission>
+    <permission>hudson.model.Item.Build:tapas.saha</permission>
+    <permission>hudson.model.Item.Build:ujjawal</permission>
+    <permission>hudson.model.Item.Build:vc75</permission>
+    <permission>hudson.model.Item.Build:vijay</permission>
+    <permission>hudson.model.Item.Build:vishnu</permission>
+    <permission>hudson.model.Item.Build:vm05</permission>
+    <permission>hudson.model.Item.Build:yashwantsingh</permission>
+    <permission>hudson.model.Item.Read:Deekshith</permission>
+    <permission>hudson.model.Item.Read:Kritika</permission>
+    <permission>hudson.model.Item.Read:Nirekshitha</permission>
+    <permission>hudson.model.Item.Read:aishwat</permission>
+    <permission>hudson.model.Item.Read:amar</permission>
+    <permission>hudson.model.Item.Read:ananthprasad</permission>
+    <permission>hudson.model.Item.Read:aniket.kulkarni</permission>
+    <permission>hudson.model.Item.Read:anunitraushan</permission>
+    <permission>hudson.model.Item.Read:chethan.jeppu</permission>
+    <permission>hudson.model.Item.Read:debangana</permission>
+    <permission>hudson.model.Item.Read:gc04</permission>
+    <permission>hudson.model.Item.Read:karthick</permission>
+    <permission>hudson.model.Item.Read:karthikt</permission>
+    <permission>hudson.model.Item.Read:lei</permission>
+    <permission>hudson.model.Item.Read:ly88</permission>
+    <permission>hudson.model.Item.Read:maheswaran.p</permission>
+    <permission>hudson.model.Item.Read:malathi</permission>
+    <permission>hudson.model.Item.Read:manjeet</permission>
+    <permission>hudson.model.Item.Read:meenusaproo</permission>
+    <permission>hudson.model.Item.Read:msuresh</permission>
+    <permission>hudson.model.Item.Read:nithya</permission>
+    <permission>hudson.model.Item.Read:ravindra.saxena</permission>
+    <permission>hudson.model.Item.Read:renuka</permission>
+    <permission>hudson.model.Item.Read:sakthya</permission>
+    <permission>hudson.model.Item.Read:shadhan</permission>
+    <permission>hudson.model.Item.Read:sharon</permission>
+    <permission>hudson.model.Item.Read:shashijb</permission>
+    <permission>hudson.model.Item.Read:shivaprasada</permission>
+    <permission>hudson.model.Item.Read:shreesha</permission>
+    <permission>hudson.model.Item.Read:skumar</permission>
+    <permission>hudson.model.Item.Read:sudar</permission>
+    <permission>hudson.model.Item.Read:sukesh</permission>
+    <permission>hudson.model.Item.Read:tapas.saha</permission>
+    <permission>hudson.model.Item.Read:ujjawal</permission>
+    <permission>hudson.model.Item.Read:vc75</permission>
+    <permission>hudson.model.Item.Read:vijay</permission>
+    <permission>hudson.model.Item.Read:vishnu</permission>
+    <permission>hudson.model.Item.Read:vm05</permission>
+    <permission>hudson.model.Item.Read:yashwantsingh</permission>
+  </authorizationStrategy>
+  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
+    <disableSignup>false</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+  </securityRealm>
+  <disableRememberMe>false</disableRememberMe>
+  <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
+  <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
+  <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.1">
+    <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
+  </markupFormatter>
+  <jdks/>
+  <viewsTabBar class="hudson.views.DefaultViewsTabBar"/>
+  <myViewsTabBar class="hudson.views.DefaultMyViewsTabBar"/>
+  <clouds/>
+  <slaves>
+    <slave>
+      <name>hsc-build-01</name>
+      <description></description>
+      <remoteFS>/Users/hscbuild01/jenkins-slave</remoteFS>
+      <numExecutors>4</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>hsc-build</label>
+      <nodeProperties/>
+      <userId>dwarakaa</userId>
+    </slave>
+    <slave>
+      <name>hsc-build-02</name>
+      <description></description>
+      <remoteFS>/Users/hscbuild01/jenkins-slave</remoteFS>
+      <numExecutors>4</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>hsc-build</label>
+      <nodeProperties/>
+      <userId>dwarakaa</userId>
+    </slave>
+    <slave>
+      <name>DC-iOS-vm</name>
+      <description></description>
+      <remoteFS>/Users/tesco/jenkins-slave</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>vm</label>
+      <nodeProperties/>
+      <userId>re86</userId>
+    </slave>
+    <slave>
+      <name>DC-ANDROID-vm</name>
+      <description></description>
+      <remoteFS>/Users/tesco/jenkins-slave</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>vm</label>
+      <nodeProperties/>
+      <userId>re86</userId>
+    </slave>
+    <slave>
+      <name>prabhu-lap</name>
+      <description></description>
+      <remoteFS>/Users/prabhuraj/jenkins-slave</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label></label>
+      <nodeProperties/>
+      <userId>re86</userId>
+    </slave>
+    <slave>
+      <name>GHS-iPHONE-vm</name>
+      <description></description>
+      <remoteFS>/Users/tesco/jenkins-slave</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>vm</label>
+      <nodeProperties/>
+      <userId>re86</userId>
+    </slave>
+    <slave>
+      <name>GHS-ANDROID-vm</name>
+      <description></description>
+      <remoteFS>/Users/tesco/jenkins-slave</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>vm</label>
+      <nodeProperties/>
+      <userId>re86</userId>
+    </slave>
+    <slave>
+      <name>GHS-iPAD-vm</name>
+      <description></description>
+      <remoteFS>/Users/tescomobilehsc/jenkins-slave</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>vm</label>
+      <nodeProperties/>
+      <userId>qg86</userId>
+    </slave>
+    <slave>
+      <name>hsc-sca-02</name>
+      <description></description>
+      <remoteFS>D:\jenkins-slave</remoteFS>
+      <numExecutors>4</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>hsc-sca</label>
+      <nodeProperties>
+        <hudson.slaves.EnvironmentVariablesNodeProperty>
+          <envVars serialization="custom">
+            <unserializable-parents/>
+            <tree-map>
+              <default>
+                <comparator class="hudson.util.CaseInsensitiveComparator"/>
+              </default>
+              <int>1</int>
+              <string>JAVA_HOME</string>
+              <string>C:\Program Files\Java\jdk1.8.0_31</string>
+            </tree-map>
+          </envVars>
+        </hudson.slaves.EnvironmentVariablesNodeProperty>
+        <hudson.tools.ToolLocationNodeProperty>
+          <locations>
+            <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+              <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
+              <name>Default</name>
+              <home>C:\Program Files (x86)\Git\cmd\git.exe</home>
+            </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+          </locations>
+        </hudson.tools.ToolLocationNodeProperty>
+      </nodeProperties>
+      <userId>re86</userId>
+    </slave>
+    <slave>
+      <name>hsc-sca-01</name>
+      <description></description>
+      <remoteFS>D:\jenkins-slave</remoteFS>
+      <numExecutors>3</numExecutors>
+      <mode>EXCLUSIVE</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>hsc-sca</label>
+      <nodeProperties>
+        <hudson.slaves.EnvironmentVariablesNodeProperty>
+          <envVars serialization="custom">
+            <unserializable-parents/>
+            <tree-map>
+              <default>
+                <comparator class="hudson.util.CaseInsensitiveComparator"/>
+              </default>
+              <int>1</int>
+              <string>JAVA_HOME</string>
+              <string>C:\Program Files\Java\jdk1.7.0_60</string>
+            </tree-map>
+          </envVars>
+        </hudson.slaves.EnvironmentVariablesNodeProperty>
+        <hudson.tools.ToolLocationNodeProperty>
+          <locations>
+            <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+              <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
+              <name>Default</name>
+              <home>C:\Program Files\Git\cmd\git.exe</home>
+            </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+          </locations>
+        </hudson.tools.ToolLocationNodeProperty>
+      </nodeProperties>
+      <userId>dwarakaa</userId>
+    </slave>
+    <slave>
+      <name>DC-iOS-vm1</name>
+      <description></description>
+      <remoteFS>/Users/tesco/jenkins-slave</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>vm</label>
+      <nodeProperties/>
+      <userId>re86</userId>
+    </slave>
+    <slave>
+      <name>CommonVM</name>
+      <description></description>
+      <remoteFS>/Users/tesco/jenkins-slave</remoteFS>
+      <numExecutors>1</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>vm</label>
+      <nodeProperties/>
+      <userId>re86</userId>
+    </slave>
+    <slave>
+      <name>mobile-sca</name>
+      <description></description>
+      <remoteFS>D:\jenkins-slave</remoteFS>
+      <numExecutors>4</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>mobile-sca</label>
+      <nodeProperties>
+        <hudson.slaves.EnvironmentVariablesNodeProperty>
+          <envVars serialization="custom">
+            <unserializable-parents/>
+            <tree-map>
+              <default>
+                <comparator class="hudson.util.CaseInsensitiveComparator"/>
+              </default>
+              <int>1</int>
+              <string>JAVA_HOME</string>
+              <string>C:\Program Files\Java\jdk1.7.0_75</string>
+            </tree-map>
+          </envVars>
+        </hudson.slaves.EnvironmentVariablesNodeProperty>
+        <hudson.tools.ToolLocationNodeProperty>
+          <locations>
+            <hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+              <type>hudson.plugins.git.GitTool$DescriptorImpl</type>
+              <name>Default</name>
+              <home>C:\Program Files (x86)\Git\cmd\git.exe</home>
+            </hudson.tools.ToolLocationNodeProperty_-ToolLocation>
+          </locations>
+        </hudson.tools.ToolLocationNodeProperty>
+      </nodeProperties>
+      <userId>re86</userId>
+    </slave>
+    <slave>
+      <name>hsc-build-03</name>
+      <description></description>
+      <remoteFS>/Users/hscbuild01/jenkins-slave</remoteFS>
+      <numExecutors>4</numExecutors>
+      <mode>NORMAL</mode>
+      <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+      <launcher class="hudson.slaves.JNLPLauncher"/>
+      <label>hsc-build</label>
+      <nodeProperties/>
+      <userId>re86</userId>
+    </slave>
+  </slaves>
+  <quietPeriod>5</quietPeriod>
+  <scmCheckoutRetryCount>0</scmCheckoutRetryCount>
+  <views>
+    <hudson.model.AllView>
+      <owner class="hudson" reference="../../.."/>
+      <name>All</name>
+      <description>All Jenkins jobs are visible in this view.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+    </hudson.model.AllView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Regression Jobs</name>
+      <description>Regression Test jobs. Manually trigger is allowed here.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>DC-Android-Regression_Build</string>
+        <string>DC-Android-Regression_Test</string>
+        <string>DC-iOS-Regression-Test</string>
+        <string>DC-iOS-Regression-Test_vm1</string>
+        <string>DC-iOS-Regression-Test_vm2</string>
+        <string>GHS-Android-Tablet-Regression-Build</string>
+        <string>GHS-iPad-Regression-Test</string>
+        <string>GHS-iPhone-Regression-Build</string>
+        <string>IGHS-iOS-Malaysia-Regression-Test</string>
+        <string>IGHS-iOS-Thailand-Regression-Test</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <includeRegex>.*-Regression.*</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Nightly-Builds</name>
+      <description>Builds are generated from develop branch every night. Donot trigger any jobs manually from this tab.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../listView/jobNames/comparator"/>
+        <string>GHS-Android-Analysis_n</string>
+        <string>GHS-Android-Build_n</string>
+        <string>GHS-iOS-Analysis_n</string>
+        <string>GHS-iOS-Build_n</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <includeRegex>.*_n</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>CI-DEV</name>
+      <description>Builds are generated from develop branch. Donot trigger any jobs manually from this tab.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>DigitalClubcard-Android-0-Poll-DEV-CI</string>
+        <string>DigitalClubcard-Android-Analysis-DEV-CI</string>
+        <string>DigitalClubcard-Android-Build-DEV-CI</string>
+        <string>DigitalClubcard-Android-Upload-DEV-CI</string>
+        <string>DigitalClubcard-iOS-0-Poll-DEV-CI</string>
+        <string>DigitalClubcard-iOS-Analysis-DEV-CI</string>
+        <string>DigitalClubcard-iOS-Build-DEV-CI</string>
+        <string>DigitalClubcard-iOS-Upload-DEV-CI</string>
+        <string>DigitalClubcard-iOS-Upload-Insight-DEV-CI</string>
+        <string>GHS-Android-0-Poll-DEV-CI</string>
+        <string>GHS-Android-Analysis-DEV-CI</string>
+        <string>GHS-Android-Build-DEV-CI</string>
+        <string>GHS-Android-Upload-DEV-CI</string>
+        <string>GHS-iOS-0-Poll-DEV-CI</string>
+        <string>GHS-iOS-Analysis-DEV-CI</string>
+        <string>GHS-iOS-Build-DEV-CI</string>
+        <string>GHS-iOS-Upload-DEV-CI</string>
+        <string>GHS-iOS-Upload-Insight-DEV-CI</string>
+        <string>IGHS-Android-Malaysia-0-Poll-DEV-CI</string>
+        <string>IGHS-Android-Malaysia-Analysis-DEV-CI</string>
+        <string>IGHS-Android-Malaysia-Build-DEV-CI</string>
+        <string>IGHS-Android-Malaysia-Upload-DEV-CI</string>
+        <string>IGHS-Android-Thailand-0-Poll-DEV-CI</string>
+        <string>IGHS-Android-Thailand-Analysis-DEV-CI</string>
+        <string>IGHS-Android-Thailand-Build-DEV-CI</string>
+        <string>IGHS-Android-Thailand-Upload-DEV-CI</string>
+        <string>IGHS-iOS-Malaysia-0-Poll-DEV-CI</string>
+        <string>IGHS-iOS-Malaysia-Analysis-DEV-CI</string>
+        <string>IGHS-iOS-Malaysia-Build-DEV-CI</string>
+        <string>IGHS-iOS-Malaysia-Upload-DEV-CI</string>
+        <string>IGHS-iOS-Thailand-0-Poll-DEV-CI</string>
+        <string>IGHS-iOS-Thailand-Analysis-DEV-CI</string>
+        <string>IGHS-iOS-Thailand-Build-DEV-CI</string>
+        <string>IGHS-iOS-Thailand-Upload-DEV-CI</string>
+        <string>MobiAssets-Android-0-Poll-DEV-CI</string>
+        <string>MobiAssets-Android-Analysis-DEV-CI</string>
+        <string>MobiAssets-Android-Build-DEV-CI</string>
+        <string>MobiAssets-Android-Upload-DEV-CI</string>
+        <string>MobiAssets-iOS-0-Poll-DEV-CI</string>
+        <string>MobiAssets-iOS-Analysis-DEV-CI</string>
+        <string>MobiAssets-iOS-Build-DEV-CI</string>
+        <string>MobiAssets-iOS-Upload-DEV-CI</string>
+        <string>StoreEmpower-Android-0-Poll-DEV-CI</string>
+        <string>StoreEmpower-Android-Analysis-DEV-CI</string>
+        <string>StoreEmpower-Android-Build-DEV-CI</string>
+        <string>StoreEmpower-Android-Upload-DEV-CI</string>
+        <string>StoreEmpower-iOS-0-Poll-DEV-CI</string>
+        <string>StoreEmpower-iOS-Analysis-DEV-CI</string>
+        <string>StoreEmpower-iOS-Build-DEV-CI</string>
+        <string>StoreEmpower-iOS-Upload-DEV-CI</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView plugin="build-monitor-plugin@1.5+build.123">
+      <owner class="hudson" reference="../../.."/>
+      <name>CI - DEV - Build Status</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>DigitalClubcard-Android-Analysis-DEV-CI</string>
+        <string>DigitalClubcard-Android-Build-DEV-CI</string>
+        <string>DigitalClubcard-Android-Upload-DEV-CI</string>
+        <string>DigitalClubcard-iOS-Analysis-DEV-CI</string>
+        <string>DigitalClubcard-iOS-Build-DEV-CI</string>
+        <string>DigitalClubcard-iOS-Upload-DEV-CI</string>
+        <string>GHS-Android-Analysis-DEV-CI</string>
+        <string>GHS-Android-Build-DEV-CI</string>
+        <string>GHS-Android-Upload-DEV-CI</string>
+        <string>GHS-iOS-Analysis-DEV-CI</string>
+        <string>GHS-iOS-Build-DEV-CI</string>
+        <string>GHS-iOS-Upload-DEV-CI</string>
+        <string>IGHS-Android-Malaysia-Analysis-DEV-CI</string>
+        <string>IGHS-Android-Malaysia-Build-DEV-CI</string>
+        <string>IGHS-Android-Malaysia-Upload-DEV-CI</string>
+        <string>IGHS-Android-Thailand-Analysis-DEV-CI</string>
+        <string>IGHS-Android-Thailand-Build-DEV-CI</string>
+        <string>IGHS-Android-Thailand-Upload-DEV-CI</string>
+        <string>IGHS-iOS-Malaysia-Analysis-DEV-CI</string>
+        <string>IGHS-iOS-Malaysia-Build-DEV-CI</string>
+        <string>IGHS-iOS-Malaysia-Upload-DEV-CI</string>
+        <string>IGHS-iOS-Thailand-Analysis-DEV-CI</string>
+        <string>IGHS-iOS-Thailand-Build-DEV-CI</string>
+        <string>IGHS-iOS-Thailand-Upload-DEV-CI</string>
+        <string>MobiAssets-Android-Analysis-DEV-CI</string>
+        <string>MobiAssets-Android-Build-DEV-CI</string>
+        <string>MobiAssets-Android-Upload-DEV-CI</string>
+        <string>MobiAssets-iOS-Analysis-DEV-CI</string>
+        <string>MobiAssets-iOS-Build-DEV-CI</string>
+        <string>MobiAssets-iOS-Upload-DEV-CI</string>
+        <string>StoreEmpower-Android-Analysis-DEV-CI</string>
+        <string>StoreEmpower-Android-Build-DEV-CI</string>
+        <string>StoreEmpower-Android-Upload-DEV-CI</string>
+        <string>StoreEmpower-iOS-Analysis-DEV-CI</string>
+        <string>StoreEmpower-iOS-Build-DEV-CI</string>
+        <string>StoreEmpower-iOS-Upload-DEV-CI</string>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <recurse>false</recurse>
+      <order class="com.smartcodeltd.jenkinsci.plugins.buildmonitor.order.ByDisplayName"/>
+    </com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>DONOT USE</name>
+      <description>DONOT use this tab. This is for CI Admin use. Donot trigger any of the below jobs</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView/jobNames/comparator"/>
+        <string>DigitalClubcard-Android-0-POLL</string>
+        <string>DigitalClubcard-Android-BUILD</string>
+        <string>DigitalClubcard-Android-SCA</string>
+        <string>SendMail</string>
+        <string>Test-Change-Release-Branch</string>
+        <string>Test-DC-Android-Analysis</string>
+        <string>Test-DC-Android-Build</string>
+        <string>Test-DC-Android-Poll</string>
+        <string>testpoll</string>
+        <string>testpollnew</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>CI-REL</name>
+      <description>Builds are generated from release branch. Donot trigger any jobs manually from this tab.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView/jobNames/comparator"/>
+        <string>DigitalClubcard-Android-Upload-REL-CI</string>
+        <string>DigitalClubcard-iOS-Upload-REL-CI</string>
+        <string>GHS-iOS-Upload-Insight-REL-CI</string>
+        <string>IGHS-Android-Malaysia-0-Poll-REL-CI</string>
+        <string>IGHS-Android-Malaysia-Build-REL-CI</string>
+        <string>IGHS-Android-Malaysia-Upload-REL-CI</string>
+        <string>IGHS-Android-Thailand-0-Poll-REL-CI</string>
+        <string>IGHS-Android-Thailand-Build-REL-CI</string>
+        <string>IGHS-Android-Thailand-Upload-REL-CI</string>
+        <string>IGHS-iOS-Malaysia-0-Poll-REL-CI</string>
+        <string>IGHS-iOS-Malaysia-Build-REL-CI</string>
+        <string>IGHS-iOS-Malaysia-Upload-REL-CI</string>
+        <string>IGHS-iOS-Thailand-0-Poll-REL-CI</string>
+        <string>IGHS-iOS-Thailand-Build-REL-CI</string>
+        <string>IGHS-iOS-Thailand-Upload-REL-CI</string>
+        <string>MobiAssets-Android-0-Poll-REL-CI</string>
+        <string>MobiAssets-Android-Build-REL-CI</string>
+        <string>MobiAssets-Android-Upload-REL-CI</string>
+        <string>MobiAssets-iOS-0-Poll-REL-CI</string>
+        <string>MobiAssets-iOS-Build-REL-CI</string>
+        <string>MobiAssets-iOS-Upload-REL-CI</string>
+        <string>StoreEmpower-Android-0-Poll-REL-CI</string>
+        <string>StoreEmpower-Android-Build-REL-CI</string>
+        <string>StoreEmpower-Android-Upload-REL-CI</string>
+        <string>StoreEmpower-iOS-0-Poll-REL-CI</string>
+        <string>StoreEmpower-iOS-Build-REL-CI</string>
+        <string>StoreEmpower-iOS-Upload-REL-CI</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <includeRegex>.*REL-CI</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>CI-MAS</name>
+      <description>Builds are generated from master branch. Donot trigger any jobs manually from this tab.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView/jobNames/comparator"/>
+        <string>DigitalClubcard-Android-Build-PlayStore-CI</string>
+        <string>DigitalClubcard-iOS-Build-AppStore-CI</string>
+        <string>DigitalClubcard-iOS-Upload-Insight-LIVE-CI</string>
+        <string>GHS-Android-Build-PlayStore-CI</string>
+        <string>GHS-iOS-Build-AppStore-CI</string>
+        <string>GHS-iOS-Upload-Insight-LIVE-CI</string>
+        <string>IGHS-Android-Malaysia-0-Poll-LIVE-CI</string>
+        <string>IGHS-Android-Malaysia-Build-LIVE-CI</string>
+        <string>IGHS-Android-Malaysia-Build-PlayStore-CI</string>
+        <string>IGHS-Android-Thailand-0-Poll-LIVE-CI</string>
+        <string>IGHS-Android-Thailand-Build-LIVE-CI</string>
+        <string>IGHS-Android-Thailand-Build-PlayStore-CI</string>
+        <string>IGHS-iOS-Malaysia-0-Poll-LIVE-CI</string>
+        <string>IGHS-iOS-Malaysia-Build-AppStore-CI</string>
+        <string>IGHS-iOS-Malaysia-Build-LIVE-CI</string>
+        <string>IGHS-iOS-Thailand-0-Poll-LIVE-CI</string>
+        <string>IGHS-iOS-Thailand-Build-AppStore-CI</string>
+        <string>IGHS-iOS-Thailand-Build-LIVE-CI</string>
+        <string>MobiAssets-Android-0-Poll-LIVE-CI</string>
+        <string>MobiAssets-Android-Build-LIVE-CI</string>
+        <string>MobiAssets-Android-Upload-LIVE-CI</string>
+        <string>MobiAssets-iOS-0-Poll-LIVE-CI</string>
+        <string>MobiAssets-iOS-Build-LIVE-CI</string>
+        <string>MobiAssets-iOS-Upload-LIVE-CI</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <includeRegex>.*LIVE-CI</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>OnDemand-Builds</name>
+      <description>On Demand Build View  -  (dev-od is DEVELOP branch)  -  (rel-od is RELEASE branch)  -  (mas-od is MASTER branch) - Manual trigger is allowed.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>Custom-DC-Build</string>
+        <string>Custom-GHS-Build</string>
+        <string>Custom-IGHS-Build</string>
+        <string>DC-Android-Build-mas-od</string>
+        <string>DC-Android-Build-rel-od</string>
+        <string>DC-iOS-Build-mas-od</string>
+        <string>DC-iOS-Build-rel-od</string>
+        <string>GHS-Android-Build-mas-od</string>
+        <string>GHS-Android-Build-rel-od</string>
+        <string>GHS-iOS-Build-mas-od</string>
+        <string>GHS-iOS-Build-rel-od</string>
+        <string>IGHS-Android-Build-mas-od</string>
+        <string>IGHS-Android-Build-rel-od</string>
+        <string>IGHS-iOS-Build-mas-od</string>
+        <string>IGHS-iOS-Build-rel-od</string>
+        <string>MobiAssets-Android-Build-dev-od</string>
+        <string>MobiAssets-Android-Build-mas-od</string>
+        <string>MobiAssets-Android-Build-rel-od</string>
+        <string>MobiAssets-iOS-Build-dev-od</string>
+        <string>MobiAssets-iOS-Build-mas-od</string>
+        <string>MobiAssets-iOS-Build-rel-od</string>
+        <string>StoreEmpower-Android-Build-dev-od</string>
+        <string>StoreEmpower-iOS-Build-dev-od</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <includeRegex>.*-od</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Sanity Jobs</name>
+      <description>Sanity Test jobs. Manually trigger is allowed here.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>DC-Android-Sanity_Build</string>
+        <string>DC-Android-Sanity_Test</string>
+        <string>DC-iOS-Sanity_Build</string>
+        <string>DC-iOS-Sanity_Build_new</string>
+        <string>DC-iOS-Sanity_Test</string>
+        <string>DC-iOS-Sanity_Test_vm1</string>
+        <string>DC-iOS-Sanity_Test_vm2</string>
+        <string>GHS-iPad-Sanity_Build</string>
+        <string>GHS-iPad-Sanity_Test</string>
+        <string>GHS-iPhone-Sanity_Build</string>
+        <string>GHS-iPhone-Sanity_Test</string>
+        <string>IGHS-Android-Sanity_Build</string>
+        <string>IGHS-Android-Sanity_Test</string>
+        <string>IGHS-iPhone-Sanity_Build</string>
+        <string>IGHS-iPhone-Sanity_Test</string>
+        <string>StoreEmpower-Android-Sanity_Build</string>
+        <string>StoreEmpower-Android-Sanity_Test</string>
+        <string>StoreEmpower-iOS-Sanity_Build</string>
+        <string>StoreEmpower-iOS-Sanity_Test</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <includeRegex>.*-Sanity_.*</includeRegex>
+      <recurse>false</recurse>
+    </listView>
+    <au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView plugin="build-pipeline-plugin@1.4.3">
+      <owner class="hudson" reference="../../.."/>
+      <name>Mobile-Build-Pipeline</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <gridBuilder class="au.com.centrumsystems.hudson.plugin.buildpipeline.DownstreamProjectGridBuilder">
+        <firstJob>IGHS-iOS-Thailand-Analysis-DEV-CI</firstJob>
+      </gridBuilder>
+      <noOfDisplayedBuilds>5</noOfDisplayedBuilds>
+      <buildViewTitle>IGHS - iOS - Thailand</buildViewTitle>
+      <consoleOutputLinkStyle>Lightbox</consoleOutputLinkStyle>
+      <cssUrl></cssUrl>
+      <triggerOnlyLatestJob>false</triggerOnlyLatestJob>
+      <alwaysAllowManualTrigger>false</alwaysAllowManualTrigger>
+      <showPipelineParameters>true</showPipelineParameters>
+      <showPipelineParametersInHeaders>false</showPipelineParametersInHeaders>
+      <startsWithParameters>false</startsWithParameters>
+      <refreshFrequency>3</refreshFrequency>
+      <showPipelineDefinitionHeader>false</showPipelineDefinitionHeader>
+    </au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView>
+    <com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView plugin="build-monitor-plugin@1.5+build.123">
+      <owner class="hudson" reference="../../.."/>
+      <name>Sanity Jobs Status</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+        <string>DC-Android-Sanity_Build</string>
+        <string>DC-Android-Sanity_Test</string>
+        <string>DC-iOS-Sanity_Build_new</string>
+        <string>DC-iOS-Sanity_Test_vm1</string>
+        <string>GHS-iPad-Sanity_Build</string>
+        <string>GHS-iPad-Sanity_Test</string>
+        <string>GHS-iPhone-Sanity_Build</string>
+        <string>GHS-iPhone-Sanity_Test</string>
+        <string>IGHS-Android-Sanity_Build</string>
+        <string>IGHS-Android-Sanity_Test</string>
+        <string>IGHS-iOS-Build-dev-od</string>
+        <string>IGHS-iOS-Build-mas-od</string>
+        <string>IGHS-iPhone-Sanity_Build</string>
+        <string>IGHS-iPhone-Sanity_Test</string>
+        <string>StoreEmpower-Android-Sanity_Build</string>
+        <string>StoreEmpower-Android-Sanity_Test</string>
+        <string>StoreEmpower-iOS-Sanity_Build</string>
+        <string>StoreEmpower-iOS-Sanity_Test</string>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <recurse>false</recurse>
+      <order class="com.smartcodeltd.jenkinsci.plugins.buildmonitor.order.ByName"/>
+    </com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView>
+    <com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView plugin="build-monitor-plugin@1.5+build.123">
+      <owner class="hudson" reference="../../.."/>
+      <name>Regression Jobs Status</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView[2]/jobNames/comparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <includeRegex>.*-Regression.*</includeRegex>
+      <recurse>false</recurse>
+      <order class="com.smartcodeltd.jenkinsci.plugins.buildmonitor.order.ByName"/>
+    </com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>Admin-Tools</name>
+      <description>These jobs are used to manage other jenkin jobs and Dashboards. Consult CI Team before triggering any jobs from here.</description>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView[2]/jobNames/comparator"/>
+        <string>Clean-Force-builds</string>
+        <string>Configure My Dashboard</string>
+        <string>Configure-DC-Android-sanity</string>
+        <string>Configure-DC-iOS-Sanity</string>
+        <string>Configure-GHS-iOS-Sanity</string>
+        <string>Disable-Builds</string>
+        <string>Enable-Builds</string>
+        <string>Force-CI-build (develop branch)</string>
+        <string>Force-CI-build (master branch)</string>
+        <string>Force-CI-build (release branch)</string>
+        <string>View-Pipeline-Status</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+    <com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView plugin="build-monitor-plugin@1.5+build.123">
+      <owner class="hudson" reference="../../.."/>
+      <name>My Dashboard</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator"/>
+      </jobNames>
+      <jobFilters/>
+      <columns/>
+      <includeRegex>.*_n</includeRegex>
+      <recurse>false</recurse>
+      <order class="com.smartcodeltd.jenkinsci.plugins.buildmonitor.order.ByName"/>
+    </com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView>
+    <listView>
+      <owner class="hudson" reference="../../.."/>
+      <name>CCube</name>
+      <filterExecutors>false</filterExecutors>
+      <filterQueue>false</filterQueue>
+      <properties class="hudson.model.View$PropertyList"/>
+      <jobNames>
+        <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../../slaves/slave[10]/nodeProperties/hudson.slaves.EnvironmentVariablesNodeProperty/envVars/tree-map/default/comparator"/>
+        <string>CCube-CI-0-Poll</string>
+        <string>CCube-CI-Analysis</string>
+        <string>CCube-CI-Build</string>
+        <string>CCube-CI-DC-Android-AppBuild</string>
+        <string>CCube-CI-DC-Android-Sanity-Test</string>
+        <string>CCube-CI-DC-iOS-AppBuild</string>
+        <string>CCube-CI-DC-iOS-Sanity-Test</string>
+        <string>CCube-CI-GHS-Android-AppBuild</string>
+        <string>CCube-CI-GHS-AndroidHudl-Sanity-Test</string>
+        <string>CCube-CI-GHS-AndroidHudl1-Sanity-Test</string>
+        <string>CCube-CI-GHS-AndroidPhone-Sanity-Test</string>
+        <string>CCube-CI-GHS-AndroidTablet-Sanity-Test</string>
+        <string>CCube-CI-GHS-iOS-AppBuild</string>
+        <string>CCube-CI-GHS-iOS-iPad-Sanity-Test</string>
+        <string>CCube-CI-GHS-iOS-iPhone-Sanity-Test</string>
+        <string>CCube-Sanity-Build</string>
+      </jobNames>
+      <jobFilters/>
+      <columns>
+        <hudson.views.StatusColumn/>
+        <hudson.views.WeatherColumn/>
+        <hudson.views.JobColumn/>
+        <hudson.views.LastSuccessColumn/>
+        <hudson.views.LastFailureColumn/>
+        <hudson.views.LastDurationColumn/>
+        <hudson.views.BuildButtonColumn/>
+        <org.jenkins.ci.plugins.progress__bar.ProgressBarColumn plugin="progress-bar-column-plugin@1.0"/>
+      </columns>
+      <recurse>false</recurse>
+    </listView>
+  </views>
+  <primaryView>OnDemand-Builds</primaryView>
+  <slaveAgentPort>0</slaveAgentPort>
+  <label></label>
+  <nodeProperties/>
+  <globalNodeProperties>
+    <hudson.slaves.EnvironmentVariablesNodeProperty>
+      <envVars serialization="custom">
+        <unserializable-parents/>
+        <tree-map>
+          <default>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+          </default>
+          <int>1</int>
+          <string>branchname</string>
+          <string>develop</string>
+        </tree-map>
+      </envVars>
+    </hudson.slaves.EnvironmentVariablesNodeProperty>
+  </globalNodeProperties>
+</hudson>

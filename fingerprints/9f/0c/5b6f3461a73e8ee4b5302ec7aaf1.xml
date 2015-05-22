@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-04 11:49:08.436 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>23</number>
+  </original>
+  <md5sum>9f0c5b6f3461a73e8ee4b5302ec7aaf1</md5sum>
+  <fileName>dc_ios_sanity.xml</fileName>
+  <usages>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>23</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

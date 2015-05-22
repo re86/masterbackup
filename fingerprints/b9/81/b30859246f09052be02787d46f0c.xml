@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-04 08:25:48.53 UTC</timestamp>
+  <original>
+    <name>IGHS-iOS-Thailand-Build-REL-CI</name>
+    <number>11</number>
+  </original>
+  <md5sum>b981b30859246f09052be02787d46f0c</md5sum>
+  <fileName>IGHS-iOS-Thailand-rel-11.ipa</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iOS-Thailand-Upload-REL-CI</string>
+      <ranges>8</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Thailand-Build-REL-CI</string>
+      <ranges>11</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-30 21:24:35.543 UTC</timestamp>
+  <original>
+    <name>IGHS-Android-Malaysia-Build_n</name>
+    <number>168</number>
+  </original>
+  <md5sum>9cca8b44288f543ed11a32fbf854b03f</md5sum>
+  <fileName>IGHS-Android-Malaysia-Release-161.apk</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-Android-Malaysia-Upload_n</string>
+      <ranges>88</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

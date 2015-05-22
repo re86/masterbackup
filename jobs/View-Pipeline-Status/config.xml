@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>2</daysToKeep>
+    <numToKeep>2</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>2</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>VIEW_Project_Name</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>DC-ANDROID</string>
+              <string>DC-iOS</string>
+              <string>GHS-ANDROID</string>
+              <string>GHS-iOS</string>
+              <string>IGHS-ANDROID-MALAYSIA</string>
+              <string>IGHS-ANDROID-THAILAND</string>
+              <string>IGHS-iOS-MALAYSIA</string>
+              <string>IGHS-iOS-THAILAND</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>master</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>CI-Admin-Data</project>
+      <filter>pipelineview/*.xml</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$VIEW_Project_Name</arg1>
+        <arg2>DC-ANDROID</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST -d @pipelineview/dcandroidtemplate.xml -H &quot;Content-Type: text/xml&quot; http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/Mobile-Build-Pipeline/config.xml
+
+echo &quot;Click on the Mobile-Build-Pipeline tab in jenkins to view the status&quot;
+
+echo &quot;OR&quot;
+
+echo &quot;CLick the below link&quot;
+
+echo &quot;http://192.168.2.207:8001/view/Mobile-Build-Pipeline/&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$VIEW_Project_Name</arg1>
+        <arg2>DC-iOS</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST -d @pipelineview/dciostemplate.xml -H &quot;Content-Type: text/xml&quot; http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/Mobile-Build-Pipeline/config.xml
+
+echo &quot;Click on the Mobile-Build-Pipeline tab in jenkins to view the status&quot;
+
+echo &quot;OR&quot;
+
+echo &quot;CLick the below link&quot;
+
+echo &quot;http://192.168.2.207:8001/view/Mobile-Build-Pipeline/&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$VIEW_Project_Name</arg1>
+        <arg2>GHS-ANDROID</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST -d @pipelineview/ghsandroidtemplate.xml -H &quot;Content-Type: text/xml&quot; http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/Mobile-Build-Pipeline/config.xml
+
+echo &quot;Click on the Mobile-Build-Pipeline tab in jenkins to view the status&quot;
+
+echo &quot;OR&quot;
+
+echo &quot;CLick the below link&quot;
+
+echo &quot;http://192.168.2.207:8001/view/Mobile-Build-Pipeline/&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$VIEW_Project_Name</arg1>
+        <arg2>GHS-iOS</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST -d @pipelineview/ghsiostemplate.xml -H &quot;Content-Type: text/xml&quot; http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/Mobile-Build-Pipeline/config.xml
+
+echo &quot;Click on the Mobile-Build-Pipeline tab in jenkins to view the status&quot;
+
+echo &quot;OR&quot;
+
+echo &quot;CLick the below link&quot;
+
+echo &quot;http://192.168.2.207:8001/view/Mobile-Build-Pipeline/&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$VIEW_Project_Name</arg1>
+        <arg2>IGHS-ANDROID-MALAYSIA</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST -d @pipelineview/ighsandroidmaltemplate.xml -H &quot;Content-Type: text/xml&quot; http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/Mobile-Build-Pipeline/config.xml
+
+echo &quot;Click on the Mobile-Build-Pipeline tab in jenkins to view the status&quot;
+
+echo &quot;OR&quot;
+
+echo &quot;CLick the below link&quot;
+
+echo &quot;http://192.168.2.207:8001/view/Mobile-Build-Pipeline/&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$VIEW_Project_Name</arg1>
+        <arg2>IGHS-ANDROID-THAILAND</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST -d @pipelineview/ighsandroidthaitemplate.xml -H &quot;Content-Type: text/xml&quot; http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/Mobile-Build-Pipeline/config.xml
+
+echo &quot;Click on the Mobile-Build-Pipeline tab in jenkins to view the status&quot;
+
+echo &quot;OR&quot;
+
+echo &quot;CLick the below link&quot;
+
+echo &quot;http://192.168.2.207:8001/view/Mobile-Build-Pipeline/&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$VIEW_Project_Name</arg1>
+        <arg2>IGHS-iOS-MALAYSIA</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST -d @pipelineview/ighsiosmaltemplate.xml -H &quot;Content-Type: text/xml&quot; http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/Mobile-Build-Pipeline/config.xml
+
+echo &quot;Click on the Mobile-Build-Pipeline tab in jenkins to view the status&quot;
+
+echo &quot;OR&quot;
+
+echo &quot;CLick the below link&quot;
+
+echo &quot;http://192.168.2.207:8001/view/Mobile-Build-Pipeline/&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.StringsMatchCondition" plugin="run-condition@1.0">
+        <arg1>$VIEW_Project_Name</arg1>
+        <arg2>IGHS-iOS-THAILAND</arg2>
+        <ignoreCase>false</ignoreCase>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST -d @pipelineview/ighsiosthaitemplate.xml -H &quot;Content-Type: text/xml&quot; http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.207:8001/view/Mobile-Build-Pipeline/config.xml
+
+echo &quot;Click on the Mobile-Build-Pipeline tab in jenkins to view the status&quot;
+
+echo &quot;OR&quot;
+
+echo &quot;CLick the below link&quot;
+
+echo &quot;http://192.168.2.207:8001/view/Mobile-Build-Pipeline/&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

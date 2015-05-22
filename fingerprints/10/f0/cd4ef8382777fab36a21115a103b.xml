@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-20 14:07:41.257 UTC</timestamp>
+  <original>
+    <name>DC-iOS-Sanity_Build_new</name>
+    <number>85</number>
+  </original>
+  <md5sum>10f0cd4ef8382777fab36a21115a103b</md5sum>
+  <fileName>auto.ios.85.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>DC-iOS-Sanity_Build_new</string>
+      <ranges>85-87</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Sanity_Test_vm2</string>
+      <ranges>65-67</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Sanity_Test_vm1</string>
+      <ranges>75-77</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Regression-Test_vm2</string>
+      <ranges>60-62</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Regression-Test_vm1</string>
+      <ranges>69-70</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

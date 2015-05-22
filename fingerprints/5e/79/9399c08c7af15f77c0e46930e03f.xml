@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-03 09:07:03.571 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>26</number>
+  </original>
+  <md5sum>5e799399c08c7af15f77c0e46930e03f</md5sum>
+  <fileName>rel_dcandroid_force.xml</fileName>
+  <usages>
+    <entry>
+      <string>Force-CI-build (release branch)</string>
+      <ranges>15-18</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

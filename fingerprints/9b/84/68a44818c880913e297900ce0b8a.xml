@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-04-01 21:21:00.332 UTC</timestamp>
+  <original>
+    <name>IGHS-Android-Malaysia-Analysis_n</name>
+    <number>163</number>
+  </original>
+  <md5sum>9b8468a44818c880913e297900ce0b8a</md5sum>
+  <fileName>ighs.droid.d667cb893b5500eeccbc00a7b1357ecde278e7f3.163.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-Android-Malaysia-Build_n</string>
+      <ranges>170</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-Android-Malaysia-Analysis_n</string>
+      <ranges>163</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-13 18:54:52.908 UTC</timestamp>
+  <original>
+    <name>StoreEmpower-Android-Sanity_Build</name>
+    <number>15</number>
+  </original>
+  <md5sum>37e6c55df01b4765ed9e562f5c9bae16</md5sum>
+  <fileName>StoreEmpowerment-15.apk</fileName>
+  <usages>
+    <entry>
+      <string>StoreEmpower-Android-Sanity_Test</string>
+      <ranges>12</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

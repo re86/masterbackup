@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-21 12:49:20.0 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>22</number>
+  </original>
+  <md5sum>f84057d9ea02f7182ca522ea76e4d022</md5sum>
+  <fileName>mas_ighsiosmal_force.xml</fileName>
+  <usages>
+    <entry>
+      <string>Force-CI-build (master branch)</string>
+      <ranges>9-13</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

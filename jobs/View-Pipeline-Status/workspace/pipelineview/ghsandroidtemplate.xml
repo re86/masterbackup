@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView plugin="build-pipeline-plugin@1.4.3">
+  <name>Mobile-Build-Pipeline</name>
+  <filterExecutors>false</filterExecutors>
+  <filterQueue>false</filterQueue>
+  <properties class="hudson.model.View$PropertyList"/>
+  <gridBuilder class="au.com.centrumsystems.hudson.plugin.buildpipeline.DownstreamProjectGridBuilder">
+    <firstJob>GHS-Android-Analysis-DEV-CI</firstJob>
+  </gridBuilder>
+  <noOfDisplayedBuilds>5</noOfDisplayedBuilds>
+  <buildViewTitle>GHS - Android</buildViewTitle>
+  <consoleOutputLinkStyle>Lightbox</consoleOutputLinkStyle>
+  <cssUrl></cssUrl>
+  <triggerOnlyLatestJob>false</triggerOnlyLatestJob>
+  <alwaysAllowManualTrigger>false</alwaysAllowManualTrigger>
+  <showPipelineParameters>true</showPipelineParameters>
+  <showPipelineParametersInHeaders>false</showPipelineParametersInHeaders>
+  <startsWithParameters>false</startsWithParameters>
+  <refreshFrequency>3</refreshFrequency>
+  <showPipelineDefinitionHeader>false</showPipelineDefinitionHeader>
+</au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView>

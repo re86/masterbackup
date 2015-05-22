@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-11 14:17:07.97 UTC</timestamp>
+  <original>
+    <name>MobiAssets-Android-Build-DEV-CI</name>
+    <number>12</number>
+  </original>
+  <md5sum>d548cab1a0db6ce08592ac287ba56b0a</md5sum>
+  <fileName>MobiAssets-Android-4.apk</fileName>
+  <usages>
+    <entry>
+      <string>MobiAssets-Android-Upload-DEV-CI</string>
+      <ranges>1</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

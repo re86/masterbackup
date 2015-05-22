@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-04-30 13:52:15.374 UTC</timestamp>
+  <original>
+    <name>DC-Android-Sanity_Build</name>
+    <number>227</number>
+  </original>
+  <md5sum>bc820a9eaa3264ee1da84511727688b6</md5sum>
+  <fileName>auto.droid.227.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Regression_Test</string>
+      <ranges>114-116</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Build</string>
+      <ranges>232-234</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test</string>
+      <ranges>227-228</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

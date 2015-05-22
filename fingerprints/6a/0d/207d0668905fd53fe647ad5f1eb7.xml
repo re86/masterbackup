@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-04 08:25:13.147 UTC</timestamp>
+  <original>
+    <name>IGHS-iOS-Malaysia-Build-REL-CI</name>
+    <number>10</number>
+  </original>
+  <md5sum>6a0d207d0668905fd53fe647ad5f1eb7</md5sum>
+  <fileName>IGHS-iOS-Malaysia-rel-10.ipa</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iOS-Malaysia-Build-REL-CI</string>
+      <ranges>10</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Malaysia-Upload-REL-CI</string>
+      <ranges>9</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

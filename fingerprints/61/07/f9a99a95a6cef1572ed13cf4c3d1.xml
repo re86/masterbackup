@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-18 06:35:14.694 UTC</timestamp>
+  <original>
+    <name>GHS-iPad-Sanity_Build</name>
+    <number>13</number>
+  </original>
+  <md5sum>6107f9a99a95a6cef1572ed13cf4c3d1</md5sum>
+  <fileName>auto.ios.13.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iPad-Sanity_Test</string>
+      <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iPad-Sanity_Build</string>
+      <ranges>13</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

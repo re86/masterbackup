@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-18 19:07:24.978 UTC</timestamp>
+  <original>
+    <name>DC-Android-Analysis_n</name>
+    <number>270</number>
+  </original>
+  <md5sum>e480974eadd083534cff2c9b2ade5ffd</md5sum>
+  <fileName>dc.droid.5b411da4b223de8b3a73f9878cbee4aa649988b1.270.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Build_n</string>
+      <ranges>217</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Analysis_n</string>
+      <ranges>270</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

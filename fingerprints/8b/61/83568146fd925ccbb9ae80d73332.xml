@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-19 09:18:42.279 UTC</timestamp>
+  <original>
+    <name>StoreEmpower-Android-Build-REL-CI</name>
+    <number>7</number>
+  </original>
+  <md5sum>8b6183568146fd925ccbb9ae80d73332</md5sum>
+  <fileName>StoreEmpowerment-7.apk</fileName>
+  <usages>
+    <entry>
+      <string>StoreEmpower-Android-Build-REL-CI</string>
+      <ranges>7</ranges>
+    </entry>
+    <entry>
+      <string>StoreEmpower-Android-Upload-REL-CI</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

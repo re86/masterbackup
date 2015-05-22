@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-11 20:44:04.916 UTC</timestamp>
+  <original>
+    <name>DC-Android-Test_Build_new</name>
+    <number>6</number>
+  </original>
+  <md5sum>e122b7a6866ff3c5811c1aba002f5295</md5sum>
+  <fileName>auto.droid.6.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device3</string>
+      <ranges>6-13</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device3</string>
+      <ranges>6-13</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

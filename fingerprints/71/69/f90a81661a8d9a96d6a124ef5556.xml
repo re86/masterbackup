@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-18 09:36:14.191 UTC</timestamp>
+  <original>
+    <name>DC-Android-Test_Build_new</name>
+    <number>14</number>
+  </original>
+  <md5sum>7169f90a81661a8d9a96d6a124ef5556</md5sum>
+  <fileName>auto.droid.14.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device3</string>
+      <ranges>14-18,20-25</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device2</string>
+      <ranges>16-18,20-25</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device1</string>
+      <ranges>16-18,20-25</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Test_Build_new</string>
+      <ranges>22-25</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device3</string>
+      <ranges>14-18,20-25</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device2</string>
+      <ranges>16-18,20-23,25</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device1</string>
+      <ranges>16-18,20-22,24-25</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

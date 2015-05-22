@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-10 06:36:14.265 UTC</timestamp>
+  <original>
+    <name>MobiAssets-iOS-Build-DEV-CI</name>
+    <number>6</number>
+  </original>
+  <md5sum>76b13db328567dfcd92dbd263200486b</md5sum>
+  <fileName>MobiAssets-6.ipa</fileName>
+  <usages>
+    <entry>
+      <string>MobiAssets-iOS-Upload-DEV-CI</string>
+      <ranges>7</ranges>
+    </entry>
+    <entry>
+      <string>MobiAssets-iOS-Build-DEV-CI</string>
+      <ranges>6</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

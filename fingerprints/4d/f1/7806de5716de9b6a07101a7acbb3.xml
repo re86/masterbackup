@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-04 12:27:25.366 UTC</timestamp>
+  <original>
+    <name>IGHS-Android-Thailand-Build-REL-CI</name>
+    <number>15</number>
+  </original>
+  <md5sum>4df17806de5716de9b6a07101a7acbb3</md5sum>
+  <fileName>IGHS-Android-Thailand-rel-15.apk</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-Android-Thailand-Upload-REL-CI</string>
+      <ranges>10</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-Android-Thailand-Build-REL-CI</string>
+      <ranges>15</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

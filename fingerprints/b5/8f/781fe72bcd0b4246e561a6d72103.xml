@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-20 10:43:40.3 UTC</timestamp>
+  <original>
+    <name>StoreEmpower-iOS-Build-DEV-CI</name>
+    <number>58</number>
+  </original>
+  <md5sum>b58f781fe72bcd0b4246e561a6d72103</md5sum>
+  <fileName>StoreEmpower-iOS-58.ipa</fileName>
+  <usages>
+    <entry>
+      <string>StoreEmpower-iOS-Build-DEV-CI</string>
+      <ranges>58</ranges>
+    </entry>
+    <entry>
+      <string>StoreEmpower-iOS-Upload-DEV-CI</string>
+      <ranges>33</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

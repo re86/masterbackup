@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-21 12:14:26.103 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>20</number>
+  </original>
+  <md5sum>f99ab732b2569c5b73e3d960d75de968</md5sum>
+  <fileName>ghsiostemplate.xml</fileName>
+  <usages>
+    <entry>
+      <string>View-Pipeline-Status</string>
+      <ranges>31</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>25-26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

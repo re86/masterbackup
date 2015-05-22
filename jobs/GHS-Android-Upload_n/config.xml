@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>3</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>3</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>APK_TO_DOWNLOAD</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>APK_BUILD</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>master</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>GHS-Android-Build_n</project>
+      <filter>**/*.apk</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.TriggeredBuildSelector">
+        <upstreamFilterStrategy>UseGlobalSetting</upstreamFilterStrategy>
+      </selector>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>curl \
+  -F &quot;status=2&quot; \
+  -F &quot;notify=1&quot; \
+  -F &quot;notes=Some new features and fixed bugs.&quot; \
+  -F &quot;notes_type=0&quot; \
+  -F &quot;ipa=@repo/${APK_BUILD}/GroceryDroidRelease-${APK_BUILD}.apk&quot; \
+  -H &quot;X-HockeyAppToken: 9f52a1ad9d6a4f919c297a690b53d4c0&quot; \
+  https://rink.hockeyapp.net/api/2/apps/199db8899e197b2324225ee8e0ef5516/app_versions/upload
+  
+curl \
+  -F &quot;status=2&quot; \
+  -F &quot;notify=1&quot; \
+  -F &quot;notes=Some new features and fixed bugs.&quot; \
+  -F &quot;notes_type=0&quot; \
+  -F &quot;ipa=@repo/${APK_BUILD}/GroceryDroidHudlRelease-${APK_BUILD}.apk&quot; \
+  -H &quot;X-HockeyAppToken: 9f52a1ad9d6a4f919c297a690b53d4c0&quot; \
+  https://rink.hockeyapp.net/api/2/apps/c8ed7cb63619e79b8a298cd441a733d2/app_versions/upload
+  
+curl \
+  -F &quot;status=2&quot; \
+  -F &quot;notify=1&quot; \
+  -F &quot;notes=Some new features and fixed bugs.&quot; \
+  -F &quot;notes_type=0&quot; \
+  -F &quot;ipa=@repo/${APK_BUILD}/GroceryDroidHudl1_Release-${APK_BUILD}.apk&quot; \
+  -H &quot;X-HockeyAppToken: 9f52a1ad9d6a4f919c297a690b53d4c0&quot; \
+  https://rink.hockeyapp.net/api/2/apps/cbd29136199bb020a6b5987947af32ee/app_versions/upload
+  
+curl \
+  -F &quot;status=2&quot; \
+  -F &quot;notify=1&quot; \
+  -F &quot;notes=Some new features and fixed bugs.&quot; \
+  -F &quot;notes_type=0&quot; \
+  -F &quot;ipa=@repo/${APK_BUILD}/GroceryDroidReleaseTablet-${APK_BUILD}.apk&quot; \
+  -H &quot;X-HockeyAppToken: 9f52a1ad9d6a4f919c297a690b53d4c0&quot; \
+  https://rink.hockeyapp.net/api/2/apps/607abaf03527829a57109e6e8c706b83/app_versions/upload</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.38.1">
+      <recipientList></recipientList>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+          <email>
+            <recipientList>HSC_Mobile_Grocery_Android@in.tesco.com, prabhuraj.manoharan@in.tesco.com, Ananth.Konagolli@in.tesco.com, Vandana.Arora@in.tesco.com</recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>true</attachBuildLog>
+            <compressBuildLog>true</compressBuildLog>
+            <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
+            <contentType>project</contentType>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+      </configuredTriggers>
+      <contentType>default</contentType>
+      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <defaultContent>Hello Team,
+
+New build is not uploaded to Hockey.
+
+-Regards
+CI Team</defaultContent>
+      <attachmentsPattern></attachmentsPattern>
+      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+      <attachBuildLog>false</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo></replyTo>
+      <saveOutput>false</saveOutput>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

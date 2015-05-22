@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>5</daysToKeep>
+    <numToKeep>2</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>GIT_PREVIOUS_COMMIT</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>START_BUILD_NUMBER</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GIT_COMMIT</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>ARCHIVE_TO_COPY</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>hsc-build-01</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>IGHS-iOS-Malaysia-Analysis_n</project>
+      <filter>**/*.bz2</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>#Unzip and prepare the files
+tar jxf ${WORKSPACE}/${ARCHIVE_TO_COPY}</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>chmod -R 755 ${WORKSPACE}</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>security -v unlock-keychain -p ${keychain_password} &quot;/certs/login.keychain&quot;</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:Release|iPhone&quot; -p:Grocery.IGHS.Malaysia.iOS Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.sln</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>mkdir -p ${WORKSPACE}/repo
+
+mkdir ${WORKSPACE}/repo/${START_BUILD_NUMBER}/
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/Release/ -name *.ipa -exec basename {} \;`
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/Release/${ENT_BUILD} ${WORKSPACE}/repo/${START_BUILD_NUMBER}/IGHS-iOS-Malaysia-Release-${START_BUILD_NUMBER}.ipa
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:Debug|iPhone&quot; -p:Grocery.IGHS.Malaysia.iOS Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.sln</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/Debug/ -name *.ipa -exec basename {} \;`
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.IGHS/Grocery.IGHS.Malaysia.iOS/bin/iPhone/Debug/${ENT_BUILD} ${WORKSPACE}/repo/${START_BUILD_NUMBER}/IGHS-iOS-Malaysia-Debug-${START_BUILD_NUMBER}.ipa</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>repo/${START_BUILD_NUMBER}/*.ipa</artifacts>
+      <allowEmptyArchive>true</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.38.1">
+      <recipientList></recipientList>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+          <email>
+            <recipientList>$DEFAULT_RECIPIENTS, HSC_Mobile_IGHS@in.tesco.com</recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>true</attachBuildLog>
+            <compressBuildLog>true</compressBuildLog>
+            <replyTo>prabhuraj.manoharan@in.tesco.com</replyTo>
+            <contentType>project</contentType>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+      </configuredTriggers>
+      <contentType>default</contentType>
+      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <attachmentsPattern></attachmentsPattern>
+      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+      <attachBuildLog>false</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo></replyTo>
+      <saveOutput>false</saveOutput>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
+    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.25">
+      <configs>
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+          <configs>
+            <hudson.plugins.parameterizedtrigger.CurrentBuildParameters/>
+            <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+              <properties>IPA_TO_DOWNLOAD=repo/${START_BUILD_NUMBER}/IGHS-iOS-Malaysia-*${START_BUILD_NUMBER}.ipa
+IPA_BUILD=${START_BUILD_NUMBER}</properties>
+            </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+          </configs>
+          <projects>IGHS-iOS-Malaysia-Upload_n</projects>
+          <condition>SUCCESS</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+      </configs>
+    </hudson.plugins.parameterizedtrigger.BuildTrigger>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+      <varPasswordPairs>
+        <varPasswordPair var="keychain_password" password="uBMzzhUHlpzwWSyOpdAtob928bD4D19+86Fv08zi1w4="/>
+      </varPasswordPairs>
+    </com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+  </buildWrappers>
+</project>

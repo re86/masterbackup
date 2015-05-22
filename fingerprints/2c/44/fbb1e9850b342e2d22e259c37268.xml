@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-18 13:19:30.276 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>26</number>
+  </original>
+  <md5sum>2c44fbb1e9850b342e2d22e259c37268</md5sum>
+  <fileName>dev_ghsios_force.xml</fileName>
+  <usages>
+    <entry>
+      <string>Force-CI-build (develop branch)</string>
+      <ranges>53-57</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

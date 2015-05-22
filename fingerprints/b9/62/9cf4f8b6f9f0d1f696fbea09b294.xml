@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-18 14:27:52.862 UTC</timestamp>
+  <original>
+    <name>CCube-CI-DC-Android-AppBuild</name>
+    <number>3</number>
+  </original>
+  <md5sum>b9629cf4f8b6f9f0d1f696fbea09b294</md5sum>
+  <fileName>Clubcard-Android-LIVE-3.apk</fileName>
+  <usages>
+    <entry>
+      <string>CCube-CI-DC-Android-AppBuild</string>
+      <ranges>3</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

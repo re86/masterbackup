@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-03 19:36:54.441 UTC</timestamp>
+  <original>
+    <name>IGHS-iOS-Malaysia-Build_n</name>
+    <number>98</number>
+  </original>
+  <md5sum>830ed07952ae76f141eb8b9be859c695</md5sum>
+  <fileName>IGHS-iOS-Malaysia-Release-133.ipa</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iOS-Malaysia-Upload_n</string>
+      <ranges>33</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

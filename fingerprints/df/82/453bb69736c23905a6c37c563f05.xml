@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2014-11-05 08:25:26.364 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>34</number>
+  </original>
+  <md5sum>df82453bb69736c23905a6c37c563f05</md5sum>
+  <fileName>updaterepo.sh</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-Android-SCA</string>
+      <ranges>3</ranges>
+    </entry>
+    <entry>
+      <string>Test-DC-Android-Poll</string>
+      <ranges>2-3</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build-dev-od</string>
+      <ranges>1-7</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-Android-BUILD</string>
+      <ranges>3-4</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iPhone-Regression-Build</string>
+      <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>Test-Change-Release-Branch</string>
+      <ranges>29-30</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-Android-0-POLL</string>
+      <ranges>1-17</ranges>
+    </entry>
+    <entry>
+      <string>Test-DC-Android-Analysis</string>
+      <ranges>2-3</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Thailand-Regression-Build</string>
+      <ranges>3</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iPad-Regression-Build</string>
+      <ranges>61-65,67,69,71-72,75,78-90,92-94</ranges>
+    </entry>
+    <entry>
+      <string>Test-DC-Android-Build</string>
+      <ranges>2-3</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

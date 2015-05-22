@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-21 12:14:26.83 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>20</number>
+  </original>
+  <md5sum>94e7fe394540bc6c8a79a766d281d800</md5sum>
+  <fileName>dcandroidtemplate.xml</fileName>
+  <usages>
+    <entry>
+      <string>View-Pipeline-Status</string>
+      <ranges>31</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>25-26</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

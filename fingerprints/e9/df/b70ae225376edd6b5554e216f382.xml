@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-26 08:12:29.559 UTC</timestamp>
+  <original>
+    <name>IGHS-Android-Malaysia-Build-DEV-CI</name>
+    <number>303</number>
+  </original>
+  <md5sum>e9dfb70ae225376edd6b5554e216f382</md5sum>
+  <fileName>IGHS-Android-Malaysia-Release-327.apk</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-Android-Malaysia-Upload-DEV-CI</string>
+      <ranges>279</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-Android-Malaysia-Build-DEV-CI</string>
+      <ranges>303</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

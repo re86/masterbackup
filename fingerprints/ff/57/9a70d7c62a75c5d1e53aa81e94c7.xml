@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-11 10:02:14.929 UTC</timestamp>
+  <original>
+    <name>DC-iOS-Sanity_Build</name>
+    <number>131</number>
+  </original>
+  <md5sum>ff579a70d7c62a75c5d1e53aa81e94c7</md5sum>
+  <fileName>Clubcard-iOS-PPE-debug-131.ipa</fileName>
+  <usages>
+    <entry>
+      <string>DC-iOS-Sanity_Test</string>
+      <ranges>115</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Regression-Test</string>
+      <ranges>48</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Sanity_Build</string>
+      <ranges>131</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

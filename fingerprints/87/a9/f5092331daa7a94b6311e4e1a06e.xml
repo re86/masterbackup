@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-01-21 12:01:22.68 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>19</number>
+  </original>
+  <md5sum>87a9f5092331daa7a94b6311e4e1a06e</md5sum>
+  <fileName>ciopsjobs.xml</fileName>
+  <usages>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>25-26</ranges>
+    </entry>
+    <entry>
+      <string>Configure My Dashboard</string>
+      <ranges>21-22</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

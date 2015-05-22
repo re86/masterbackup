@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-20 05:59:55.191 UTC</timestamp>
+  <original>
+    <name>CI-Admin-Data</name>
+    <number>27</number>
+  </original>
+  <md5sum>7456dead0751cb9217e34b9bf03d7641</md5sum>
+  <fileName>rel_ighsiosthai_force.xml</fileName>
+  <usages>
+    <entry>
+      <string>Force-CI-build (release branch)</string>
+      <ranges>19</ranges>
+    </entry>
+    <entry>
+      <string>CI-Admin-Data</string>
+      <ranges>27</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

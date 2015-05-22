@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-05 19:14:51.584 UTC</timestamp>
+  <original>
+    <name>IGHS-iOS-Thailand-Analysis_n</name>
+    <number>160</number>
+  </original>
+  <md5sum>5c6808e716690d044c0663f0e0520f48</md5sum>
+  <fileName>ighs.ios.thai.34503fde7be1428ff00bc6bd40847af424b2c279.160.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iOS-Thailand-Analysis_n</string>
+      <ranges>160</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Thailand-Build_n</string>
+      <ranges>108</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

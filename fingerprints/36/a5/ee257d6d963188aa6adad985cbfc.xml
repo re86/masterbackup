@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-24 08:46:16.365 UTC</timestamp>
+  <original>
+    <name>CCube-CI-DC-iOS-AppBuild</name>
+    <number>4</number>
+  </original>
+  <md5sum>36a5ee257d6d963188aa6adad985cbfc</md5sum>
+  <fileName>Clubcard-iOS-PROD-debug-4.ipa</fileName>
+  <usages>
+    <entry>
+      <string>CCube-CI-DC-iOS-AppBuild</string>
+      <ranges>4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

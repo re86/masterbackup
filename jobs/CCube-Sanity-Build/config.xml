@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>hsc-build-03</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>CI-Scripts</project>
+      <filter>*.*</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>chmod 755 *.*</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>./updaterepo.sh /Users/hscbuild01/jenkins-slave/codebase/ENV/DEV/CCUBE-code ${WORKSPACE} ccube.code.${BUILD_NUMBER}.tar</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>chmod -R 755 ${WORKSPACE}</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>##./bumpiosbuild.sh ${BUILD_NUMBER} Apps/DigitalClubcard/iOS/Clubcard.iOS/Info.plist</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>security -v unlock-keychain -p ${keychain_password} &quot;/Users/hscbuild01/Library/Keychains/login.keychain&quot;
+#security -v unlock-keychain -p ${keychain_password} &quot;/certs/login.keychain&quot;</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>#./buildccube.sh
+
+</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>#cd /Users/hscbuild01/jenkins-slave/codebase/ENV/DEV/CCubeFramework.bin
+#git status
+#git commit -am &quot;CI build-$BUILD_NUMBER updated the CCubeFramework.bin repo&quot;
+#git push origin develop</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>#tar cf ${WORKSPACE}/auto.ios.${BUILD_NUMBER}.tar Apps/DigitalClubcard/Automation.iOS</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>#bzip2 auto.ios.${BUILD_NUMBER}.tar</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.25">
+      <configs>
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+          <configs>
+            <hudson.plugins.parameterizedtrigger.CurrentBuildParameters/>
+          </configs>
+          <projects>xxCCube-Sanity-DC-iOS-AppBuild</projects>
+          <condition>SUCCESS</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+      </configs>
+    </hudson.plugins.parameterizedtrigger.BuildTrigger>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+      <varPasswordPairs>
+        <varPasswordPair var="keychain_password" password="uBMzzhUHlpzwWSyOpdAtob928bD4D19+86Fv08zi1w4="/>
+      </varPasswordPairs>
+    </com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+  </buildWrappers>
+</project>

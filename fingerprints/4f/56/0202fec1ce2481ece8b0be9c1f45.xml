@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-03-03 19:35:58.725 UTC</timestamp>
+  <original>
+    <name>IGHS-iOS-Thailand-Build_n</name>
+    <number>106</number>
+  </original>
+  <md5sum>4f560202fec1ce2481ece8b0be9c1f45</md5sum>
+  <fileName>IGHS-iOS-Thailand-Debug-158.ipa</fileName>
+  <usages>
+    <entry>
+      <string>IGHS-iOS-Thailand-Upload_n</string>
+      <ranges>38</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

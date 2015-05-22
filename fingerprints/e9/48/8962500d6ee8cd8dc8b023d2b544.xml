@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2014-09-26 10:44:44.498 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>22</number>
+  </original>
+  <md5sum>e9488962500d6ee8cd8dc8b023d2b544</md5sum>
+  <fileName>updaterepo.sh</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iPad-Regression-Build</string>
+      <ranges>26-27,30-35,38-41,54-60</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2014-11-04 13:28:00.437 UTC</timestamp>
+  <original>
+    <name>CI-Scripts</name>
+    <number>26</number>
+  </original>
+  <md5sum>adabcc7dd57898846de9011281621e68</md5sum>
+  <fileName>poll.bat</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-Android-SCA</string>
+      <ranges>3</ranges>
+    </entry>
+    <entry>
+      <string>Test-DC-Android-Poll</string>
+      <ranges>2-3</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build-dev-od</string>
+      <ranges>1-7</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-Android-BUILD</string>
+      <ranges>3-4</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iPhone-Regression-Build</string>
+      <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>Test-Change-Release-Branch</string>
+      <ranges>29-30</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-Android-0-POLL</string>
+      <ranges>1-17</ranges>
+    </entry>
+    <entry>
+      <string>Test-DC-Android-Analysis</string>
+      <ranges>2-3</ranges>
+    </entry>
+    <entry>
+      <string>Test-DC-Android-Build</string>
+      <ranges>2-3</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

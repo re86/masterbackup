@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-19 09:31:31.171 UTC</timestamp>
+  <original>
+    <name>DigitalClubcard-iOS-Build-REL-CI</name>
+    <number>89</number>
+  </original>
+  <md5sum>966d7c8abe3598f1d142bffdb978446c</md5sum>
+  <fileName>DC-iOS-rel-PROD-89.ipa</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-iOS-Build-REL-CI</string>
+      <ranges>89</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-iOS-Upload-REL-CI</string>
+      <ranges>53</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

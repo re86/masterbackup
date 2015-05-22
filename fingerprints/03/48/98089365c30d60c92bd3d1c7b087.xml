@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-02-12 06:37:44.348 UTC</timestamp>
+  <original>
+    <name>MobiAssets-Android-Build-DEV-CI</name>
+    <number>13</number>
+  </original>
+  <md5sum>034898089365c30d60c92bd3d1c7b087</md5sum>
+  <fileName>MobiAssets-Android-5.apk</fileName>
+  <usages>
+    <entry>
+      <string>MobiAssets-Android-Build-DEV-CI</string>
+      <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>MobiAssets-Android-Upload-DEV-CI</string>
+      <ranges>2</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

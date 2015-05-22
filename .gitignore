@@ -5,6 +5,12 @@
 # But not these files...
 !.gitignore
 !**/*.xml
+!**/plugins/*.jpi
+!**/plugins/*.hpi
 
-# ...even if they are in subdirectories
+# Remove these even if they are in subdirectories
 #!*/
+**/log
+**/nextBuildNumber
+**/changelog.xml
+**/build.xml

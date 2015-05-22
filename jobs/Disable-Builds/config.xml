@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <logRotator class="hudson.tasks.LogRotator">
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>5</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>5</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.BooleanParameterDefinition>
+          <name>Nightly_Builds</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>CI_DEV_Builds</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>CI_OPS_Builds</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>CI_LIVE_Builds</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>OnDemand_develop_branch</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>OnDemand_release_branch</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>OnDemand_master_branch</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>Sanity_builds</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>Regression_builds</name>
+          <description></description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>master</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$Nightly_Builds</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DC-Android-Analysis_n/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DC-iOS-Analysis_n/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-Android-Analysis_n/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-iOS-Analysis_n/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Malaysia-Analysis_n/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Thailand-Analysis_n/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Malaysia-Analysis_n/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Thailand-Analysis_n/disable</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$CI_DEV_Builds</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DigitalClubcard-Android-0-Poll-DEV-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DigitalClubcard-iOS-0-Poll-DEV-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-Android-0-Poll-DEV-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-iOS-0-Poll-DEV-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Malaysia-0-Poll-DEV-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Thailand-0-Poll-DEV-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Malaysia-0-Poll-DEV-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Thailand-0-Poll-DEV-CI/disable</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$CI_OPS_Builds</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DigitalClubcard-Android-0-Poll-REL-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DigitalClubcard-iOS-0-Poll-REL-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-Android-0-Poll-REL-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-iOS-0-Poll-REL-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Malaysia-0-Poll-REL-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Thailand-0-Poll-REL-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Malaysia-0-Poll-REL-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Thailand-0-Poll-REL-CI/disable</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$CI_LIVE_Builds</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DigitalClubcard-Android-0-Poll-LIVE-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DigitalClubcard-iOS-0-Poll-LIVE-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-Android-0-Poll-LIVE-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-iOS-0-Poll-LIVE-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Malaysia-0-Poll-LIVE-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Thailand-0-Poll-LIVE-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Malaysia-0-Poll-LIVE-CI/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Thailand-0-Poll-LIVE-CI/disable</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$OnDemand_develop_branch</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DC-Android-Build-dev-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DC-iOS-Build-dev-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-Android-Build-dev-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-iOS-Build-dev-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Build-dev-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Build-dev-od/disable</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$OnDemand_release_branch</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DC-Android-Build-rel-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DC-iOS-Build-rel-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-Android-Build-rel-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-iOS-Build-rel-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Build-rel-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Build-rel-od/disable</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$OnDemand_master_branch</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DC-Android-Build-mas-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/DC-iOS-Build-mas-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-Android-Build-mas-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/GHS-iOS-Build-mas-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-Android-Build-mas-od/disable
+curl -X POST http://re86:a25e9830c23dd609fc37dd8b58739bc9@192.168.2.100:8001/view/All/job/IGHS-iOS-Build-mas-od/disable</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$Sanity_builds</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>echo &quot;SAnity Builds are not disabled&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+    <org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder plugin="conditional-buildstep@1.3.3">
+      <runner class="org.jenkins_ci.plugins.run_condition.BuildStepRunner$Fail" plugin="run-condition@1.0"/>
+      <runCondition class="org.jenkins_ci.plugins.run_condition.core.BooleanCondition" plugin="run-condition@1.0">
+        <token>$Regression_builds</token>
+      </runCondition>
+      <conditionalbuilders>
+        <hudson.tasks.Shell>
+          <command>echo &quot;SAnity Builds are not disabled&quot;</command>
+        </hudson.tasks.Shell>
+      </conditionalbuilders>
+    </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>

@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>pullhash</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>hsc-build-01</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
+      <project>CI-Scripts</project>
+      <filter>*.*</filter>
+      <target></target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.Shell>
+      <command>chmod 755 *.*
+
+./updaterepo.sh /Users/hscbuild01/jenkins-slave/codebase/ENV/LIVE/GHS-iOS-code ${WORKSPACE} ghs.AMB.code.tar origin/master ${pullhash}
+
+chmod -R 755 ${WORKSPACE}</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>security -v unlock-keychain -p ${keychain_password} &quot;/certs/login.keychain&quot;</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:AppStore|iPhone&quot; -p:Grocery.iPad Apps/Grocery/iOS/Grocery.iOS.sln</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>mkdir -p ${WORKSPACE}/repo
+
+mkdir ${WORKSPACE}/repo/${BUILD_NUMBER}/
+
+ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iPad/bin/iPhone/AppStore/  -name *.app -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iPad/bin/iPhone/AppStore/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/${ENT_BUILD}
+
+tar cf ${WORKSPACE}/repo/${ENT_BUILD}.${BUILD_NUMBER}.tar ${WORKSPACE}/repo/${BUILD_NUMBER}
+
+cd ${WORKSPACE}/repo
+
+bzip2 ${ENT_BUILD}.${BUILD_NUMBER}.tar</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:AppStore|iPhone&quot; -p:Grocery.iOS Apps/Grocery/iOS/Grocery.iOS.sln</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>ENT_BUILD=`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iOS/bin/iPhone/AppStore/  -name *.app -exec basename {} \; `
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iOS/bin/iPhone/AppStore/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/${ENT_BUILD}
+
+tar cf ${WORKSPACE}/repo/${ENT_BUILD}.${BUILD_NUMBER}.tar ${WORKSPACE}/repo/${BUILD_NUMBER}
+
+cd ${WORKSPACE}/repo
+
+bzip2 ${ENT_BUILD}.${BUILD_NUMBER}.tar</command>
+    </hudson.tasks.Shell>
+    <hudson.tasks.Shell>
+      <command>cd ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iOS/bin/iPhone/AppStore/
+
+zip -r GHS-iOS-dSYM.zip *.dSYM
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iOS/bin/iPhone/AppStore/GHS-iOS-dSYM.zip ${WORKSPACE}/repo/${BUILD_NUMBER}/GHS-iOS-dSYM.zip
+
+cd ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iPad/bin/iPhone/AppStore/
+
+zip -r GHS-iPad-dSYM.zip *.dSYM
+
+mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iPad/bin/iPhone/AppStore/GHS-iPad-dSYM.zip ${WORKSPACE}/repo/${BUILD_NUMBER}/GHS-iPad-dSYM.zip</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>**/*.bz2, repo/${BUILD_NUMBER}/*.zip</artifacts>
+      <allowEmptyArchive>true</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.38.1">
+      <recipientList></recipientList>
+      <configuredTriggers>
+        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+          <email>
+            <recipientList>HSC_Grocery_Iphone@in.tesco.com, prabhuraj.manoharan@in.tesco.com</recipientList>
+            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
+            <body>$PROJECT_DEFAULT_CONTENT</body>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
+            <attachmentsPattern></attachmentsPattern>
+            <attachBuildLog>true</attachBuildLog>
+            <compressBuildLog>true</compressBuildLog>
+            <replyTo>prabhuraj.manoharan@in.tesco.com</replyTo>
+            <contentType>project</contentType>
+          </email>
+        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
+      </configuredTriggers>
+      <contentType>default</contentType>
+      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
+      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <attachmentsPattern></attachmentsPattern>
+      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+      <attachBuildLog>false</attachBuildLog>
+      <compressBuildLog>false</compressBuildLog>
+      <replyTo></replyTo>
+      <saveOutput>false</saveOutput>
+    </hudson.plugins.emailext.ExtendedEmailPublisher>
+    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.25">
+      <configs>
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+          <configs>
+            <hudson.plugins.parameterizedtrigger.CurrentBuildParameters/>
+            <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+              <properties>IPA_BUILD=${BUILD_NUMBER}</properties>
+            </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+          </configs>
+          <projects>GHS-iOS-Upload-Insight-LIVE-CI</projects>
+          <condition>SUCCESS</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+      </configs>
+    </hudson.plugins.parameterizedtrigger.BuildTrigger>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+      <varPasswordPairs>
+        <varPasswordPair var="keychain_password" password="uBMzzhUHlpzwWSyOpdAtob928bD4D19+86Fv08zi1w4="/>
+      </varPasswordPairs>
+    </com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+  </buildWrappers>
+</project>
