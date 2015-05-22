@@ -20,18 +20,6 @@
       <string>DC-Android-Sanity_Test_Device1</string>
       <ranges>18</ranges>
     </entry>
-    <entry>
-      <string>DC-Android-Regression_Test_Device3</string>
-      <ranges>18</ranges>
-    </entry>
-    <entry>
-      <string>DC-Android-Regression_Test_Device2</string>
-      <ranges>18</ranges>
-    </entry>
-    <entry>
-      <string>DC-Android-Regression_Test_Device1</string>
-      <ranges>18</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>

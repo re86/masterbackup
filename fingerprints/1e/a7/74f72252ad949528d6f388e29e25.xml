@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-22 12:47:10.419 UTC</timestamp>
+  <original>
+    <name>GHS-iPhone-Sanity_Build</name>
+    <number>32</number>
+  </original>
+  <md5sum>1ea774f72252ad949528d6f388e29e25</md5sum>
+  <fileName>Grocery-iOS-OPS-32.ipa</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iPhone-Sanity_Build</string>
+      <ranges>32</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iPhone-Sanity_Test</string>
+      <ranges>36</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

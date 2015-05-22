@@ -20,7 +20,7 @@
         <hudson.model.BooleanParameterDefinition>
           <name>OPS</name>
           <description></description>
-          <defaultValue>false</defaultValue>
+          <defaultValue>true</defaultValue>
         </hudson.model.BooleanParameterDefinition>
         <hudson.model.BooleanParameterDefinition>
           <name>STORE5</name>
@@ -84,7 +84,7 @@
           <command>/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool -v build &quot;--configuration:Debug|iPhone&quot; -p:Grocery.iOS Apps/Grocery/iOS/Grocery.iOS.sln</command>
         </hudson.tasks.Shell>
         <hudson.tasks.Shell>
-          <command>mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iOS/bin/iPhone/Debug/`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iOS/bin/iPhone/Debug/  -name *.ipa -exec basename {} \; ` ${WORKSPACE}/repo/${BUILD_NUMBER}/Grocery-iOS-LIVEDebug-${BUILD_NUMBER}.ipa</command>
+          <command>mv ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iOS/bin/iPhone/Debug/`find  ${WORKSPACE}/Apps/Grocery/iOS/Grocery.iOS/bin/iPhone/Debug/  -name *.ipa -exec basename {} \; ` ${WORKSPACE}/repo/${BUILD_NUMBER}/Grocery-iOS-LIVE-Debug-${BUILD_NUMBER}.ipa</command>
         </hudson.tasks.Shell>
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
@@ -131,19 +131,15 @@
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
     <hudson.tasks.Shell>
-      <command>tar cf ${WORKSPACE}/auto.ios.${BUILD_NUMBER}.tar GroceryAutomationiOS</command>
+      <command>tar cf ${WORKSPACE}/auto.ios.${BUILD_NUMBER}.tar Grocery.Automation.iOS</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>bzip2 auto.ios.${BUILD_NUMBER}.tar</command>
     </hudson.tasks.Shell>
-    <org.jenkinsci.plugins.ios.connector.DeployBuilder plugin="ios-device-connector@1.2">
-      <udid>2d246d9267e784d711b5819e138356f0f44ef61d</udid>
-      <path>**/*.ipa</path>
-    </org.jenkinsci.plugins.ios.connector.DeployBuilder>
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>**/*.bz2</artifacts>
+      <artifacts>**/*.bz2, repo/${BUILD_NUMBER}/Grocery-iOS-*.ipa</artifacts>
       <allowEmptyArchive>false</allowEmptyArchive>
       <onlyIfSuccessful>false</onlyIfSuccessful>
       <fingerprint>false</fingerprint>

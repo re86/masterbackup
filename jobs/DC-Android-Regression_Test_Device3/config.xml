@@ -42,6 +42,11 @@
           <description></description>
           <defaultValue></defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>REGRESSIONDEVICE3</name>
+          <description></description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
     <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
@@ -73,9 +78,8 @@
       </runCondition>
       <conditionalbuilders>
         <hudson.tasks.Shell>
-          <command>reports=$(date +&quot;%d%m%Y_%H_%M_%S&quot;)_reg_LIVE.html
-cd Apps/DigitalClubcard/Automation.Droid/Sanity
-./runner.sh 9aac0d89 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-LIVE-${START_BUILD_NUMBER}.apk @regression LIVE rach_h@hotmail.co.uk:NIreland14 $reports</command>
+          <command>cd Apps/DigitalClubcard/Automation.Droid/Sanity
+$REGRESSIONDEVICE3</command>
         </hudson.tasks.Shell>
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
@@ -87,7 +91,7 @@ cd Apps/DigitalClubcard/Automation.Droid/Sanity
       <conditionalbuilders>
         <hudson.tasks.Shell>
           <command>cd Apps/DigitalClubcard/Automation.Droid/Sanity
-./runner.sh 0186e853915717f7 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-PPE-${START_BUILD_NUMBER}.apk @regression OPS pierre.curie@gmail.com:Password%1</command>
+$REGRESSIONDEVICE3</command>
         </hudson.tasks.Shell>
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
@@ -98,9 +102,8 @@ cd Apps/DigitalClubcard/Automation.Droid/Sanity
       </runCondition>
       <conditionalbuilders>
         <hudson.tasks.Shell>
-          <command>reports=$(date +&quot;%d%m%Y_%H_%M_%S&quot;)_reg_store5.html
-cd Apps/DigitalClubcard/Automation.Droid/Sanity
-./runner.sh 9aac0d89 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-STORE5-${START_BUILD_NUMBER}.apk @regression STORE5 rach_h@hotmail.co.uk:NIreland14 $reports</command>
+          <command>cd Apps/DigitalClubcard/Automation.Droid/Sanity
+$REGRESSIONDEVICE3</command>
         </hudson.tasks.Shell>
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
@@ -111,9 +114,8 @@ cd Apps/DigitalClubcard/Automation.Droid/Sanity
       </runCondition>
       <conditionalbuilders>
         <hudson.tasks.Shell>
-          <command>reports=$(date +&quot;%d%m%Y_%H_%M_%S&quot;)_reg_store6.html
-cd Apps/DigitalClubcard/Automation.Droid/Sanity
-./runner.sh 9aac0d89 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-STORE6-${START_BUILD_NUMBER}.apk @regression STORE6 rach_h@hotmail.co.uk:NIreland14 $reports</command>
+          <command>cd Apps/DigitalClubcard/Automation.Droid/Sanity
+$REGRESSIONDEVICE3</command>
         </hudson.tasks.Shell>
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>

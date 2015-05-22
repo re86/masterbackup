@@ -12,10 +12,6 @@
       <string>GHS-Android-Upload-REL-CI</string>
       <ranges>21</ranges>
     </entry>
-    <entry>
-      <string>GHS-Android-Build-REL-CI</string>
-      <ranges>25</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>

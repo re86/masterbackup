@@ -10,31 +10,31 @@
   <usages>
     <entry>
       <string>DC-Android-Sanity_Test_Device3</string>
-      <ranges>18,20-27</ranges>
+      <ranges>18,20-28</ranges>
     </entry>
     <entry>
       <string>DC-Android-Sanity_Test_Device2</string>
-      <ranges>18,20-27</ranges>
-    </entry>
-    <entry>
-      <string>DC-Android-Test_Build_new</string>
-      <ranges>25-27</ranges>
+      <ranges>18,20-28</ranges>
     </entry>
     <entry>
       <string>DC-Android-Sanity_Test_Device1</string>
-      <ranges>18,20-27</ranges>
+      <ranges>18,20-28</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Test_Build_new</string>
+      <ranges>25-28</ranges>
     </entry>
     <entry>
       <string>DC-Android-Regression_Test_Device3</string>
-      <ranges>20-26</ranges>
+      <ranges>20-28</ranges>
     </entry>
     <entry>
       <string>DC-Android-Regression_Test_Device2</string>
-      <ranges>20-23,25-26</ranges>
+      <ranges>20-23,25-28</ranges>
     </entry>
     <entry>
       <string>DC-Android-Regression_Test_Device1</string>
-      <ranges>20-22,24-26</ranges>
+      <ranges>20-22,24-26,28</ranges>
     </entry>
   </usages>
   <facets/>

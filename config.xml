@@ -8,7 +8,7 @@
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
-    <permission>hudson.model.Hudson.Administer:mathuraa</permission>
+    <permission>hudson.model.Hudson.Administer:dwaraka</permission>
     <permission>hudson.model.Hudson.Administer:re86</permission>
     <permission>hudson.model.Hudson.Read:Deekshith</permission>
     <permission>hudson.model.Hudson.Read:Kritika</permission>
@@ -16,14 +16,11 @@
     <permission>hudson.model.Hudson.Read:aishwat</permission>
     <permission>hudson.model.Hudson.Read:amar</permission>
     <permission>hudson.model.Hudson.Read:ananthprasad</permission>
-    <permission>hudson.model.Hudson.Read:aniket.kulkarni</permission>
     <permission>hudson.model.Hudson.Read:anunitraushan</permission>
     <permission>hudson.model.Hudson.Read:chethan.jeppu</permission>
-    <permission>hudson.model.Hudson.Read:debangana</permission>
     <permission>hudson.model.Hudson.Read:gc04</permission>
     <permission>hudson.model.Hudson.Read:karthick</permission>
     <permission>hudson.model.Hudson.Read:karthikt</permission>
-    <permission>hudson.model.Hudson.Read:lei</permission>
     <permission>hudson.model.Hudson.Read:ly88</permission>
     <permission>hudson.model.Hudson.Read:maheswaran.p</permission>
     <permission>hudson.model.Hudson.Read:malathi</permission>
@@ -31,18 +28,17 @@
     <permission>hudson.model.Hudson.Read:meenusaproo</permission>
     <permission>hudson.model.Hudson.Read:msuresh</permission>
     <permission>hudson.model.Hudson.Read:nithya</permission>
-    <permission>hudson.model.Hudson.Read:ravindra.saxena</permission>
     <permission>hudson.model.Hudson.Read:renuka</permission>
     <permission>hudson.model.Hudson.Read:sakthya</permission>
     <permission>hudson.model.Hudson.Read:shadhan</permission>
     <permission>hudson.model.Hudson.Read:sharon</permission>
     <permission>hudson.model.Hudson.Read:shashijb</permission>
     <permission>hudson.model.Hudson.Read:shivaprasada</permission>
-    <permission>hudson.model.Hudson.Read:shreesha</permission>
     <permission>hudson.model.Hudson.Read:skumar</permission>
     <permission>hudson.model.Hudson.Read:sudar</permission>
     <permission>hudson.model.Hudson.Read:sukesh</permission>
     <permission>hudson.model.Hudson.Read:tapas.saha</permission>
+    <permission>hudson.model.Hudson.Read:tz93</permission>
     <permission>hudson.model.Hudson.Read:ujjawal</permission>
     <permission>hudson.model.Hudson.Read:vc75</permission>
     <permission>hudson.model.Hudson.Read:vijay</permission>
@@ -56,14 +52,11 @@
     <permission>hudson.model.Hudson.RunScripts:aishwat</permission>
     <permission>hudson.model.Hudson.RunScripts:amar</permission>
     <permission>hudson.model.Hudson.RunScripts:ananthprasad</permission>
-    <permission>hudson.model.Hudson.RunScripts:aniket.kulkarni</permission>
     <permission>hudson.model.Hudson.RunScripts:anunitraushan</permission>
     <permission>hudson.model.Hudson.RunScripts:chethan.jeppu</permission>
-    <permission>hudson.model.Hudson.RunScripts:debangana</permission>
     <permission>hudson.model.Hudson.RunScripts:gc04</permission>
     <permission>hudson.model.Hudson.RunScripts:karthick</permission>
     <permission>hudson.model.Hudson.RunScripts:karthikt</permission>
-    <permission>hudson.model.Hudson.RunScripts:lei</permission>
     <permission>hudson.model.Hudson.RunScripts:ly88</permission>
     <permission>hudson.model.Hudson.RunScripts:maheswaran.p</permission>
     <permission>hudson.model.Hudson.RunScripts:malathi</permission>
@@ -71,18 +64,17 @@
     <permission>hudson.model.Hudson.RunScripts:meenusaproo</permission>
     <permission>hudson.model.Hudson.RunScripts:msuresh</permission>
     <permission>hudson.model.Hudson.RunScripts:nithya</permission>
-    <permission>hudson.model.Hudson.RunScripts:ravindra.saxena</permission>
     <permission>hudson.model.Hudson.RunScripts:renuka</permission>
     <permission>hudson.model.Hudson.RunScripts:sakthya</permission>
     <permission>hudson.model.Hudson.RunScripts:shadhan</permission>
     <permission>hudson.model.Hudson.RunScripts:sharon</permission>
     <permission>hudson.model.Hudson.RunScripts:shashijb</permission>
     <permission>hudson.model.Hudson.RunScripts:shivaprasada</permission>
-    <permission>hudson.model.Hudson.RunScripts:shreesha</permission>
     <permission>hudson.model.Hudson.RunScripts:skumar</permission>
     <permission>hudson.model.Hudson.RunScripts:sudar</permission>
     <permission>hudson.model.Hudson.RunScripts:sukesh</permission>
     <permission>hudson.model.Hudson.RunScripts:tapas.saha</permission>
+    <permission>hudson.model.Hudson.RunScripts:tz93</permission>
     <permission>hudson.model.Hudson.RunScripts:ujjawal</permission>
     <permission>hudson.model.Hudson.RunScripts:vc75</permission>
     <permission>hudson.model.Hudson.RunScripts:vijay</permission>
@@ -96,14 +88,11 @@
     <permission>hudson.model.Item.Build:aishwat</permission>
     <permission>hudson.model.Item.Build:amar</permission>
     <permission>hudson.model.Item.Build:ananthprasad</permission>
-    <permission>hudson.model.Item.Build:aniket.kulkarni</permission>
     <permission>hudson.model.Item.Build:anunitraushan</permission>
     <permission>hudson.model.Item.Build:chethan.jeppu</permission>
-    <permission>hudson.model.Item.Build:debangana</permission>
     <permission>hudson.model.Item.Build:gc04</permission>
     <permission>hudson.model.Item.Build:karthick</permission>
     <permission>hudson.model.Item.Build:karthikt</permission>
-    <permission>hudson.model.Item.Build:lei</permission>
     <permission>hudson.model.Item.Build:ly88</permission>
     <permission>hudson.model.Item.Build:maheswaran.p</permission>
     <permission>hudson.model.Item.Build:malathi</permission>
@@ -111,18 +100,17 @@
     <permission>hudson.model.Item.Build:meenusaproo</permission>
     <permission>hudson.model.Item.Build:msuresh</permission>
     <permission>hudson.model.Item.Build:nithya</permission>
-    <permission>hudson.model.Item.Build:ravindra.saxena</permission>
     <permission>hudson.model.Item.Build:renuka</permission>
     <permission>hudson.model.Item.Build:sakthya</permission>
     <permission>hudson.model.Item.Build:shadhan</permission>
     <permission>hudson.model.Item.Build:sharon</permission>
     <permission>hudson.model.Item.Build:shashijb</permission>
     <permission>hudson.model.Item.Build:shivaprasada</permission>
-    <permission>hudson.model.Item.Build:shreesha</permission>
     <permission>hudson.model.Item.Build:skumar</permission>
     <permission>hudson.model.Item.Build:sudar</permission>
     <permission>hudson.model.Item.Build:sukesh</permission>
     <permission>hudson.model.Item.Build:tapas.saha</permission>
+    <permission>hudson.model.Item.Build:tz93</permission>
     <permission>hudson.model.Item.Build:ujjawal</permission>
     <permission>hudson.model.Item.Build:vc75</permission>
     <permission>hudson.model.Item.Build:vijay</permission>
@@ -136,14 +124,11 @@
     <permission>hudson.model.Item.Read:aishwat</permission>
     <permission>hudson.model.Item.Read:amar</permission>
     <permission>hudson.model.Item.Read:ananthprasad</permission>
-    <permission>hudson.model.Item.Read:aniket.kulkarni</permission>
     <permission>hudson.model.Item.Read:anunitraushan</permission>
     <permission>hudson.model.Item.Read:chethan.jeppu</permission>
-    <permission>hudson.model.Item.Read:debangana</permission>
     <permission>hudson.model.Item.Read:gc04</permission>
     <permission>hudson.model.Item.Read:karthick</permission>
     <permission>hudson.model.Item.Read:karthikt</permission>
-    <permission>hudson.model.Item.Read:lei</permission>
     <permission>hudson.model.Item.Read:ly88</permission>
     <permission>hudson.model.Item.Read:maheswaran.p</permission>
     <permission>hudson.model.Item.Read:malathi</permission>
@@ -151,18 +136,17 @@
     <permission>hudson.model.Item.Read:meenusaproo</permission>
     <permission>hudson.model.Item.Read:msuresh</permission>
     <permission>hudson.model.Item.Read:nithya</permission>
-    <permission>hudson.model.Item.Read:ravindra.saxena</permission>
     <permission>hudson.model.Item.Read:renuka</permission>
     <permission>hudson.model.Item.Read:sakthya</permission>
     <permission>hudson.model.Item.Read:shadhan</permission>
     <permission>hudson.model.Item.Read:sharon</permission>
     <permission>hudson.model.Item.Read:shashijb</permission>
     <permission>hudson.model.Item.Read:shivaprasada</permission>
-    <permission>hudson.model.Item.Read:shreesha</permission>
     <permission>hudson.model.Item.Read:skumar</permission>
     <permission>hudson.model.Item.Read:sudar</permission>
     <permission>hudson.model.Item.Read:sukesh</permission>
     <permission>hudson.model.Item.Read:tapas.saha</permission>
+    <permission>hudson.model.Item.Read:tz93</permission>
     <permission>hudson.model.Item.Read:ujjawal</permission>
     <permission>hudson.model.Item.Read:vc75</permission>
     <permission>hudson.model.Item.Read:vijay</permission>
@@ -850,10 +834,10 @@
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
       <gridBuilder class="au.com.centrumsystems.hudson.plugin.buildpipeline.DownstreamProjectGridBuilder">
-        <firstJob>IGHS-iOS-Thailand-Analysis-DEV-CI</firstJob>
+        <firstJob>IGHS-Android-Thailand-Analysis-DEV-CI</firstJob>
       </gridBuilder>
       <noOfDisplayedBuilds>5</noOfDisplayedBuilds>
-      <buildViewTitle>IGHS - iOS - Thailand</buildViewTitle>
+      <buildViewTitle>IGHS - Android - Thailand</buildViewTitle>
       <consoleOutputLinkStyle>Lightbox</consoleOutputLinkStyle>
       <cssUrl></cssUrl>
       <triggerOnlyLatestJob>false</triggerOnlyLatestJob>
@@ -922,7 +906,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator" reference="../../../com.smartcodeltd.jenkinsci.plugins.buildmonitor.BuildMonitorView[2]/jobNames/comparator"/>
         <string>Clean-Force-builds</string>
         <string>Configure My Dashboard</string>
-        <string>Configure-DC-Android-sanity</string>
+        <string>Configure-DC-Android-Test</string>
         <string>Configure-DC-iOS-Test</string>
         <string>Configure-GHS-iOS-Sanity</string>
         <string>Disable-Builds</string>

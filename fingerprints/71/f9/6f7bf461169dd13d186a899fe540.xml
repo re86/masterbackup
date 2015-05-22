@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-22 12:46:46.39 UTC</timestamp>
+  <original>
+    <name>GHS-iPhone-Sanity_Build</name>
+    <number>32</number>
+  </original>
+  <md5sum>71f96f7bf461169dd13d186a899fe540</md5sum>
+  <fileName>auto.ios.32.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iPhone-Sanity_Build</string>
+      <ranges>32</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iPhone-Sanity_Test</string>
+      <ranges>36</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

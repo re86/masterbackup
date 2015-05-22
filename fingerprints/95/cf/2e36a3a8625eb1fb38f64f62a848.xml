@@ -20,10 +20,6 @@
       <string>DC-Android-Sanity_Test_Device1</string>
       <ranges>23</ranges>
     </entry>
-    <entry>
-      <string>DC-Android-Test_Build_new</string>
-      <ranges>23</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>

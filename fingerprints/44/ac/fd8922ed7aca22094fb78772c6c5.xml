@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-22 10:49:37.538 UTC</timestamp>
+  <original>
+    <name>GHS-Android-Build-DEV-CI</name>
+    <number>405</number>
+  </original>
+  <md5sum>44acfd8922ed7aca22094fb78772c6c5</md5sum>
+  <fileName>GroceryDroidRelease-425.apk</fileName>
+  <usages>
+    <entry>
+      <string>GHS-Android-Build-DEV-CI</string>
+      <ranges>405</ranges>
+    </entry>
+    <entry>
+      <string>GHS-Android-Upload-DEV-CI</string>
+      <ranges>356</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

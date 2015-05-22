@@ -12,10 +12,6 @@
       <string>GHS-iOS-Upload-Insight-DEV-CI</string>
       <ranges>50</ranges>
     </entry>
-    <entry>
-      <string>GHS-iOS-Build-DEV-CI</string>
-      <ranges>283</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>

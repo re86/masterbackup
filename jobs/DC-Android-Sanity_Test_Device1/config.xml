@@ -83,9 +83,8 @@
       </runCondition>
       <conditionalbuilders>
         <hudson.tasks.Shell>
-          <command>reports=$(date +&quot;%d%m%Y_%H_%M_%S&quot;)_sanity_LIVE.html
-cd Apps/DigitalClubcard/Automation.Droid/Sanity
-./runner.sh 9aac0d89 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-LIVE-${START_BUILD_NUMBER}.apk @sanity LIVE rach_h@hotmail.co.uk:NIreland14 $reports</command>
+          <command>cd Apps/DigitalClubcard/Automation.Droid/Sanity
+$SANITYDEVICE1</command>
         </hudson.tasks.Shell>
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
@@ -108,9 +107,8 @@ $SANITYDEVICE1</command>
       </runCondition>
       <conditionalbuilders>
         <hudson.tasks.Shell>
-          <command>reports=$(date +&quot;%d%m%Y_%H_%M_%S&quot;)_sanity_store5.html
-cd Apps/DigitalClubcard/Automation.Droid/Sanity
-./runner.sh 9aac0d89 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-STORE5-${START_BUILD_NUMBER}.apk @sanity STORE5 rach_h@hotmail.co.uk:NIreland14 $reports</command>
+          <command>cd Apps/DigitalClubcard/Automation.Droid/Sanity
+$SANITYDEVICE1</command>
         </hudson.tasks.Shell>
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
@@ -121,9 +119,8 @@ cd Apps/DigitalClubcard/Automation.Droid/Sanity
       </runCondition>
       <conditionalbuilders>
         <hudson.tasks.Shell>
-          <command>reports=$(date +&quot;%d%m%Y_%H_%M_%S&quot;)_sanity_store6.html
-cd Apps/DigitalClubcard/Automation.Droid/Sanity
-./runner.sh 9aac0d89 ../../../../repo/${START_BUILD_NUMBER}/Clubcard-Android-STORE6-${START_BUILD_NUMBER}.apk @sanity STORE6 rach_h@hotmail.co.uk:NIreland14 $reports</command>
+          <command>cd Apps/DigitalClubcard/Automation.Droid/Sanity
+$SANITYDEVICE1</command>
         </hudson.tasks.Shell>
       </conditionalbuilders>
     </org.jenkinsci.plugins.conditionalbuildstep.ConditionalBuilder>
