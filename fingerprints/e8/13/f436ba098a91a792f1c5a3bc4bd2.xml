@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-22 21:11:08.449 UTC</timestamp>
+  <original>
+    <name>GHS-iOS-Build_n</name>
+    <number>79</number>
+  </original>
+  <md5sum>e813f436ba098a91a792f1c5a3bc4bd2</md5sum>
+  <fileName>Grocery-iOS-172.ipa</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iOS-Build_n</string>
+      <ranges>79</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Upload_n</string>
+      <ranges>57</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

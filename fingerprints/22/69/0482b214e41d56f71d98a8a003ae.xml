@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-22 18:50:52.854 UTC</timestamp>
+  <original>
+    <name>DC-Android-Test_Build_new</name>
+    <number>29</number>
+  </original>
+  <md5sum>22690482b214e41d56f71d98a8a003ae</md5sum>
+  <fileName>auto.droid.29.tar.bz2</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device3</string>
+      <ranges>29</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device2</string>
+      <ranges>29</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Sanity_Test_Device1</string>
+      <ranges>29</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Test_Build_new</string>
+      <ranges>29</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device3</string>
+      <ranges>29</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device2</string>
+      <ranges>29</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Regression_Test_Device1</string>
+      <ranges>29</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

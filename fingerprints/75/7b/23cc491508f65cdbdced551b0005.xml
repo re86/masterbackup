@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-22 20:22:26.262 UTC</timestamp>
+  <original>
+    <name>GHS-Android-Build_n</name>
+    <number>159</number>
+  </original>
+  <md5sum>757b23cc491508f65cdbdced551b0005</md5sum>
+  <fileName>GroceryDroidRelease-185.apk</fileName>
+  <usages>
+    <entry>
+      <string>GHS-Android-Upload_n</string>
+      <ranges>81</ranges>
+    </entry>
+    <entry>
+      <string>GHS-Android-Build_n</string>
+      <ranges>159</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

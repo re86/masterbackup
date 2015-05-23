@@ -9,12 +9,8 @@
   <fileName>updaterepo.sh</fileName>
   <usages>
     <entry>
-      <string>DigitalClubcard-Android-Build-PlayStore-CI</string>
-      <ranges>1</ranges>
-    </entry>
-    <entry>
-      <string>IGHS-iOS-Malaysia-0-Poll-LIVE-CI</string>
-      <ranges>7-11</ranges>
+      <string>IGHS-iPhone-Sanity_Build</string>
+      <ranges>2-3</ranges>
     </entry>
     <entry>
       <string>GHS-iOS-Build-mas-od</string>
@@ -25,56 +21,60 @@
       <ranges>1-27</ranges>
     </entry>
     <entry>
-      <string>IGHS-iOS-Malaysia-Build-LIVE-CI</string>
-      <ranges>4-9</ranges>
-    </entry>
-    <entry>
-      <string>IGHS-iOS-Thailand-0-Poll-LIVE-CI</string>
-      <ranges>2-4</ranges>
-    </entry>
-    <entry>
-      <string>IGHS-iOS-Thailand-Build-AppStore-CI</string>
+      <string>GHS-Android-Build-PlayStore-CI</string>
       <ranges>1</ranges>
-    </entry>
-    <entry>
-      <string>GHS-iPhone-Sanity_Build</string>
-      <ranges>30-31</ranges>
-    </entry>
-    <entry>
-      <string>GHS-iOS-Build-AppStore-CI</string>
-      <ranges>3,5</ranges>
-    </entry>
-    <entry>
-      <string>IGHS-iPhone-Sanity_Build</string>
-      <ranges>2-3</ranges>
-    </entry>
-    <entry>
-      <string>IGHS-iOS-Build-dev-od</string>
-      <ranges>32-36</ranges>
-    </entry>
-    <entry>
-      <string>IGHS-iOS-Thailand-Build-LIVE-CI</string>
-      <ranges>3</ranges>
-    </entry>
-    <entry>
-      <string>DigitalClubcard-iOS-Build-AppStore-CI</string>
-      <ranges>1</ranges>
-    </entry>
-    <entry>
-      <string>GHS-Android-Build-LIVE-CI</string>
-      <ranges>5-6</ranges>
     </entry>
     <entry>
       <string>GHS-iOS-Build-dev-od</string>
       <ranges>8-47</ranges>
     </entry>
     <entry>
+      <string>IGHS-iOS-Thailand-Build-LIVE-CI</string>
+      <ranges>3</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Malaysia-0-Poll-LIVE-CI</string>
+      <ranges>7-11</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Thailand-Build-AppStore-CI</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
       <string>IGHS-iOS-Build-mas-od</string>
       <ranges>2-5</ranges>
     </entry>
     <entry>
-      <string>GHS-Android-Build-PlayStore-CI</string>
+      <string>DigitalClubcard-Android-Build-PlayStore-CI</string>
       <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build-AppStore-CI</string>
+      <ranges>3,5</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iPhone-Sanity_Build</string>
+      <ranges>31</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Build-dev-od</string>
+      <ranges>32-36</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Malaysia-Build-LIVE-CI</string>
+      <ranges>4-9</ranges>
+    </entry>
+    <entry>
+      <string>GHS-Android-Build-LIVE-CI</string>
+      <ranges>5-6</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-iOS-Build-AppStore-CI</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Thailand-0-Poll-LIVE-CI</string>
+      <ranges>2-4</ranges>
     </entry>
   </usages>
   <facets/>

@@ -17,12 +17,12 @@
       <ranges>1-3</ranges>
     </entry>
     <entry>
-      <string>Test-DC-Android-Poll</string>
-      <ranges>2-3</ranges>
-    </entry>
-    <entry>
       <string>DigitalClubcard-Android-SCA</string>
       <ranges>3</ranges>
+    </entry>
+    <entry>
+      <string>Test-DC-Android-Poll</string>
+      <ranges>2-3</ranges>
     </entry>
     <entry>
       <string>GHS-iOS-Build-dev-od</string>
@@ -33,12 +33,12 @@
       <ranges>3-4</ranges>
     </entry>
     <entry>
-      <string>Test-Change-Release-Branch</string>
-      <ranges>29-30</ranges>
-    </entry>
-    <entry>
       <string>GHS-iPhone-Regression-Build</string>
       <ranges>13</ranges>
+    </entry>
+    <entry>
+      <string>Test-Change-Release-Branch</string>
+      <ranges>29-30</ranges>
     </entry>
     <entry>
       <string>DigitalClubcard-Android-0-POLL</string>
@@ -47,10 +47,6 @@
     <entry>
       <string>Test-DC-Android-Analysis</string>
       <ranges>2-3</ranges>
-    </entry>
-    <entry>
-      <string>GHS-iPhone-Sanity_Build</string>
-      <ranges>30</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Build-dev-od</string>

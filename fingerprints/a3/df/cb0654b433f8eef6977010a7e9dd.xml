@@ -12,10 +12,6 @@
       <string>CI-Admin-Data</string>
       <ranges>26</ranges>
     </entry>
-    <entry>
-      <string>Configure-DC-Android-sanity</string>
-      <ranges>34-35</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>
