@@ -12,10 +12,6 @@
       <string>GHS-Android-Upload_n</string>
       <ranges>80</ranges>
     </entry>
-    <entry>
-      <string>GHS-Android-Build_n</string>
-      <ranges>158</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>

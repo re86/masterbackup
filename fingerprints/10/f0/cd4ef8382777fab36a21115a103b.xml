@@ -10,11 +10,11 @@
   <usages>
     <entry>
       <string>DC-iOS-Sanity_Build_new</string>
-      <ranges>87-89</ranges>
+      <ranges>88-90</ranges>
     </entry>
     <entry>
       <string>DC-iOS-Sanity_Test_vm2</string>
-      <ranges>68-69</ranges>
+      <ranges>69-70</ranges>
     </entry>
     <entry>
       <string>DC-iOS-Sanity_Test_vm1</string>
@@ -22,7 +22,7 @@
     </entry>
     <entry>
       <string>DC-iOS-Regression-Test_vm2</string>
-      <ranges>63-64</ranges>
+      <ranges>64-65</ranges>
     </entry>
     <entry>
       <string>DC-iOS-Regression-Test_vm1</string>

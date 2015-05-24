@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-23 19:09:15.353 UTC</timestamp>
+  <original>
+    <name>DC-Android-Build_n</name>
+    <number>222</number>
+  </original>
+  <md5sum>665ab09a826329ab2510b82348710085</md5sum>
+  <fileName>Clubcard-Android-PPE-275.apk</fileName>
+  <usages>
+    <entry>
+      <string>DC-Android-Upload_n</string>
+      <ranges>124</ranges>
+    </entry>
+    <entry>
+      <string>DC-Android-Build_n</string>
+      <ranges>222</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

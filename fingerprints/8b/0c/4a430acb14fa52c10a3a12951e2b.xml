@@ -13,16 +13,8 @@
       <ranges>88</ranges>
     </entry>
     <entry>
-      <string>DC-iOS-Sanity_Test_vm2</string>
-      <ranges>68</ranges>
-    </entry>
-    <entry>
       <string>DC-iOS-Sanity_Test_vm1</string>
       <ranges>78</ranges>
-    </entry>
-    <entry>
-      <string>DC-iOS-Regression-Test_vm2</string>
-      <ranges>63</ranges>
     </entry>
     <entry>
       <string>DC-iOS-Regression-Test_vm1</string>
