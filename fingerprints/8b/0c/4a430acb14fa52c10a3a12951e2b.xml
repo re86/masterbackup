@@ -9,10 +9,6 @@
   <fileName>Clubcard-iOS-PPE-debug-88.ipa</fileName>
   <usages>
     <entry>
-      <string>DC-iOS-Sanity_Build_new</string>
-      <ranges>88</ranges>
-    </entry>
-    <entry>
       <string>DC-iOS-Sanity_Test_vm1</string>
       <ranges>78</ranges>
     </entry>

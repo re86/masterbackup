@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-25 12:51:32.85 UTC</timestamp>
+  <original>
+    <name>GHS-Android-Build-DEV-CI</name>
+    <number>406</number>
+  </original>
+  <md5sum>508dce328da293e1bb610c7f81d274c8</md5sum>
+  <fileName>GroceryDroidReleaseTablet-426.apk</fileName>
+  <usages>
+    <entry>
+      <string>GHS-Android-Build-DEV-CI</string>
+      <ranges>406</ranges>
+    </entry>
+    <entry>
+      <string>GHS-Android-Upload-DEV-CI</string>
+      <ranges>357</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

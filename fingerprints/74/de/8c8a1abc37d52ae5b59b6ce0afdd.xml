@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-24 21:03:49.541 UTC</timestamp>
+  <original>
+    <name>DC-iOS-Build_n</name>
+    <number>194</number>
+  </original>
+  <md5sum>74de8c8a1abc37d52ae5b59b6ce0afdd</md5sum>
+  <fileName>Clubcard-iOS-LIVE-240.ipa</fileName>
+  <usages>
+    <entry>
+      <string>DC-iOS-Upload_n</string>
+      <ranges>104</ranges>
+    </entry>
+    <entry>
+      <string>DC-iOS-Build_n</string>
+      <ranges>194</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

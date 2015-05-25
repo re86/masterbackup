@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-25 12:47:58.793 UTC</timestamp>
+  <original>
+    <name>DigitalClubcard-AndroidBeta-Build-DEV-CI</name>
+    <number>7</number>
+  </original>
+  <md5sum>a873c3bf0970d3ba1d706250c565ce3d</md5sum>
+  <fileName>Clubcard-Android-LIVE-8.apk</fileName>
+  <usages>
+    <entry>
+      <string>DigitalClubcard-AndroidBeta-Upload-DEV-CI</string>
+      <ranges>7</ranges>
+    </entry>
+    <entry>
+      <string>DigitalClubcard-AndroidBeta-Build-DEV-CI</string>
+      <ranges>7</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

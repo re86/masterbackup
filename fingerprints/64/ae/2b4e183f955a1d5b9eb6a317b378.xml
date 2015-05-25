@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2015-05-25 13:04:43.295 UTC</timestamp>
+  <original>
+    <name>GHS-iOS-Build-DEV-CI</name>
+    <number>289</number>
+  </original>
+  <md5sum>64ae2b4e183f955a1d5b9eb6a317b378</md5sum>
+  <fileName>Grocery-iPad-305.ipa</fileName>
+  <usages>
+    <entry>
+      <string>GHS-iOS-Upload-DEV-CI</string>
+      <ranges>236</ranges>
+    </entry>
+    <entry>
+      <string>GHS-iOS-Build-DEV-CI</string>
+      <ranges>289</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>
