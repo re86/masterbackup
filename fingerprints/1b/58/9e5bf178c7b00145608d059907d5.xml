@@ -9,10 +9,6 @@
   <fileName>Grocery-iPad-173.ipa</fileName>
   <usages>
     <entry>
-      <string>GHS-iOS-Build_n</string>
-      <ranges>80</ranges>
-    </entry>
-    <entry>
       <string>GHS-iOS-Upload_n</string>
       <ranges>58</ranges>
     </entry>

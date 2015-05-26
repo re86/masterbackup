@@ -9,10 +9,6 @@
   <fileName>Clubcard-iOS-PPE-debug-87.ipa</fileName>
   <usages>
     <entry>
-      <string>DC-iOS-Sanity_Test_vm1</string>
-      <ranges>77</ranges>
-    </entry>
-    <entry>
       <string>DC-iOS-Regression-Test_vm1</string>
       <ranges>71</ranges>
     </entry>

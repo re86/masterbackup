@@ -13,12 +13,16 @@
     <org.jvnet.hudson.plugins.shelveproject.ShelveProjectProperty plugin="shelve-project-plugin@1.5"/>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
-  <assignedNode>hsc-build-02</assignedNode>
+  <assignedNode>hsc-sca</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers/>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>H/59 * * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.31">
@@ -29,46 +33,13 @@
       <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
       <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
     </hudson.plugins.copyartifact.CopyArtifact>
-    <hudson.tasks.Shell>
-      <command>chmod 755 *.*
-
-./updaterepo.sh /Users/hscbuild01/jenkins-slave/codebase/ENV/DEV-TESTING/StoreEmpower-Android-code ${WORKSPACE} se.android.code.${BUILD_NUMBER}.tar origin/develop
-
-chmod -R 755 ${WORKSPACE}</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>./bumpdroidbuild.sh ${BUILD_NUMBER} platforms/android/AndroidManifest.xml</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>cordova build --debug
-
-ENT_BUILD=`find ${WORKSPACE}/platforms/android/ant-build/ -name *-debug.apk -exec basename {} \; `
-
-#jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ${WORKSPACE}/platforms/android/TescoGrocery-Key.keystore ${WORKSPACE}/platforms/android/ant-build/${ENT_BUILD} TescoPlc -storepass Tesco123
-
-#jarsigner -verify -verbose ${WORKSPACE}/platforms/android/ant-build/${ENT_BUILD}
-
-#zipalign -f -v 4 ${WORKSPACE}/platforms/android/ant-build/${ENT_BUILD} StoreEmpowerment-${BUILD_NUMBER}.apk</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>mkdir -p ${WORKSPACE}/repo
-
-mkdir ${WORKSPACE}/repo/${BUILD_NUMBER}/
-
-ENT_BUILD=`find ${WORKSPACE} -name *-debug.apk -exec basename {} \; `
-
-mv ${WORKSPACE}/platforms/android/ant-build/${ENT_BUILD} ${WORKSPACE}/repo/${BUILD_NUMBER}/StoreEmpowerment-${BUILD_NUMBER}.apk</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>tar cf ${WORKSPACE}/auto.se.droid.${BUILD_NUMBER}.tar StoreEmpowerment-Automation</command>
-    </hudson.tasks.Shell>
-    <hudson.tasks.Shell>
-      <command>bzip2 auto.se.droid.${BUILD_NUMBER}.tar</command>
-    </hudson.tasks.Shell>
+    <hudson.tasks.BatchFile>
+      <command>pollrepo.bat D:\jenkins-slave\codebase\ENV\DEV\DC-iOSBeta-code HSC_Digital_Clubcard_iOS@in.tesco.com %JOB_NAME% feature/Gaz/Passbook</command>
+    </hudson.tasks.BatchFile>
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>repo/${BUILD_NUMBER}/*.apk, **/*.bz2</artifacts>
+      <artifacts>*.txt</artifacts>
       <allowEmptyArchive>false</allowEmptyArchive>
       <onlyIfSuccessful>false</onlyIfSuccessful>
       <fingerprint>false</fingerprint>
@@ -79,11 +50,16 @@ mv ${WORKSPACE}/platforms/android/ant-build/${ENT_BUILD} ${WORKSPACE}/repo/${BUI
         <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
           <configs>
             <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
-              <properties>ARCHIVE_TO_COPY=auto.se.droid.${BUILD_NUMBER}.tar.bz2
-START_BUILD_NUMBER=${BUILD_NUMBER}</properties>
+              <properties>CODEBASE=D:\\jenkins-slave\\codebase\\ENV\\DEV\\DC-iOSBeta-code</properties>
             </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+            <hudson.plugins.parameterizedtrigger.FileBuildParameters>
+              <propertiesFile>current_commit.txt</propertiesFile>
+              <failTriggerOnMissing>true</failTriggerOnMissing>
+              <useMatrixChild>false</useMatrixChild>
+              <onlyExactRuns>false</onlyExactRuns>
+            </hudson.plugins.parameterizedtrigger.FileBuildParameters>
           </configs>
-          <projects>StoreEmpower-Android-Sanity_Test</projects>
+          <projects>DigitalClubcard-iOSBeta-Analysis-DEV-CI</projects>
           <condition>SUCCESS</condition>
           <triggerWithNoParameters>false</triggerWithNoParameters>
         </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
@@ -92,9 +68,23 @@ START_BUILD_NUMBER=${BUILD_NUMBER}</properties>
   </publishers>
   <buildWrappers>
     <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.22">
+      <patterns>
+        <hudson.plugins.ws__cleanup.Pattern>
+          <pattern>pollcount</pattern>
+          <type>EXCLUDE</type>
+        </hudson.plugins.ws__cleanup.Pattern>
+      </patterns>
       <deleteDirs>false</deleteDirs>
       <cleanupParameter></cleanupParameter>
       <externalDelete></externalDelete>
     </hudson.plugins.ws__cleanup.PreBuildCleanup>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.14">
+      <strategy class="hudson.plugins.build_timeout.impl.AbsoluteTimeOutStrategy">
+        <timeoutMinutes>30</timeoutMinutes>
+      </strategy>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
+      </operationList>
+    </hudson.plugins.build__timeout.BuildTimeoutWrapper>
   </buildWrappers>
 </project>

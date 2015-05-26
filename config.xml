@@ -507,6 +507,10 @@
         <string>DigitalClubcard-iOS-Build-DEV-CI</string>
         <string>DigitalClubcard-iOS-Upload-DEV-CI</string>
         <string>DigitalClubcard-iOS-Upload-Insight-DEV-CI</string>
+        <string>DigitalClubcard-iOSBeta-0-Poll-DEV-CI</string>
+        <string>DigitalClubcard-iOSBeta-Analysis-DEV-CI</string>
+        <string>DigitalClubcard-iOSBeta-Build-DEV-CI</string>
+        <string>DigitalClubcard-iOSBeta-Upload-DEV-CI</string>
         <string>GHS-Android-0-Poll-DEV-CI</string>
         <string>GHS-Android-Analysis-DEV-CI</string>
         <string>GHS-Android-Build-DEV-CI</string>

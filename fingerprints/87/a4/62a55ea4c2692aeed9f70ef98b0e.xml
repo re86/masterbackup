@@ -37,16 +37,12 @@
       <ranges>1</ranges>
     </entry>
     <entry>
-      <string>DigitalClubcard-Android-Build-PlayStore-CI</string>
-      <ranges>1</ranges>
-    </entry>
-    <entry>
       <string>IGHS-iOS-Build-mas-od</string>
       <ranges>2-5</ranges>
     </entry>
     <entry>
-      <string>GHS-iPhone-Sanity_Build</string>
-      <ranges>31</ranges>
+      <string>DigitalClubcard-Android-Build-PlayStore-CI</string>
+      <ranges>1</ranges>
     </entry>
     <entry>
       <string>GHS-iOS-Build-AppStore-CI</string>
