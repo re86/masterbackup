@@ -12,22 +12,6 @@
       <string>DC-iOS-Sanity_Build_new</string>
       <ranges>91</ranges>
     </entry>
-    <entry>
-      <string>DC-iOS-Sanity_Test_vm2</string>
-      <ranges>71</ranges>
-    </entry>
-    <entry>
-      <string>DC-iOS-Sanity_Test_vm1</string>
-      <ranges>79</ranges>
-    </entry>
-    <entry>
-      <string>DC-iOS-Regression-Test_vm2</string>
-      <ranges>66</ranges>
-    </entry>
-    <entry>
-      <string>DC-iOS-Regression-Test_vm1</string>
-      <ranges>73</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>

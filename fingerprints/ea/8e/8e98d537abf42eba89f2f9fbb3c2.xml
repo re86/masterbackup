@@ -9,31 +9,7 @@
   <fileName>Clubcard-Android-PPE-31.apk</fileName>
   <usages>
     <entry>
-      <string>DC-Android-Sanity_Test_Device3</string>
-      <ranges>31</ranges>
-    </entry>
-    <entry>
-      <string>DC-Android-Sanity_Test_Device2</string>
-      <ranges>31</ranges>
-    </entry>
-    <entry>
       <string>DC-Android-Test_Build_new</string>
-      <ranges>31</ranges>
-    </entry>
-    <entry>
-      <string>DC-Android-Sanity_Test_Device1</string>
-      <ranges>31</ranges>
-    </entry>
-    <entry>
-      <string>DC-Android-Regression_Test_Device3</string>
-      <ranges>31</ranges>
-    </entry>
-    <entry>
-      <string>DC-Android-Regression_Test_Device2</string>
-      <ranges>31</ranges>
-    </entry>
-    <entry>
-      <string>DC-Android-Regression_Test_Device1</string>
       <ranges>31</ranges>
     </entry>
   </usages>

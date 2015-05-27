@@ -13,16 +13,12 @@
       <ranges>32-42</ranges>
     </entry>
     <entry>
-      <string>GHS-iOS-Build-rel-od</string>
-      <ranges>5</ranges>
+      <string>IGHS-iOS-Build-dev-od</string>
+      <ranges>34-36</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Malaysia-Build-LIVE-CI</string>
       <ranges>4</ranges>
-    </entry>
-    <entry>
-      <string>IGHS-iOS-Build-dev-od</string>
-      <ranges>34-36</ranges>
     </entry>
   </usages>
   <facets/>

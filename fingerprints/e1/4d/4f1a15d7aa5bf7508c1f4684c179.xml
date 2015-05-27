@@ -9,16 +9,12 @@
   <fileName>pollrepo.bat</fileName>
   <usages>
     <entry>
-      <string>GHS-iPad-Sanity_Build</string>
-      <ranges>12-13</ranges>
-    </entry>
-    <entry>
       <string>GHS-iOS-Build-dev-od</string>
       <ranges>48-56</ranges>
     </entry>
     <entry>
-      <string>GHS-iOS-Build-rel-od</string>
-      <ranges>28</ranges>
+      <string>GHS-iPad-Sanity_Build</string>
+      <ranges>12-13</ranges>
     </entry>
     <entry>
       <string>MobiAssets-Android-Build-DEV-CI</string>

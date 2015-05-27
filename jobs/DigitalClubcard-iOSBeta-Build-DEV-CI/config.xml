@@ -63,9 +63,9 @@ chmod -R 755 ${WORKSPACE}</command>
 
 cd Apps/DigitalClubcard/iOS/Clubcard.iOS
 
-./setup.sh Release PROD
+./setup.sh Release PPE
 
-xbuild &quot;/property:Configuration=PPE Pass&quot; ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS.sln</command>
+xbuild &quot;/property:Configuration=PPE Pass&quot; ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS.sln /property:BuildIpa=true</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>mkdir -p ${WORKSPACE}/repo
@@ -73,16 +73,16 @@ xbuild &quot;/property:Configuration=PPE Pass&quot; ${WORKSPACE}/Apps/DigitalClu
 mkdir ${WORKSPACE}/repo/${START_BUILD_NUMBER}/
 
 #DEBUG_BUILD=`find  ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/Debug/  -name *.ipa -exec basename {} \; `
-ENT_BUILD=`find  ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/PPE Pass/ -name *.ipa -exec basename {} \; `
+ENT_BUILD=`find &quot;${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/PPE Pass/&quot; -name *.ipa -exec basename {} \; `
 
-mv ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/PPE Pass/${ENT_BUILD} ${WORKSPACE}/repo/${START_BUILD_NUMBER}/Clubcard-iOS-PPE-Pass-${START_BUILD_NUMBER}.ipa
+mv &quot;${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/PPE Pass/${ENT_BUILD}&quot; ${WORKSPACE}/repo/${START_BUILD_NUMBER}/Clubcard-iOS-PPE-Pass-${START_BUILD_NUMBER}.ipa
 
 
-cd ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/PPE Pass
+cd &quot;${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/PPE Pass&quot;
 
 zip -r DC-iOS-dSYM-prod.zip *.dSYM
 
-mv ${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/PPE Pass/DC-iOS-dSYM-prod.zip ${WORKSPACE}/repo/${START_BUILD_NUMBER}/DC-iOS-dSYM-prod.zip</command>
+mv &quot;${WORKSPACE}/Apps/DigitalClubcard/iOS/Clubcard.iOS/bin/iPhone/PPE Pass/DC-iOS-dSYM-prod.zip&quot; ${WORKSPACE}/repo/${START_BUILD_NUMBER}/DC-iOS-dSYM-prod.zip</command>
     </hudson.tasks.Shell>
     <hudson.tasks.Shell>
       <command>#/Applications/Xamarin?Studio.app/Contents/MacOS/mdtool build -t:Build Apps/DigitalClubcard/Common/Common.Resources/Common.Resources/Common.Resources.csproj

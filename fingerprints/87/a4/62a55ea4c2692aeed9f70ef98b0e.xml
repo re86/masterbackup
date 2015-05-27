@@ -13,10 +13,6 @@
       <ranges>1</ranges>
     </entry>
     <entry>
-      <string>GHS-iOS-Build-rel-od</string>
-      <ranges>6-27</ranges>
-    </entry>
-    <entry>
       <string>IGHS-iOS-Thailand-Build-LIVE-CI</string>
       <ranges>3</ranges>
     </entry>
@@ -37,12 +33,12 @@
       <ranges>1</ranges>
     </entry>
     <entry>
-      <string>IGHS-iOS-Build-mas-od</string>
-      <ranges>2-5</ranges>
-    </entry>
-    <entry>
       <string>DigitalClubcard-Android-Build-PlayStore-CI</string>
       <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Build-mas-od</string>
+      <ranges>2-5</ranges>
     </entry>
     <entry>
       <string>GHS-iOS-Build-AppStore-CI</string>

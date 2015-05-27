@@ -12,10 +12,6 @@
       <string>GHS-iOS-Build-dev-od</string>
       <ranges>28-30</ranges>
     </entry>
-    <entry>
-      <string>GHS-iOS-Build-rel-od</string>
-      <ranges>4</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>

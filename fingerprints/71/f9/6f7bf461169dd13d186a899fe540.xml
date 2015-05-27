@@ -12,10 +12,6 @@
       <string>GHS-iPhone-Sanity_Build</string>
       <ranges>32</ranges>
     </entry>
-    <entry>
-      <string>GHS-iPhone-Sanity_Test</string>
-      <ranges>36</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>
