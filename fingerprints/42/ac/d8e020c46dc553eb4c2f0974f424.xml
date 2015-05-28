@@ -9,10 +9,6 @@
   <fileName>DC-iOS-dSYM-ppe.zip</fileName>
   <usages>
     <entry>
-      <string>DigitalClubcard-iOS-Build-DEV-CI</string>
-      <ranges>579</ranges>
-    </entry>
-    <entry>
       <string>DigitalClubcard-iOS-Upload-Insight-DEV-CI</string>
       <ranges>87</ranges>
     </entry>

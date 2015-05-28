@@ -12,10 +12,6 @@
       <string>GHS-iOS-Upload-REL-CI</string>
       <ranges>7</ranges>
     </entry>
-    <entry>
-      <string>GHS-iOS-Build-REL-CI</string>
-      <ranges>10</ranges>
-    </entry>
   </usages>
   <facets/>
 </fingerprint>
