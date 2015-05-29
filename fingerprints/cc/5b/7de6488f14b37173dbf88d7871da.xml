@@ -10,11 +10,11 @@
   <usages>
     <entry>
       <string>View-Pipeline-Status</string>
-      <ranges>31</ranges>
+      <ranges>31-32</ranges>
     </entry>
     <entry>
       <string>CI-Admin-Data</string>
-      <ranges>25-26</ranges>
+      <ranges>25-27</ranges>
     </entry>
   </usages>
   <facets/>

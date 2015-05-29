@@ -10,23 +10,7 @@
   <usages>
     <entry>
       <string>DC-iOS-Sanity_Build_new</string>
-      <ranges>92-93</ranges>
-    </entry>
-    <entry>
-      <string>DC-iOS-Sanity_Test_vm2</string>
-      <ranges>73</ranges>
-    </entry>
-    <entry>
-      <string>DC-iOS-Sanity_Test_vm1</string>
-      <ranges>81</ranges>
-    </entry>
-    <entry>
-      <string>DC-iOS-Regression-Test_vm2</string>
-      <ranges>68</ranges>
-    </entry>
-    <entry>
-      <string>DC-iOS-Regression-Test_vm1</string>
-      <ranges>75</ranges>
+      <ranges>93</ranges>
     </entry>
   </usages>
   <facets/>
