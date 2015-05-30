@@ -9,10 +9,6 @@
   <fileName>poll.bat</fileName>
   <usages>
     <entry>
-      <string>GHS-iOS-Build-dev-od</string>
-      <ranges>8-25</ranges>
-    </entry>
-    <entry>
       <string>IGHS-iPhone-Sanity_Build</string>
       <ranges>2-3</ranges>
     </entry>

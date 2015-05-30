@@ -9,10 +9,6 @@
   <fileName>pollrepo.bat</fileName>
   <usages>
     <entry>
-      <string>GHS-iOS-Build-dev-od</string>
-      <ranges>31-35</ranges>
-    </entry>
-    <entry>
       <string>IGHS-iOS-Build-dev-od</string>
       <ranges>34-36</ranges>
     </entry>

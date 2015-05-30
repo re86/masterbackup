@@ -25,10 +25,6 @@
       <ranges>7-11</ranges>
     </entry>
     <entry>
-      <string>GHS-iOS-Build-dev-od</string>
-      <ranges>31-47</ranges>
-    </entry>
-    <entry>
       <string>IGHS-iOS-Thailand-Build-AppStore-CI</string>
       <ranges>1</ranges>
     </entry>
@@ -45,12 +41,12 @@
       <ranges>3,5</ranges>
     </entry>
     <entry>
-      <string>IGHS-iOS-Build-dev-od</string>
-      <ranges>34-36</ranges>
-    </entry>
-    <entry>
       <string>IGHS-iOS-Malaysia-Build-LIVE-CI</string>
       <ranges>4-9</ranges>
+    </entry>
+    <entry>
+      <string>IGHS-iOS-Build-dev-od</string>
+      <ranges>34-36</ranges>
     </entry>
     <entry>
       <string>GHS-Android-Build-LIVE-CI</string>
