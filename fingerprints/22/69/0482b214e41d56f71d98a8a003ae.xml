@@ -17,11 +17,11 @@
       <ranges>34-35</ranges>
     </entry>
     <entry>
-      <string>DC-Android-Sanity_Test_Device1</string>
-      <ranges>34-35</ranges>
+      <string>DC-Android-Test_Build_new</string>
+      <ranges>35</ranges>
     </entry>
     <entry>
-      <string>DC-Android-Test_Build_new</string>
+      <string>DC-Android-Sanity_Test_Device1</string>
       <ranges>34-35</ranges>
     </entry>
     <entry>
