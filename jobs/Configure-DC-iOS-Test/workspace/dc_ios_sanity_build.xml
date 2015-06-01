@@ -40,22 +40,22 @@
         <hudson.model.StringParameterDefinition>
           <name>SANITYVM1</name>
           <description/>
-          <defaultValue>./Runner.sh http://192.168.3.231:37265 james.bond@gmail.com:Password+1 ops @sanity Sanity</defaultValue>
+          <defaultValue>./Runner.sh http://192.168.3.34:37265 james.bond@gmail.com:Password+1 ops @sanity Sanity</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>REGRESSIONVM1</name>
           <description/>
-          <defaultValue>./Runner.sh http://192.168.3.231:37265 james.bond@gmail.com:Password+1 ops @regression Regression</defaultValue>
+          <defaultValue>./Runner.sh http://192.168.3.34:37265 james.bond@gmail.com:Password+1 ops @regression Regression</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>SANITYVM2</name>
           <description/>
-          <defaultValue>./Runner.sh http://192.168.3.174:37265 james.bond@gmail.com:Password+1 ops @sanity Sanity</defaultValue>
+          <defaultValue>./Runner.sh http://192.168.3.29:37265 james.bond@gmail.com:Password+1 ops @sanity Sanity</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>REGRESSIONVM2</name>
           <description/>
-          <defaultValue>./Runner.sh http://192.168.3.174:37265 james.bond@gmail.com:Password+1 ops @regression Regression</defaultValue>
+          <defaultValue>./Runner.sh http://192.168.3.29:37265 james.bond@gmail.com:Password+1 ops @regression Regression</defaultValue>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
