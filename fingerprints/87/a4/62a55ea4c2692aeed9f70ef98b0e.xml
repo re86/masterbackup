@@ -9,10 +9,6 @@
   <fileName>pollrepo.bat</fileName>
   <usages>
     <entry>
-      <string>GHS-iOS-Build-mas-od</string>
-      <ranges>1</ranges>
-    </entry>
-    <entry>
       <string>IGHS-iOS-Thailand-Build-LIVE-CI</string>
       <ranges>3</ranges>
     </entry>
