@@ -46,7 +46,7 @@
     </entry>
     <entry>
       <string>StoreEmpower-iOS-Analysis-DEV-CI</string>
-      <ranges>49-53</ranges>
+      <ranges>52-54</ranges>
     </entry>
     <entry>
       <string>DigitalClubcard-iOS-Build-AppStore-CI</string>
@@ -54,7 +54,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-iOSBeta-Build-DEV-CI</string>
-      <ranges>33-34</ranges>
+      <ranges>33-38</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Malaysia-0-Poll-REL-CI</string>
@@ -62,7 +62,7 @@
     </entry>
     <entry>
       <string>GHS-iOS-Build-DEV-CI</string>
-      <ranges>299-300</ranges>
+      <ranges>299-301</ranges>
     </entry>
     <entry>
       <string>Test-DC-Android-Analysis</string>
@@ -74,7 +74,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-iOS-0-Poll-DEV-CI</string>
-      <ranges>4332-4381</ranges>
+      <ranges>4332-4405</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Malaysia-Analysis-DEV-CI</string>
@@ -82,7 +82,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-AndroidBeta-Build-DEV-CI</string>
-      <ranges>15-17</ranges>
+      <ranges>16-20</ranges>
     </entry>
     <entry>
       <string>DigitalClubcard-Android-SCA</string>
@@ -118,7 +118,7 @@
     </entry>
     <entry>
       <string>DC-iOS-Analysis_n</string>
-      <ranges>247-249</ranges>
+      <ranges>248-250</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Build-dev-od</string>
@@ -162,11 +162,11 @@
     </entry>
     <entry>
       <string>GHS-Android-Build-dev-od</string>
-      <ranges>154-157</ranges>
+      <ranges>155-157</ranges>
     </entry>
     <entry>
       <string>GHS-Android-Analysis_n</string>
-      <ranges>195-196</ranges>
+      <ranges>196-197</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Thailand-Build-REL-CI</string>
@@ -210,7 +210,7 @@
     </entry>
     <entry>
       <string>StoreEmpower-Android-Build-DEV-CI</string>
-      <ranges>116-117</ranges>
+      <ranges>116-118</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Malaysia-Analysis_n</string>
@@ -258,7 +258,7 @@
     </entry>
     <entry>
       <string>StoreEmpower-iOS-Build-DEV-CI</string>
-      <ranges>68-73</ranges>
+      <ranges>72-74</ranges>
     </entry>
     <entry>
       <string>IGHS-iPhone-Sanity_Build</string>
@@ -266,11 +266,11 @@
     </entry>
     <entry>
       <string>GHS-Android-Analysis-DEV-CI</string>
-      <ranges>437-439</ranges>
+      <ranges>438-439</ranges>
     </entry>
     <entry>
       <string>DigitalClubcard-AndroidBeta-Analysis-DEV-CI</string>
-      <ranges>16-18</ranges>
+      <ranges>17-21</ranges>
     </entry>
     <entry>
       <string>DC-Android-Sanity_Build</string>
@@ -290,7 +290,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-AndroidBeta-0-Poll-DEV-CI</string>
-      <ranges>352-380</ranges>
+      <ranges>370-404</ranges>
     </entry>
     <entry>
       <string>DigitalClubcard-Android-0-POLL</string>
@@ -298,7 +298,7 @@
     </entry>
     <entry>
       <string>GHS-Android-0-Poll-DEV-CI</string>
-      <ranges>4296-4327</ranges>
+      <ranges>4316-4351</ranges>
     </entry>
     <entry>
       <string>Test-DC-Android-Poll</string>
@@ -350,7 +350,7 @@
     </entry>
     <entry>
       <string>StoreEmpower-Android-0-Poll-DEV-CI</string>
-      <ranges>2781-2811</ranges>
+      <ranges>2781-2836</ranges>
     </entry>
     <entry>
       <string>IGHS-Android-Thailand-Analysis-DEV-CI</string>
@@ -358,7 +358,7 @@
     </entry>
     <entry>
       <string>GHS-iOS-Build-dev-od</string>
-      <ranges>147-149</ranges>
+      <ranges>147-150</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Thailand-Build-AppStore-CI</string>
@@ -394,7 +394,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-iOSBeta-0-Poll-DEV-CI</string>
-      <ranges>187-217</ranges>
+      <ranges>187-244</ranges>
     </entry>
     <entry>
       <string>DC-Android-Test_Build_new</string>
@@ -402,7 +402,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-iOSBeta-Analysis-DEV-CI</string>
-      <ranges>27-28</ranges>
+      <ranges>27-31</ranges>
     </entry>
     <entry>
       <string>DigitalClubcard-Android-0-Poll-LIVE-CI</string>
@@ -414,7 +414,7 @@
     </entry>
     <entry>
       <string>StoreEmpower-iOS-0-Poll-DEV-CI</string>
-      <ranges>521-585</ranges>
+      <ranges>578-610</ranges>
     </entry>
     <entry>
       <string>DigitalClubcard-Android-Build-DEV-CI</string>
@@ -430,7 +430,7 @@
     </entry>
     <entry>
       <string>DC-Android-Analysis_n</string>
-      <ranges>283-285</ranges>
+      <ranges>284-286</ranges>
     </entry>
     <entry>
       <string>GHS-iOS-0-Poll-REL-CI</string>
@@ -442,11 +442,11 @@
     </entry>
     <entry>
       <string>GHS-iOS-Analysis_n</string>
-      <ranges>181-183</ranges>
+      <ranges>182-184</ranges>
     </entry>
     <entry>
       <string>GHS-iOS-Analysis-DEV-CI</string>
-      <ranges>314-315</ranges>
+      <ranges>314-316</ranges>
     </entry>
     <entry>
       <string>DC-Android-Build-rel-od</string>
@@ -462,7 +462,7 @@
     </entry>
     <entry>
       <string>GHS-iOS-0-Poll-DEV-CI</string>
-      <ranges>4274-4308</ranges>
+      <ranges>4274-4333</ranges>
     </entry>
     <entry>
       <string>GHS-Android-0-Poll-LIVE-CI</string>
@@ -474,11 +474,11 @@
     </entry>
     <entry>
       <string>DC-iOS-Build-dev-od</string>
-      <ranges>235-237</ranges>
+      <ranges>235-240</ranges>
     </entry>
     <entry>
       <string>GHS-Android-Build-DEV-CI</string>
-      <ranges>417-419</ranges>
+      <ranges>418-419</ranges>
     </entry>
     <entry>
       <string>IGHS-Android-Malaysia-Analysis-DEV-CI</string>
@@ -514,7 +514,7 @@
     </entry>
     <entry>
       <string>StoreEmpower-Android-Analysis-DEV-CI</string>
-      <ranges>110-111</ranges>
+      <ranges>110-112</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Thailand-0-Poll-DEV-CI</string>
@@ -538,7 +538,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-Android-0-Poll-DEV-CI</string>
-      <ranges>4103-4228</ranges>
+      <ranges>4103-4252</ranges>
     </entry>
     <entry>
       <string>DC-Android-Regression_Build</string>

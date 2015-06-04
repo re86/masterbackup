@@ -46,7 +46,7 @@
     <hudson.tasks.Shell>
       <command>chmod 755 *.*
 
-./updaterepo.sh /Users/hscbuild01/jenkins-slave/codebase/ENV/DEV/DC-iOSBeta-code ${WORKSPACE} dc.ios.code.${BUILD_NUMBER}.tar origin/develop ${pullhash}
+./updaterepo.sh /Users/hscbuild01/jenkins-slave/codebase/ENV/DEV/DC-iOSBeta-code ${WORKSPACE} dc.ios.code.${BUILD_NUMBER}.tar feature/Gaz/Passbook ${pullhash}
 
 chmod -R 755 ${WORKSPACE}</command>
     </hudson.tasks.Shell>
