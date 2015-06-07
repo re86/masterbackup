@@ -74,7 +74,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-iOS-0-Poll-DEV-CI</string>
-      <ranges>4332-4453</ranges>
+      <ranges>4332-4477</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Malaysia-Analysis-DEV-CI</string>
@@ -118,7 +118,7 @@
     </entry>
     <entry>
       <string>DC-iOS-Analysis_n</string>
-      <ranges>250-252</ranges>
+      <ranges>251-253</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Build-dev-od</string>
@@ -166,7 +166,7 @@
     </entry>
     <entry>
       <string>GHS-Android-Analysis_n</string>
-      <ranges>198-199</ranges>
+      <ranges>199-200</ranges>
     </entry>
     <entry>
       <string>IGHS-iOS-Thailand-Build-REL-CI</string>
@@ -290,7 +290,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-AndroidBeta-0-Poll-DEV-CI</string>
-      <ranges>422-452</ranges>
+      <ranges>422-476</ranges>
     </entry>
     <entry>
       <string>Test-DC-Android-Poll</string>
@@ -298,7 +298,7 @@
     </entry>
     <entry>
       <string>GHS-Android-0-Poll-DEV-CI</string>
-      <ranges>4316-4399</ranges>
+      <ranges>4316-4423</ranges>
     </entry>
     <entry>
       <string>DigitalClubcard-Android-0-POLL</string>
@@ -350,7 +350,7 @@
     </entry>
     <entry>
       <string>StoreEmpower-Android-0-Poll-DEV-CI</string>
-      <ranges>2824-2884</ranges>
+      <ranges>2824-2908</ranges>
     </entry>
     <entry>
       <string>IGHS-Android-Thailand-Analysis-DEV-CI</string>
@@ -394,7 +394,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-iOSBeta-0-Poll-DEV-CI</string>
-      <ranges>239-292</ranges>
+      <ranges>239-316</ranges>
     </entry>
     <entry>
       <string>DC-Android-Test_Build_new</string>
@@ -414,7 +414,7 @@
     </entry>
     <entry>
       <string>StoreEmpower-iOS-0-Poll-DEV-CI</string>
-      <ranges>601-658</ranges>
+      <ranges>601-682</ranges>
     </entry>
     <entry>
       <string>GHS-iPad-Sanity_Build</string>
@@ -430,7 +430,7 @@
     </entry>
     <entry>
       <string>DC-Android-Analysis_n</string>
-      <ranges>286-288</ranges>
+      <ranges>287-289</ranges>
     </entry>
     <entry>
       <string>GHS-iOS-Build-mas-od</string>
@@ -442,7 +442,7 @@
     </entry>
     <entry>
       <string>GHS-iOS-Analysis_n</string>
-      <ranges>184-186</ranges>
+      <ranges>185-187</ranges>
     </entry>
     <entry>
       <string>GHS-iOS-Analysis-DEV-CI</string>
@@ -462,7 +462,7 @@
     </entry>
     <entry>
       <string>GHS-iOS-0-Poll-DEV-CI</string>
-      <ranges>4352-4381</ranges>
+      <ranges>4352-4405</ranges>
     </entry>
     <entry>
       <string>GHS-Android-0-Poll-LIVE-CI</string>
@@ -490,7 +490,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-Android-0-Poll-REL-CI</string>
-      <ranges>455</ranges>
+      <ranges>455-456</ranges>
     </entry>
     <entry>
       <string>IGHS-Android-Malaysia-0-Poll-DEV-CI</string>
@@ -534,7 +534,7 @@
     </entry>
     <entry>
       <string>DigitalClubcard-Android-0-Poll-DEV-CI</string>
-      <ranges>4103-4300</ranges>
+      <ranges>4103-4324</ranges>
     </entry>
     <entry>
       <string>DC-iOS-Build-mas-od</string>
